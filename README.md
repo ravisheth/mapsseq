@@ -15,7 +15,7 @@ Subparts of the sample no larger than 5x10mm in size were then sliced for embedd
 monomer solution (store -20C indefinitely)
 
 | name | stock concentration | amt to add | final conc (w/w) |
-|:----:|:-------------------:|:----------:|:----------------:|
+|:----:|:-------------------:|:----------:|:---------------:|
 |acrymalide|1.25g/2.5mL (1.5mL water sufficient)|2mL|10%|
 |bisacrymalide|0.04g/wmL|1.25mL|0.25%|
 |PBS|10x|1mL|1x|
@@ -68,8 +68,9 @@ Proteinase K:
 - Wash 2x T<sub>10</sub>E<sub>1</sub>  buffer and store at 4C
 
 ### Barcoded Bead Construction
-Beads were extracted from GE HiTrap NHS-Activated HP columns. The bottoms were cutoff and flushed with isopropanol via a syringe, and stored in isopropanol at 4C. Beads were also passed through a 100um cell strainer (Fisher) to remove any debris or doublet beads.
-
+#### Obtaining Sepharose Beads
+Sepharose beads with a mean diameter of approximately 30μm are extracted from 1mL GE HiTrap NHS-Activated HP columns (GE Healthcare 17071601). The bottom of the column can be cut off directly above the filter assembly with a razor blade, and beads can be flushed out with a syringe filled with isopropanol coupled to the provide syringe adapter. Beads are subsequently filtered through a 100um cell strainer (Fisher 22-363-549) to remove any debris or aggregrated beads, and stored in isopropanol at 4C. 
+#### Conjugation of 
 strep bead construction
 
 - Take ~1MM beads (~200uL of stock)
@@ -77,7 +78,7 @@ strep bead construction
 - Resuspend in 100mM sodium borate, 0.8mg/mL streptavidin, 5%Cy3-Strep
     - (10uL 0.5M sodium borate, 38uL 1mg/mL strep, 2uL strep-Cy3)
 - Incubate at RT on rotisserie, 1 hour
-- Wash 5X in wash buffer (TK+tween)
+- Wash 5X in wash buffer 10mM Tris 0.1mM EDTA 0.1% Tween20
 - Let sit in wash buffer 30 minutes
 
 
