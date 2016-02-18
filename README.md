@@ -14,8 +14,8 @@ Subparts of the sample no larger than 5x10mm in size were then sliced for embedd
 
 monomer solution (store -20C indefinitely)
 
-| name | stock concentration | amt to add | final concentration (w/w) |
-|:____:|:-------------------:|:----------:|:-------------------------:|
+| name | stock concentration | amt to add | final conc (w/w) |
+|:----:|:-------------------:|:----------:|:-----_----------:|
 |acrymalide|1.25g/2.5mL (1.5mL water sufficient)|2mL|10%|
 |bisacrymalide|0.04g/wmL|1.25mL|0.25%|
 |PBS|10x|1mL|1x|
