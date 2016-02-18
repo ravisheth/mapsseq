@@ -68,21 +68,12 @@ Proteinase K:
 - Wash 2x T<sub>10</sub>E<sub>1</sub>  buffer and store at 4C
 
 ### Barcoded Bead Construction
-#### Obtaining Sepharose Beads
-Sepharose beads with a mean diameter of approximately 30μm are extracted from 1mL GE HiTrap NHS-Activated HP columns (GE Healthcare 17071601). The bottom of the column can be cut off directly above the filter assembly with a razor blade, and beads can be flushed out with a syringe filled with isopropanol coupled to the provide syringe adapter. Beads are subsequently filtered through a 100um cell strainer (Fisher 22-363-549) to remove any debris or aggregrated beads, and stored in isopropanol at 4C. 
-#### Conjugation of 
-strep bead construction
-
-- Take ~1MM beads (~200uL of stock)
-- Wash in water 3x
-- Resuspend in 100mM sodium borate, 0.8mg/mL streptavidin, 5%Cy3-Strep
-    - (10uL 0.5M sodium borate, 38uL 1mg/mL strep, 2uL strep-Cy3)
-- Incubate at RT on rotisserie, 1 hour
-- Wash 5X in wash buffer 10mM Tris 0.1mM EDTA 0.1% Tween20
-- Let sit in wash buffer 30 minutes
-
-
-Oligo extension
+##### Conjugation of streptavidin to beads
+- Extract sepharose beads with a mean diameter of approximately 30μm from 1mL GE HiTrap NHS-Activated HP columns (GE Healthcare 17071601). The bottom of the column can be cut off directly above the filter assembly with a razor blade, and beads can be flushed out with a syringe filled with isopropanol coupled to the provide syringe adapter. Filter beads through a 100um cell strainer (Fisher 22-363-549) to remove any debris or aggregrated beads, and store in isopropanol at 4C. 
+- Measure the concentration of bead stock with a hemacytomter, and prepare an aliquot of 20 million beads in a 1.5mL tube. Wash with 1mL of nuclease-free water, and gently pellet by centrifugation in a microcentrifuge. Repeat this wash twice for a total of three washes. Carefully remove all water from the aliquot.  
+- Prepare a 250uL solution of 100mM borate, 0.75mg/mL streptavidin and 5% Streptavidin-Cy3 by mixing: 50uL 0.5M sodium borate, 187.5uL 1mg/mL streptavidin (NEB N7021S) and 12.5uL Streptavidin-Cy3 (Life Technologies 43-4315). To covalently attach the streptavidin and Cy3 label to the beads, resuspend the prepared beads in the full 250uL of the solution. Incubate at room temperature on a rotisserie for 1 hour. 
+- Wash the beads with 1mL of wash buffer (10mM Tris-HCl pH 8.0, 1mM EDTA, 0.1% Tween 20, 100mM NaCl) and gently pellet by centrifugation in a microcentrifuge. Repeat this wash four times for a total of five washes. Incubate the beads in wash buffer at room temperature on a rotisserie for 30 minutes to fully quench any remaining reactive groups on the beads. 
+##### First round primer extension of barcode oligonucleotide
 
 - anneal 2bio_pc oligo to each of the three bc oligos
     - 2uM of 2xbio, 8uM of bc oligo:
