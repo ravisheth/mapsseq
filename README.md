@@ -77,21 +77,22 @@ Nylon mesh filters of size XX, XX, XX (Component Supply Company) were punched us
 ### Lysis
 Wash
 
-- Wash particle TK buffer 500uL 2x
+- Wash particle T<sub>10</sub>E<sub>1</sub> (Tris pH 8 10mM, EDTA 1mM) buffer 500uL 2x
 
 Lysozyme:
 
+- resuspend particle in T<sub>10</sub>E<sub>1</sub>S<sub>100</sub> buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM) 
 - use 50U/uL or 2.5K units, or 0.066uL of 37.5K stock
 - Incubate RT 15 min
 - Wash 2x 500uL TK Buffer
 
 Proteinase K:
 
-- use 1:100 of 50ug/uL stock (0.5uL)
-- use 0.5% tritonX-100 (0.25uL)
+- digestion buffer: 30mM Tris HCl 30mM EDTA< 5% Tween 20 0.5% Triton X 100 800mM GuHCl 
+- use 1:50 of 50ug/uL stock (0.5uL)
 - Incubate at 65C, 15 min vortex every 5min
 - Incubate at 95C, 10 min (inactivate PK to make sure we are OK for PCR)
-- Wash 2x TK buffer and store at 4C
+- Wash 2x T<sub>10</sub>E<sub>1</sub>  buffer and store at 4C
 
 ### Barcoded Bead Construction
 Beads were extracted from GE HiTrap NHS-Activated HP columns. The bottoms were cutoff and flushed with isopropanol via a syringe, and stored in isopropanol at 4C. Beads were also passed through a 100um cell strainer (Fisher) to remove any debris or doublet beads.
