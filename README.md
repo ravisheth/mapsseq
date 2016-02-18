@@ -13,39 +13,11 @@ Sample (feces, GI tract etc.) was taken and immediately placed in methacarn solu
 Subparts of the sample no larger than 5x10mm in size were then sliced for embedding. First, acrylamide stock solutions are generated for embedding:
 
 monomer solution (store -20C indefinitely)
-
-name
-
-stock concentration
-
-amt to add
-
-final concentration (w/w)
-
-acrymalide
-
-1.25g/2.5mL
-(use ~1.5mL to get 2.5mL total)
-
-2mL
-
-10%
-
-bisacrymalide
-
-0.04g/2mL
-
-1.25mL
-
-0.25%
-
-PBS
-
-10x
-
-1mL
-
-1x
+| name | stock concentration | amt to add | final concentration (w/w) |
+|:____:|:-------------------:|:----------:|:-------------------------:|
+|acrymalide|1.25g/2.5mL (1.5mL water sufficient)|2mL|10%|
+|bisacrymalide|0.04g/wmL|1.25mL|0.25%|
+|PBS|10x|1mL|1x|
 
 Other chemicals (store -20C,remake once every 2 weeks)
 
