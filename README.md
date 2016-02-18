@@ -97,6 +97,54 @@ Proteinase K:
 ### Barcoded Bead Construction
 Beads were extracted from GE HiTrap NHS-Activated HP columns. The bottoms were cutoff and flushed with isopropanol via a syringe, and stored in isopropanol at 4C. Beads were also passed through a 100um cell strainer (Fisher) to remove any debris or doublet beads.
 
+strep bead construction
+
+- Take ~1MM beads (~200uL of stock)
+- Wash in water 3x
+- Resuspend in 100mM sodium borate, 0.8mg/mL streptavidin, 5%Cy3-Strep
+    - (10uL 0.5M sodium borate, 38uL 1mg/mL strep, 2uL strep-Cy3)
+- Incubate at RT on rotisserie, 1 hour
+- Wash 5X in wash buffer (TK+tween)
+- Let sit in wash buffer 30 minutes
+
+
+Oligo extension
+
+- anneal 2bio_pc oligo to each of the three bc oligos
+    - 2uM of 2xbio, 8uM of bc oligo:
+        - 0.16uL 250uM stock 2xbio_pc, 0.64uL 250uM stock PE oligo, 19.2uL water
+    - stepwise cooling from 85 to 30 over 30 minutes (step down 30s)
+    - Then add DNA pol master mix  to each
+        - 5uL NEB Buffer 2 (1x), 2.5uL Klenow
+        - (0.25U/uL), 2.5uL 10mM dNTPs (0.5mM), 20uL water
+    - 27C, 30 minutes, 75C, 20 minutes
+
+Conjugate to bead:
+
+- add ~100,000 beads per well (5uL of stock, this makes conc of each ~ 4*10^-4 pmol which is what i want)
+- incubate at RT, 2 hrs
+- quench with biotin 2mM and NaOH 125mM
+- Was 5x biotin 0.1mM NaOH 125mM
+- Wash 3x 0.1mM biotin/wash buffer
+- Resuspend in 20uL hybridization buffer (20mM tris ph8, 1M NaCl, 0.1% tween 20) with 0.1mM biotin
+
+Anneal second round primer
+
+- hybridize second primer at final concentration of 5uM (0.4uL 250uM stock in 20uL)
+- Allow to anneal overnight
+
+Wash, extend and finalize primers
+
+- Wash 5x in Wash Buffer/0.1mM biotin
+- Resuspend in reaction mixture: 0.5mM dNTPs, NEB Buffer
+    - 2uL NEB Buffer 2 (1x), 1uL dNTPs, 16uL water
+    - Chill to 16C, add 1uL Klenow
+    - Incubate 1hr
+    - 75C, 20min
+- quench with biotin 2mM and NaOH 125mM
+- Wash 5x biotin 0.1mM NaOH 125mM
+- Wash 3x 0.1mM biotin/wash buffer
+
 ### Barcoded Bead QC
 DNA FISH
 Deep Sequencing on MiSeq 50
