@@ -116,20 +116,29 @@ DNA FISH
 Deep Sequencing on MiSeq 50
 
 ### Encapsulation
-An in-syringe magnetic mixer was constructed with 400 RPM mini DC geared gear box electric motor (uxcell, Amazon) driven by a Unique Goods Digital Display DC Motor Speed Controller (Amazon) and a 6V 1A power adapter (Amazon). The motor rotates a small neodynium magnet (K&J magnetics B448) via a custom 3D printed adapter.
+##### Equipment required
+- An in-syringe magnetic mixer was constructed with 400 RPM mini DC geared gear box electric motor (uxcell, Amazon) driven by a Unique Goods Digital Display DC Motor Speed Controller (Amazon) and a 6V 1A power adapter (Amazon). The motor rotates a small neodynium magnet (K&J magnetics B448) via a custom 3D printed adapter. This spins a 3x3mm magnetic stirbar (Bel-Art Z283835) which fits within a 1mL syringe.
+- We utilize two Harvard Apparatus Pump 11 Elite syringe pumps and a Zeiss Axiovert 25 inverted microscope to observe droplet formation and flow. 
+- To generate droplets, we use a flow-focusing (T-junction) droplet generator cast in PDMS. The diameter of the droplet forming junction is 60um in width. This yields droplets of approximately 90um in diameter or 0.5nL in volume. 
 
-Harvard Apparatus Pump 11 Elite
-60uM flow-focusing droplet generator
-Droplets of around 0.86nL
+##### Encapsulation protocol
+- UV treatment of all required equipment. 
+- Mix 200uL encapsulation master mix as follows: 100uL Kapa Hifi PCR MasterMix, 32uL NycoPrep (60% w/v Nycodenz), 20uL 10%w/v Pluronic 127, 5uL BSA (20mg/mL, NEB), XXuL acrylamide particles, XXuL barcoded beads (approximately 200 particles/uL).
+- Pipette into 1mL syringe (BD) and carefully load syringe
+
+tubing
+         
+
 
 Cool syringe
 Cool when collecting
 
 PCR mix:
-Load in 1mL syringe, 200uL total
-3x3mm magnetic mixer
 
-32% NycoPrep Universal (60%, final density ~ 1.1g/mL)
+
+Kapa Hifi PCR MasterMix
+16% NycoPrep Universal (60%, final density ~ 1.1g/mL)
+0.5ug/uL BSA (NEB)
 1% Pluronic F127
 Run PCR with mineral oil on top, no heated lid
 
