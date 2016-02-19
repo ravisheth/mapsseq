@@ -123,24 +123,14 @@ Deep Sequencing on MiSeq 50
 
 ##### Encapsulation protocol
 - UV treatment of all required equipment. 
-- Mix 200uL encapsulation master mix as follows: 100uL Kapa Hifi PCR MasterMix, 32uL NycoPrep (60% w/v Nycodenz), 20uL 10%w/v Pluronic 127, 5uL BSA (20mg/mL, NEB), XXuL acrylamide particles, XXuL barcoded beads (approximately 200 particles/uL).
+- Mix 200uL encapsulation master mix as follows: 100uL Kapa Hifi PCR MasterMix, 32uL NycoPrep (60% w/v Nycodenz), 20uL 10%w/v Pluronic 127, 5uL BSA (20mg/mL, NEB), XXuL acrylamide particles, XXuL barcoded beads (approximately 200 particles/uL). Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
 - Pipette into 1mL syringe (BD) and carefully load syringe
 
 tubing
-         
-
-
+        
 Cool syringe
 Cool when collecting
 
-PCR mix:
-
-
-Kapa Hifi PCR MasterMix
-16% NycoPrep Universal (60%, final density ~ 1.1g/mL)
-0.5ug/uL BSA (NEB)
-1% Pluronic F127
-Run PCR with mineral oil on top, no heated lid
 
 ### Droplet PCR
 PCR program:
