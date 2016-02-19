@@ -74,11 +74,11 @@ Note: this protocol yields approximately 10 million beads containing one of appr
 - Extract sepharose beads with a mean diameter of approximately 30μm from 1mL GE HiTrap NHS-Activated HP columns (GE Healthcare 17071601). The bottom of the column can be cut off directly above the filter assembly with a razor blade, and beads can be flushed out with a syringe filled with isopropanol coupled to the provide syringe adapter. Filter beads through a 100um cell strainer (Fisher 22-363-549) to remove any debris or aggregrated beads, and store in isopropanol at 4C. 
 - Measure the concentration of bead stock with a hemacytomter, and prepare an aliquot of 10 million beads in a 1.5mL tube. Wash with 1mL of nuclease-free water, and gently pellet by centrifugation in a microcentrifuge. Repeat this wash twice for a total of three washes. Carefully remove all water from the aliquot.  
 - Prepare a 250uL solution of 100mM borate, 0.75mg/mL streptavidin and 5% Streptavidin-Cy3 by mixing: 50uL 0.5M sodium borate, 187.5uL 1mg/mL streptavidin (NEB N7021S) and 12.5uL Streptavidin-Cy3 (Life Technologies 43-4315). To covalently attach the streptavidin and Cy3 label to the beads, resuspend the prepared beads in the full 250uL of the solution. Incubate at room temperature on a rotisserie for 1 hour. 
-- Wash the beads with 1mL of wash buffer (10mM Tris-HCl pH 8.0, 1mM EDTA, 0.1% Tween 20, 100mM NaCl) and gently pellet by centrifugation in a microcentrifuge. Repeat this wash four times for a total of five washes. Incubate the beads in wash buffer at room temperature on a rotisserie for 30 minutes to fully quench any remaining reactive groups on the beads. 
+- Wash the beads with 1mL of wash buffer (10mM Tris-HCl pH 8.0, 0.1% Tween 20, 100mM NaCl) and gently pellet by centrifugation in a microcentrifuge. Repeat this wash four times for a total of five washes. Incubate the beads in wash buffer at room temperature on a rotisserie for 30 minutes to fully quench any remaining reactive groups on the beads. 
 
-##### First round primer extension of barcode oligonucleotide
+##### First round primer extension 
 - Note from this point forward, all materials should be shielded from ambient light with amber tubes or foil to the greatest extent possible. In each well of a 96-well PCR plate, prepare a 10uL solution of 2.5uM 2bio-PC-pe1 primer and 10uM pe1 primer for each well. 
-    - Specifically, prepare a 900uL containing 10uL of 250uM 2bio-PC-pe1 and 890uL nuclease free water. Pipette 9uL of the master mix into each well of a 96 well plate. Add 1uL of 100uM pe1 primer. 
+    - Specifically, prepare 900uL containing 10uL of 250uM 2bio-PC-pe1 and 890uL nuclease free water. Pipette 9uL of the master mix into each well of a 96 well plate. Add 1uL of 100uM pe1 primer. 
 - Perform a stepwise cooling from 85C to 25C over 30 minutes (ramp -2C/min)
 - Add a Klenow (NEB M0210L) master mix such that each well has a final volume of 20uL containing 1x NEBuffer 2, 0.5mM dNTPs, and 2U Klenow. 
     - Specifically, prepare a 1000uL master mix containing 200uL NEBuffer 2 10x, 100uL 10uM dNTPs, 40uL Klenow (5,000 units/mL) and 860uL nuclease free water. Add 10uL to each well and mix well. 
@@ -89,29 +89,27 @@ Note: this protocol yields approximately 10 million beads containing one of appr
 ##### Conjugation of extended oligonucleotide to beads
 - Resuspend beads to a concentrations of 20,000 beads per uL. Add 5uL (100,000 beads) to each well and mix well. 
 - Incubate on a rotisserie at room temperature overnight. 
+- Quench the reaction with 70uL of 125mM NaOH, 2mM biotin and mix well. 
+- Pool the reactions and wash 5 times with 10mL of 125mM NaOH, 0.1mM biotin. 
+- Wash 3 times with wash buffer supplemented with 0.1mM biotin. 
+- Resuspend in hybridization buffer (10mM Tris-HCl pH 8.0, 0.1% Tween 20, 1M NaCl) with 0.1mM biotin such that the final volume of the entire mixture is 900uL. 
 
-
-- quench with biotin 2mM and NaOH 125mM
-- Was 5x biotin 0.1mM NaOH 125mM
-- Wash 3x 0.1mM biotin/wash buffer
-- Resuspend in 20uL hybridization buffer (20mM tris ph8, 1M NaCl, 0.1% tween 20) with 0.1mM biotin
-
-Anneal second round primer
-
-- hybridize second primer at final concentration of 5uM (0.4uL 250uM stock in 20uL)
-- Allow to anneal overnight
-
-Wash, extend and finalize primers
-
-- Wash 5x in Wash Buffer/0.1mM biotin
-- Resuspend in reaction mixture: 0.5mM dNTPs, NEB Buffer
-    - 2uL NEB Buffer 2 (1x), 1uL dNTPs, 16uL water
-    - Chill to 16C, add 1uL Klenow
-    - Incubate 1hr
-    - 75C, 20min
-- quench with biotin 2mM and NaOH 125mM
-- Wash 5x biotin 0.1mM NaOH 125mM
-- Wash 3x 0.1mM biotin/wash buffer
+##### Second round primer extension
+- Aliquot 9uL of beads in hybridization buffer (ensure beads are in suspension throughout) into each well of a 96-well PCR plate. 
+- Add 1uL of 100uM pe2 primer to each well such that the concentration is 10uM. Mix well. 
+- Incubate on a rotisserie at room temperature overnight. 
+- Wash the beads 3 times with wash buffer suppemented with 0.1mM biotin. The plate must be centrifuged during this step and care must be taken to not accidentally aspirate any beads. 
+- Remove 8uL of wash buffer such that the remaining beads are resuspended in in 2uL. Replace with 8uL of nuclease free water. 
+- Add a Klenow (NEB M0210L) master mix such that each well has a final volume of 20uL containing 1x NEBuffer 2, 0.5mM dNTPs. Note that Klenow will be added in a subsequent step. Cool the mixture to 16C. 
+    - Specifically, prepare a 960uL master mix containing 200uL NEBuffer 2 10x, 100uL 10uM dNTPs, 40uL Klenow (5,000 units/mL) and 860uL nuclease free water. Add 9.6uL to each well and mix well. 
+- Once mixture is cooled to 16C, add 0.4uL of Klenow (5,000 units/mL).
+- Incubate at 16C for 1hr. 
+- Add 1uL of 0.5M EDTA pH8.0 to each well and mix well. 
+- Incubate at 75C for 20 minutes
+- Quench the reaction with 70uL of 125mM NaOH, 2mM biotin and mix well. 
+- Pool the reactions and wash 5 times with 10mL of 125mM NaOH, 0.1mM biotin. 
+- Wash 3 times with wash buffer supplemented with 0.1mM biotin. 
+- Resuspend beads in approximately 1mL  storage buffer (10mM Tris-HCl pH 8.0, 0.1mM EDTA, 0.1% Tween-20) supplemented with 0.1mM biotin. 
 
 ### Barcoded Bead QC
 DNA FISH
