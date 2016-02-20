@@ -104,10 +104,10 @@ Note: this protocol yields approximately 10 million beads containing one of appr
     - Specifically, prepare a 960uL master mix containing 200uL NEBuffer 2 10x, 100uL 10uM dNTPs, 40uL Klenow (5,000 units/mL) and 860uL nuclease free water. Add 9.6uL to each well and mix well. 
 - Once mixture is cooled to 16C, add 0.4uL of Klenow (5,000 units/mL).
 - Incubate at 16C for 1hr. 
-- Add 1uL of 0.5M EDTA pH8.0 to each well and mix well. 
-- Incubate at 75C for 20 minutes
-- Quench the reaction with 70uL of 125mM NaOH, 2mM biotin and mix well. 
-- Pool the reactions and wash 5 times with 10mL of 125mM NaOH, 0.1mM biotin. 
+- Add 2uL of 0.5M EDTA pH8.0 to each well and mix well. 
+- Incubate on ice for 30 minutes to allow full chelation of magnesium ions and inactivation of Klenow.
+- Quench the reaction with 70uL of 125mM NaOH, 2mM biotin, 10mM EDTA and mix well. 
+- Pool the reactions and wash 5 times with 10mL of 125mM NaOH, 0.1mM biotin, 10mM EDTA.  
 - Wash 3 times with wash buffer supplemented with 0.1mM biotin. 
 - Resuspend beads in approximately 1mL  storage buffer (10mM Tris-HCl pH 8.0, 0.1mM EDTA, 0.1% Tween-20) supplemented with 0.1mM biotin. 
 
