@@ -74,12 +74,12 @@ Note: this protocol yields 3 to 4 million beads containing one of approximately 
 - Extract sepharose beads with a mean diameter of approximately 30μm from 1mL GE HiTrap NHS-Activated HP columns (GE Healthcare 17071601). The bottom of the column can be cut off directly above the filter assembly with a razor blade, and beads can be flushed out with a syringe filled with isopropanol coupled to the provide syringe adapter. Filter beads through a 100um cell strainer (Fisher 22-363-549) to remove any debris or aggregrated beads, and store in isopropanol at 4C. 
 - Measure the concentration of bead stock with a hemacytomter, and prepare an aliquot of 10 million beads in a 1.5mL tube. Wash with 1mL of nuclease-free water, and gently pellet by centrifugation in a microcentrifuge. Repeat this wash twice for a total of three washes. Carefully remove all water from the aliquot.  
 - Prepare a 250uL solution of 100mM borate, 0.75mg/mL streptavidin and 5% Streptavidin-Cy3 by mixing: 50uL 0.5M sodium borate, 187.5uL 1mg/mL streptavidin (NEB N7021S) and 12.5uL Streptavidin-Cy3 (Life Technologies 43-4315). To covalently attach the streptavidin and Cy3 label to the beads, resuspend the prepared beads in the full 250uL of the solution. Incubate at room temperature on a rotisserie for 1 hour. 
-    - Note: from this point forward, all materials should be shielded from ambient light with amber tubes or foil to the greatest extent possible, to prevent premature cleavage of the photocleavable linker and bleaching of the Cy3 fluorophore. 
+    - **Note:** from this point forward, all materials should be shielded from ambient light with amber tubes or foil to the greatest extent possible, to prevent premature cleavage of the photocleavable linker and bleaching of the Cy3 fluorophore. 
 - Wash the beads with 1mL of wash buffer (10mM Tris-HCl pH 8.0, 0.1% Tween 20, 100mM NaCl) and gently pellet by centrifugation in a microcentrifuge. Repeat this wash four times for a total of five washes. Incubate the beads in approximately 1mL of wash buffer at room temperature on a rotisserie for 30 minutes to fully quench any remaining reactive groups on the beads. 
 
 ##### First round primer extension 
 - In each well of a 96-well PCR plate, prepare a 10uL solution of 2.5uM 2bio-PC-pe1 primer and 10uM pe1 primer for each well. 
-    - Specifically, prepare 900uL containing 10uL of 250uM 2bio-PC-pe1 and 890uL nuclease free water. Pipette 9uL of the master mix into each well of a 96 well plate. Add 1uL of 100uM pe1 primer. 
+    - Specifically, prepare 900uL containing 10uL of 250uM 2bio-PC-pe1 and 890uL nuclease free water. Pipette 9uL of the master mix into each well of a 96 well plate. Add 1uL of 100uM e1 primer to each well. 
 - Perform a stepwise cooling from 85C to 25C over 30 minutes (ramp -2C/min)
 - Add a Klenow (NEB M0210L) master mix such that each well has a final volume of 20uL containing 1x NEBuffer 2, 0.5mM dNTPs, and 2U Klenow. 
     - Specifically, prepare a 1000uL master mix containing 200uL NEBuffer 2 10x, 100uL 10mM dNTPs, 40uL Klenow (5,000 units/mL) and 660uL nuclease free water. Add 10uL to each well and mix well. 
@@ -88,7 +88,7 @@ Note: this protocol yields 3 to 4 million beads containing one of approximately 
 - Incubate at 75C for 20 minutes
 
 ##### Conjugation of extended oligonucleotide to beads
-- Beads should be resuspended in approximately 1mL of wash buffer per protocol above. Measure concentration of beads with a hemacytometer and add 50,000 beads to each well and mix well by pipetting. 
+- Beads should be resuspended in approximately 1mL of wash buffer per protocol above. Measure concentration of beads with a hemacytometer and add 50,000 beads to each well. Mix well by pipetting. 
 - Incubate on a rotisserie at room temperature overnight. 
 - Quench the reaction with 70uL of 125mM NaOH, 2mM biotin and mix well. 
 - Pool the reactions and wash 5 times with 10mL of 125mM NaOH, 0.1mM biotin. 
@@ -96,8 +96,8 @@ Note: this protocol yields 3 to 4 million beads containing one of approximately 
 - Resuspend in hybridization buffer (10mM Tris-HCl pH 8.0, 0.1% Tween 20, 1M NaCl) with 0.1mM biotin such that the final volume of the entire mixture is 900uL. 
 
 ##### Second round primer extension
-- Aliquot 9uL of beads in hybridization buffer (ensure beads are in suspension throughout) into each well of a 96-well PCR plate. 
-- Add 1uL of 100uM pe2 primer to each well such that the concentration is 10uM. Mix well. 
+- Aliquot 9uL of beads in hybridization buffer (ensure beads are in suspension throughout process) into each well of a 96-well PCR plate. 
+- Add 1uL of 100uM e2 primer to each well such that the concentration is 10uM. Mix well. 
 - Incubate on a rotisserie at room temperature overnight. 
 - Wash the beads 3 times with wash buffer suppemented with 0.1mM biotin. The plate must be centrifuged during this step and care must be taken to not accidentally aspirate any beads. 
 - Remove 8uL of wash buffer such that the remaining beads are resuspended in in 2uL. Replace with 8uL of nuclease free water. 
