@@ -108,8 +108,8 @@ Note: this protocol yields 3 to 4 million beads containing one of approximately 
 - Incubate on ice for 30 minutes to allow full chelation of magnesium ions and inactivation of Klenow.
 - Quench the reaction with 70uL of 125mM NaOH, 2mM biotin, 10mM EDTA and mix well. 
 - Pool the reactions and wash 5 times with 10mL of 125mM NaOH, 0.1mM biotin, 10mM EDTA.  
-- Wash 3 times with wash buffer supplemented with 0.1mM biotin. 
-- Resuspend beads in approximately 1mL  storage buffer (10mM Tris-HCl pH 8.0, 0.1mM EDTA, 0.1% Tween-20) supplemented with 0.1mM biotin. 
+- Wash 3 times with wash buffer supplemented with 0.1mM biotin and 0.1mM EDTA. 
+- Resuspend beads in approximately 1mL of the wash buffer, 0.1mM biotin, 0.1mM EDTA solution from above, and store at 4C in an amber tube.  
 
 ### Barcoded Bead QC
 DNA FISH
