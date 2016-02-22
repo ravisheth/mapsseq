@@ -100,11 +100,10 @@ Note: this protocol yields 3 to 4 million beads containing one of approximately 
 - Add 1uL of 100uM e2 primer to each well such that the concentration is 10uM. Mix well. 
 - Incubate on a rotisserie at room temperature overnight. 
 - Wash the beads 3 times with wash buffer suppemented with 0.1mM biotin. The plate must be centrifuged during this step and care must be taken to not accidentally aspirate any beads. 
-- Remove 8uL of wash buffer such that the remaining beads are resuspended in in 2uL. Replace with 8uL of nuclease free water. 
-- Add a Klenow (NEB M0210L) master mix such that each well has a final volume of 20uL containing 1x NEBuffer 2, 0.5mM dNTPs. Note that Klenow will be added in a subsequent step. Cool the mixture to 16C. 
-    - Specifically, prepare a 960uL master mix containing 200uL NEBuffer 2 10x, 100uL 10uM dNTPs, 40uL Klenow (5,000 units/mL) and 860uL nuclease free water. Add 9.6uL to each well and mix well. 
-- Once mixture is cooled to 16C, add 0.4uL of Klenow (5,000 units/mL).
-- Incubate at 16C for 1hr. 
+- Remove as much of the of wash buffer as possible, taking care not to aspirate any of the beads.  
+- On ice, add a Klenow (NEB M0210L) master mix such that each well has a final volume of 20uL containing 1x NEBuffer 2, 0.5mM dNTPs. 
+    - Specifically, prepare a 2000uL master mix containing 200uL NEBuffer 2 10x, 100uL 10uM dNTPs, 40uL Klenow (5,000 units/mL) and 1660uL nuclease free water, and chill on ice. Add 20uL to each well and mix well. 
+- Transfer plate to a PCR block at 16C and incubate for 1hr. Vortex plate every 15 minutes to keep beads in solution. 
 - Add 2uL of 0.5M EDTA pH8.0 to each well and mix well. 
 - Incubate on ice for 30 minutes to allow full chelation of magnesium ions and inactivation of Klenow.
 - Quench the reaction with 70uL of 125mM NaOH, 2mM biotin, 10mM EDTA and mix well. 
