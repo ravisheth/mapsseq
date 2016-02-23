@@ -104,14 +104,36 @@ Note: this protocol yields 3 to 4 million beads containing one of approximately 
 - On ice, add a Klenow (NEB M0210L) master mix such that each well has a final volume of 20uL containing 1x NEBuffer 2, 0.5mM dNTPs. 
     - Specifically, prepare a 2000uL master mix containing 200uL NEBuffer 2 10x, 100uL 10uM dNTPs, 40uL Klenow (5,000 units/mL) and 1660uL nuclease free water, and chill on ice. Add 20uL to each well and mix well. 
 - Transfer plate to a PCR block at 16C and incubate for 1hr. Vortex plate every 15 minutes to keep beads in solution. 
-- Add 2uL of 0.5M EDTA pH8.0 to each well and mix well. 
-- Incubate on ice for 30 minutes to allow full chelation of magnesium ions and inactivation of Klenow.
-- Quench the reaction with 70uL of 125mM NaOH, 2mM biotin, 10mM EDTA and mix well. 
+- Add 2uL of 0.5M EDTA pH8.0 to each well and mix well. Incubate on ice for 30 minutes to allow full chelation of magnesium ions and inactivation of Klenow.
+- Quench the reaction with 70uL of 125mM NaOH, 2mM biotin and 10mM EDTA and mix well. 
 - Pool the reactions and wash 5 times with 10mL of 125mM NaOH, 0.1mM biotin, 10mM EDTA.  
 - Wash 3 times with wash buffer supplemented with 0.1mM biotin and 0.1mM EDTA. 
-- Resuspend beads in approximately 1mL of the wash buffer, 0.1mM biotin, 0.1mM EDTA solution from above, and store at 4C in an amber tube.  
+- Resuspend beads in approximately 1mL of the wash buffer, 0.1mM biotin, 0.1mM EDTA solution, and store at 4C in an amber tube.  
 
-### Barcoded Bead QC
+### Barcoded Bead Quality Control
+##### Quantification of extension efficiency via FISH
+
+##### Validation of photorelease of primers from bead
+
+##### Sequencing of individual bead primers and total pool primers
+To assess the composition of primers on a single bead as well as the composition of the entire pool of beads, we utilize deep sequencing of the ssDNA primers on the Illumina MiSeq platform. 
+- Suspend 100,000 beads (approximately 10x the size of the library) in 48uL of hybridization buffer with 0.1mM biotin. Add 2L of 250uM stock pe2-umi-505f primer such that the final concentraiton is 10uM. Allow primers to anneal for 1 hour on a rotisserie at room temperature. 
+- Wash beads 3 times with wash buffer supplemented with 0.1mM biotin. Remove as much of the wash buffer without aspirating any of the beads. 
+- Add 50uL of a Klenow maxter mix such that the tube has a final volume of 50uL containing 1x NEBuffer 2, 0.5mM dNTPs and and 5U Klenow. 
+	- Specifically, mix 5uL NEBuffer 2 10x, 2.5uL 10uM dNTPs, 1uL Klenow (5,000 units/mL) and 41.5uL nuclease-free water. 
+- Incubate at 25C for 30 minutes. 
+- Add 5uL of 0.5M EDTA pH8.0 and mix well. Incubate on ice for 30 minutes to allow full chelation of magnesium ions and inactivation of Klenow. 
+- Quench the reaction with 100uL of 125mM NaOH, 2mM biotin and 10mM EDTA. 
+- Transfer to a 1.5mL tube and wash 5 times with 500uL of 125mM NaOH, 2mM biotin and 10mM EDTA. 
+- Wash 3 times with wash buffer supplemented with 0.1mM biotin and 0.1mM EDTA. 
+- Dilute an aliquot of beads and isolate single beads on a microscope field by pipetting carefully with a 2uL pipette. Place 16 beads in PCR tubes with 10uL of nuclease-free water. 
+- Resuspend the remaining ~100,000 beads in 10uL of nuclease free water. 
+- Expose all tubes to UV light (BlackRay Xenon 365nm UV) for 15 minutes on ice. 
+- Add 20uL of Kapa HiFi PCR Master Mix, forward primer, and uniquely indexed reverse primer to each tube such that the final volume is 30uL
+	- Specifically, prepare a master mix of 255uL Kapa HiFi PCR Master Mix 2x, 25.5uL pe1 forward primer 10uM, 34uL nuclease-free water. Aliquot 18.5uL of this master mix into each tube, and add 1.5uL of pe2 indexed reverse primer 10uM (ie containing appropriate barcode). Mix well. 
+- Perform limited-cycle PCR reaction, with 20 cycles for the individual beads and 10 cycles for the pooled beads: 95C 5m, 98C 20s, 65C 15s, 72C 30s, 72C 5m. 
+
+
 DNA FISH
 Deep Sequencing on MiSeq 50
 
