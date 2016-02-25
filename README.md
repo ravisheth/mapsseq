@@ -119,6 +119,11 @@ To assess the efficiency of primer extension, we utilize fluorescence in situ hy
 - Record average intensity per bead using an epifluorescence microscope. 
 
 ##### Validation of photorelease of primers from bead
+To assess UV exposure-dependent release of primers from barcoded beads, we utilize the Agilent Bioanlyzer HS DNA assay kit to detect low concentrations of ssDNA product. 
+- Resuspend ~5,000 beads in 10uL nuclease-free water. Make two aliquots. 
+- Expose one aliquot to UV light (BlackRay Xenon 365nm UV) for 15 minutes on ice. Place the other aliquot on ice and protect from ambient light. 
+- Spin down aliquots and remove ~5uL of supernatant. 
+- Load 1uL of supernatant and follow manufacturer instructions for the Agilent Bioanylyzer HS DNA kit. 
 
 ##### Sequencing of individual bead primers and total pool primers
 To assess the composition of primers on a single bead as well as the composition of the entire pool of beads, we utilize deep sequencing of the ssDNA primers on the Illumina MiSeq platform. 
