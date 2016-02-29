@@ -44,8 +44,21 @@ The pellet is then extracted from the tube, excess acrlyamide trimmed with a ste
 
 ### Fractionation
 
-### Size Selection
-Nylon mesh filters of size XX, XX, XX (Component Supply Company) were punched using a 1/2” hole punch (Amazon) and placed in a Swinnex 13mm filter holder (ThermoFisher).
+### Size selection
+We utilize nylon mesh filters to size-select fractured acrylamide particles. 
+##### Preparation of nylon mesh filters
+- Sterilize a 1/2" hole punch (Amazon) and workspace. 
+- Take nylon mesh filters of size 7um, 15um, 31um, 52um (Component Supply Company) and punch. Prepare multiple dots for multiple experiments in advance. 
+- Place in a plastic bag for long-term storage
+
+##### Size selection of acrylamide particles
+- Clean and sterilize 4 Swinnex 13mm filter holders, 4 gasket O-rings, 1 punched nylon mesh filter of each size, and 4 3mL BD syringes via UV steriliation. 
+- Place each filter in a Swinnex filter holder with gasket O-ring. 
+- Perform the following steps for the 52um, 31um, 15um, 7um filters in order to yield >52um, 31-52um, 15-31um, 7-15um and <7um size filtered particles. 
+	- Take sample and resuspend in 1mL of nuclease-free water. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than the filter size.
+	- Perform a wash by attaching a blunt syringe to the filter assembly, and aspirating 3mL of nuclease-free water. completely flow through the 3mL through and discard, repeat this wash twice for a total of three times. 
+	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles greater than the filter size. 
+- Each fraction can be pelleted via centrifugation and resuspended in storage buffer for long term storage. 
 
 ### Lysis
 Wash
