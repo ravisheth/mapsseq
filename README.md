@@ -43,6 +43,11 @@ The tube is then opened, cycled into the anaerobic incubator (O2 impedes polymer
 The pellet is then extracted from the tube, excess acrlyamide trimmed with a sterile razor, washed 3x in PBS and stored in an amber tube at 4C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized with your protocol.
 
 ### Fractionation
+The embedded sample is then broken into small particles using cryofracturing. 
+- Place sample in stainless steel microvial (Biospec 2007) and add a single 6.35mm stainless steel bead on top (Biospec 11079635ss). Seal the tube with a silicone rubber plug cap (Biospec 2008). 
+- Place (but do not submerge) vial in liquid nitrogen for at least 2 minutes. 
+- Quickly transfer to a bead beater (Biospec 112011) and beat for 30s. Inspect tube; if sample has not been completely fractionated repeat the liquid nitrogen freezing and bead beating for an additional step. 
+- Resuspend particles in PBS, vortex, and transfer to a sterile tube. Wash 3 times in PBS. Metal residue may color the particles a grey color, but this will not affect downstream steps. 
 
 ### Size selection
 We utilize nylon mesh filters to size-select fractured acrylamide particles. 
