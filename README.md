@@ -49,25 +49,20 @@ The embedded sample is then broken into small particles using cryofracturing.
 - Quickly transfer to a bead beater (Biospec 112011) and beat for 30s. Inspect tube; if sample has not been completely fractionated repeat the liquid nitrogen freezing and bead beating for an additional step. 
 - Resuspend particles in PBS, vortex, and transfer to a sterile tube. Wash 3 times in PBS. Metal residue may color the particles a grey color, but this will not affect downstream steps. 
 
-### Lysis
-##### Wash
+### Lysis of cells within embedded particles
+Particles are then treated with lysozyme and proteinase K to lyse any remaining cells. 
+##### Lysozyme treatment
+- Wash particles in 500uL TE buffer (Tris pH 8 10mM, EDTA 1mM) 3x times. 
+- Resuspend particle in lysis buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM) 
+- Add 50U/uL of lysozyme (0.66uL of 1:10 37.5U/uL stock for 50uL of sample)
+- Incubate at 37C for 15 min
 
-- Wash particle T<sub>10</sub>E<sub>1</sub> (Tris pH 8 10mM, EDTA 1mM) buffer 500uL 2x
-
-##### Lysozyme:
-
-- resuspend particle in T<sub>10</sub>E<sub>1</sub>S<sub>100</sub> buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM) 
-- use 50U/uL or 2.5K units, or 0.066uL of 37.5K stock
-- Incubate RT 15 min
-- Wash 2x 500uL TK Buffer
-
-##### Proteinase K:
-
-- digestion buffer: 30mM Tris HCl 30mM EDTA< 5% Tween 20 0.5% Triton X 100 800mM GuHCl 
-- use 1:50 of 50ug/uL stock (0.5uL)
-- Incubate at 65C, 15 min vortex every 5min
-- Incubate at 95C, 10 min (inactivate PK to make sure we are OK for PCR)
-- Wash 2x T<sub>10</sub>E<sub>1</sub>  buffer and store at 4C
+##### Proteinase K treatment
+- Wash particles in 500uL digestion buffer (30mM Tris HCl pH 8.0, EDTA 1mM, 0.5% Triton X-100, 800mM guanidine HCl) 3x times. 
+- Add 1ug/uL of proteinase K (1uL of 50ug/uL stock for 50uL of sample)
+- Incubate at 65C for 15 min
+- Incubate at 95C for 10 min to inactivate proteinase K.
+- Wash particles in 500uL TE buffer 3x times and store at 4C
 
 ### Size selection
 We utilize nylon mesh filters to size-select fractured acrylamide particles. 
