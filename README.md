@@ -49,6 +49,26 @@ The embedded sample is then broken into small particles using cryofracturing.
 - Quickly transfer to a bead beater (Biospec 112011) and beat for 30s. Inspect tube; if sample has not been completely fractionated repeat the liquid nitrogen freezing and bead beating for an additional step. 
 - Resuspend particles in PBS, vortex, and transfer to a sterile tube. Wash 3 times in PBS. Metal residue may color the particles a grey color, but this will not affect downstream steps. 
 
+### Lysis
+##### Wash
+
+- Wash particle T<sub>10</sub>E<sub>1</sub> (Tris pH 8 10mM, EDTA 1mM) buffer 500uL 2x
+
+##### Lysozyme:
+
+- resuspend particle in T<sub>10</sub>E<sub>1</sub>S<sub>100</sub> buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM) 
+- use 50U/uL or 2.5K units, or 0.066uL of 37.5K stock
+- Incubate RT 15 min
+- Wash 2x 500uL TK Buffer
+
+##### Proteinase K:
+
+- digestion buffer: 30mM Tris HCl 30mM EDTA< 5% Tween 20 0.5% Triton X 100 800mM GuHCl 
+- use 1:50 of 50ug/uL stock (0.5uL)
+- Incubate at 65C, 15 min vortex every 5min
+- Incubate at 95C, 10 min (inactivate PK to make sure we are OK for PCR)
+- Wash 2x T<sub>10</sub>E<sub>1</sub>  buffer and store at 4C
+
 ### Size selection
 We utilize nylon mesh filters to size-select fractured acrylamide particles. 
 ##### Preparation of nylon mesh filters
@@ -64,26 +84,6 @@ We utilize nylon mesh filters to size-select fractured acrylamide particles.
 	- Perform a wash by attaching a blunt syringe to the filter assembly, and aspirating 3mL of nuclease-free water. completely flow through the 3mL through and discard, repeat this wash twice for a total of three times. 
 	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles greater than the filter size. 
 - Each fraction can be pelleted via centrifugation and resuspended in storage buffer for long term storage. 
-
-### Lysis
-Wash
-
-- Wash particle T<sub>10</sub>E<sub>1</sub> (Tris pH 8 10mM, EDTA 1mM) buffer 500uL 2x
-
-Lysozyme:
-
-- resuspend particle in T<sub>10</sub>E<sub>1</sub>S<sub>100</sub> buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM) 
-- use 50U/uL or 2.5K units, or 0.066uL of 37.5K stock
-- Incubate RT 15 min
-- Wash 2x 500uL TK Buffer
-
-Proteinase K:
-
-- digestion buffer: 30mM Tris HCl 30mM EDTA< 5% Tween 20 0.5% Triton X 100 800mM GuHCl 
-- use 1:50 of 50ug/uL stock (0.5uL)
-- Incubate at 65C, 15 min vortex every 5min
-- Incubate at 95C, 10 min (inactivate PK to make sure we are OK for PCR)
-- Wash 2x T<sub>10</sub>E<sub>1</sub>  buffer and store at 4C
 
 ### Barcoded Bead Construction
 Note: this protocol yields 3 to 4 million beads containing one of approximately 9,200 barcodes. We target at least 100nM primer concentration per droplet. Assuming a droplet volume of approximately 0.5nL, and accounting for a worst-case extension efficiency of 10%, each bead must be initially loaded with 5*10<sup>-4</sup> pmol of primer. 
