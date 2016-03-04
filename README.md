@@ -10,7 +10,7 @@ Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic
 - Fix the sample at room temperature for between 12 to 48 hours. 
 
 ### Embedding
-The sample is then embedded with an acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. 
+The sample is then embedded with an acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. Note that for inclusion of reverse primer, we target a concentration of approximately 100nM per droplet; accounting for droplet volume of 0.5nL this means that 5*10<sup>-5</sup>pmol must be loaded per particle. Assuming a median particle diameter of 20um, and assuming a spherical shape, this yields a particle volume of 4.2pL, meaning that the concentration of reverse primer should be approximately 10uM. 
 
 ##### Preparation of  stock solutions
 - Monomer solution concentrate (store -20C indefinitely)
@@ -30,9 +30,9 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 - Remove sample from fixative and cut into sub-parts no larger than 3x3mm. A smaller size allows for more effecient perfusion of acrymalide solution. 
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice. 
 	- 8uL reverse primer (250uM stock), 10uM final
-	- 4uL Cy5 primer (250uM stock), 5uM final
+	- 8uL Cy5 primer (250uM stock), 10uM final
 	- 105uL monomer concenrate
-	- 71uL water
+	- 67uL water
 	- 4uL 4HT
 	- 4uL TEMED
 	- 4uL APS
