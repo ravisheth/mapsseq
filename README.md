@@ -5,14 +5,15 @@
 ## Detailed Protocol
 
 ### Fixation
-
-Sample (feces, GI tract etc.) was taken and immediately placed in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid). The sample was fixed at room temperature for between 4 to 48 hours. After fixation, the sample is allowed to dry/evaporate in a sterile environment at room temperature.
+Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde. 
+- Acquire sample (feces, GI tract etc.) and immediately placed in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid). 
+- Fix the sample at room temperature for between 12 to 48 hours. 
 
 ### Embedding
+The sample is then embedded with an acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. 
 
-Subparts of the sample no larger than 5x10mm in size were then sliced for embedding. First, acrylamide stock solutions are generated for embedding:
-
-monomer solution (store -20C indefinitely)
+##### Preparation of  stock solutions
+- Monomer solution concentrate (store -20C indefinitely)
 
 | name | stock concentration | amt to add | final conc (w/w) |
 |:----:|:-------------------:|:----------:|:---------------:|
@@ -20,27 +21,25 @@ monomer solution (store -20C indefinitely)
 |bisacrymalide|0.04g/wmL|1.25mL|0.25%|
 |PBS|10x|1mL|1x|
 
-Other chemicals (store -20C,remake once every 2 weeks)
+- Other stock solutions (store -20C,remake once every 2 weeks)
+	- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
+	- TEMED  (10% w/w stock, 0.1g/1mL ddH20), final 0.2%
+	- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
 
-- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
-- TEMED  (10% w/w stock, 0.1g/1mL ddH20), final 0.2%
-- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
-
-A stock solution was then mixed in the following order, on ice, with mixing in between each step. All reagents are kept on ice.
-
-- 8uL reverse primer (250uM stock), 10uM final
-- 4uL Cy5 primer (250uM stock), 5uM final
-- 105uL monomer concenrate
-- 71uL water
-- 4uL 4HT
-- 4uL TEMED
-- 4uL APS
-
-The particle is placed in an 1.5mL amber eppendorf tube, on ice. 100uL of the solution is added and allowed to sit for 5 minutes. Then the solution is carefully pipetted out and replaced with the next 100uL of the solution. This is allowed to embed for approximately 1 hour, or until the sample is embedded. You may check for this by seeing if the sample “sinks” in the solution indicating it has equilibrated and any residual air has left.
-
-The tube is then opened, cycled into the anaerobic incubator (O2 impedes polymerization reaction) and allowed to polymerize at 37C for 4-6 hours. You can use a small aliquot of previously removed solution polymerized in identical conditions as a “sham” to detect if polymerization has occured.
-
-The pellet is then extracted from the tube, excess acrlyamide trimmed with a sterile razor, washed 3x in PBS and stored in an amber tube at 4C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized with your protocol.
+##### Embedding of sample
+- Remove sample from fixative and cut into sub-parts no larger than 3x3mm. A smaller size allows for more effecient perfusion of acrymalide solution. 
+- Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice. 
+	- 8uL reverse primer (250uM stock), 10uM final
+	- 4uL Cy5 primer (250uM stock), 5uM final
+	- 105uL monomer concenrate
+	- 71uL water
+	- 4uL 4HT
+	- 4uL TEMED
+	- 4uL APS
+- Place the particle in an 1.5mL  eppendorf tube, on ice. Place enough solution to fully embed the particle and allow to sit on ice for approximately 4 hours to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore. You may check for this by seeing if the sample “sinks” in the solution indicating it has equilibrated and any residual air has left.  
+- Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 4-6 hours or overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore. 
+- Extract the embeded sample from the tube, and trim excess acrlyamide with a sterile razor. 
+- Wash 3x in PBS and store in an amber tube at 4C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized.
 
 ### Fractionation
 The embedded sample is then broken into small particles using cryofracturing. 
