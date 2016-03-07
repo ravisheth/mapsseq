@@ -42,7 +42,7 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 - Extract the embeded sample from the tube, and trim excess acrlyamide with a sterile razor. 
 - Wash 3x in PBS and store in an amber tube at 4C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized.
 
-### Fractionation
+### Fracturing
 The embedded sample is then broken into small particles using cryofracturing. 
 - Place sample in stainless steel microvial (Biospec 2007) and add a single 6.35mm stainless steel bead on top (Biospec 11079635ss). Seal the tube with a silicone rubber plug cap (Biospec 2008). 
 - Place (but do not submerge) vial in liquid nitrogen for at least 2 minutes. 
