@@ -62,7 +62,7 @@ Particles are then treated with lysozyme and proteinase K to lyse any remaining 
 - Add 1ug/uL of proteinase K (1uL of 50ug/uL stock for 50uL of sample)
 - Incubate at 65C for 15 min
 - Incubate at 95C for 10 min to inactivate proteinase K.
-- Wash particles in 500uL TE buffer 3x times and store at 4C
+- Wash particles in 500uL TlowE buffer 3x times and store at 4C
 
 ### Size selection
 We utilize nylon mesh filters to size-select fractured acrylamide particles. 
