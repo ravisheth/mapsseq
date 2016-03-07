@@ -27,7 +27,8 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 	- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
 
 ##### Embedding of sample
-- Remove sample from fixative and cut into sub-parts no larger than 3x3mm. A smaller size allows for more effecient perfusion of acrymalide solution. 
+- Remove sample from fixative and cut into sub-parts no larger than 3x3mm. A smaller size allows for more effecient perfusion of acrymalide solution.
+- Wash in 1mL of PBS 3 times 
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice. 
 	- 8uL reverse primer (250uM stock), 10uM final
 	- 8uL Cy5 primer (250uM stock), 10uM final
