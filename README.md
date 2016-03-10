@@ -164,34 +164,37 @@ To assess the composition of primers on a single bead as well as the composition
 - To generate droplets, we use a flow-focusing (T-junction) droplet generator cast in PDMS. The diameter of the droplet forming junction is 60um in width. This yields droplets of approximately 90um in diameter or 0.5nL in volume. 
 
 ##### Encapsulation protocol
-- UV treatment of all required equipment. 
-- Mix 200uL encapsulation master mix as follows: 100uL Kapa Hifi PCR MasterMix, 32uL NycoPrep (60% w/v Nycodenz), 20uL 10%w/v Pluronic 127, 5uL BSA (20mg/mL, NEB), XXuL acrylamide particles, XXuL barcoded beads (approximately 200 particles/uL). Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
+- UV treatment of all required equipment: chip, magnetic mixer, 1mL syringe, LoBind collection tube, Hamilton connector, exit connector. 
+- Mix 200uL encapsulation master mix as follows: 100uL Kapa Hifi PCR MasterMix, 32uL NycoPrep (60% w/v Nycodenz), 40uL 10%w/v Pluronic 127, 10uL BSA (20mg/mL, NEB), XXuL acrylamide particles, XXuL barcoded beads (approximately 200 particles/uL). Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
 - Pipette into 1mL syringe (BD) and carefully load syringe
-
-tubing
-        
+   
 Cool syringe
-Cool when collecting
-
+Cool when collecting into lobind tube
+UV treat 15m
+10uL into tube, add 10uL 10% ea in HFE7500
+Cover mineral oil
 
 ### Droplet PCR
 PCR program:
-1 98 30s
-2 98 10s
-3 55 30s (Tm on NEB website is calculated to be 67C)
-4 72 60s
-5 step 2, 20x
-6 72 2:00
+1 95 30s
+2 95 10s
+3 55 15s 
+4 72 30s
+5 step 2, 9x
+6 72 30s
+7 10 infinity
 
 ### Droplet breakage
-Perfluorooctaonal
+Perfluoroctaonal, 10uL. Vertically shake. centrifuge. Extract aqueous phase. 
+0.8x ampure clean up
 
 ### Second round PCR
 PCR program:
-1 98 30s
-2 98 10s
-3 65 30s
+1 95 3m
+2 98 20s
+3 65 15s
 4 72 30s
-5 step 2, 9 or 19x
+5 step 2, 19x
 6 72 2:00
+7 10 infinity
 
