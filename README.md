@@ -164,37 +164,48 @@ To assess the composition of primers on a single bead as well as the composition
 - To generate droplets, we use a flow-focusing (T-junction) droplet generator cast in PDMS. The diameter of the droplet forming junction is 60um in width. This yields droplets of approximately 90um in diameter or 0.5nL in volume. 
 
 ##### Encapsulation protocol
-- UV treatment of all required equipment: chip, magnetic mixer, 1mL syringe, LoBind collection tube, Hamilton connector, exit connector. 
-- Mix 200uL encapsulation master mix as follows: 100uL Kapa Hifi PCR MasterMix, 32uL NycoPrep (60% w/v Nycodenz), 40uL 10%w/v Pluronic 127, 10uL BSA (20mg/mL, NEB), XXuL acrylamide particles, XXuL barcoded beads (approximately 200 particles/uL). Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
-- Pipette into 1mL syringe (BD) and carefully load syringe
-   
-Cool syringe
-Cool when collecting into lobind tube
-UV treat 15m
-10uL into tube, add 10uL 10% ea in HFE7500
-Cover mineral oil
+A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 10 droplets will receive a bead, while approximately 1 in 10 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.  
+- UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bar, 1mL syringe, 1.5mL  collection tube, Hamilton luer to tubing connector, tubing exit connector. 
+- Mix 200uL encapsulation master mix as follows: 100uL Kapa Hifi PCR MasterMix, 32uL NycoPrep (60% w/v Nycodenz), 40uL 10%w/v Pluronic 127, 10uL BSA (20mg/mL, NEB), XXuL acrylamide particles, XXuL barcoded beads (approximately 200 particles/uL) and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
+	- 200uL should contain approximately 20,000 barcoded beads and 20,000 particles.
+- Mix mixture well without introducing bubbles and pipette into 1mL syringe. Carefully load syringe with magnetic mixer. 
+- Prepare a second syringe with 1mL of 2%EA surfactant in HFE7500. 
+- Connect tubing to chip, and prime syringes. Turn on the syringe mixer to 400rpm. 
+- Flow syringes as 15uL/min for the PCR and 30uL/min for the oil. 
+- Observe proper and stable droplet formation (faint flickers at droplet junction)
+- Collect droplets into a LoBind tube cooled on ice
 
-### Droplet PCR
-PCR program:
-1 95 30s
-2 95 10s
-3 55 15s 
-4 72 30s
-5 step 2, 9x
-6 72 30s
-7 10 infinity
+##### UV treatment 
+- Place tube on ice and treat under UV light for 15 minutes
 
-### Droplet breakage
-Perfluoroctaonal, 10uL. Vertically shake. centrifuge. Extract aqueous phase. 
-0.8x ampure clean up
+### PCR amplification and library prep
+##### First round PCR amplification
+- Pipette out 10uL of just droplets into PCR tubes. Each 10uL contains approximately 100 particles. 
+- Add 10uL of 10%EA in HFE7500 to each tube
+- Cover with ~20uL of mineral oil
+- Run with the following PCR program:
+	- 1 95 30s
+	- 2 95 10s
+	- 3 55 15s 
+	- 4 72 30s
+	- 5 step 2, 9x
+	- 6 72 30s
+	- 7 10 infinity
 
-### Second round PCR
-PCR program:
-1 95 3m
-2 98 20s
-3 65 15s
-4 72 30s
-5 step 2, 19x
-6 72 2:00
-7 10 infinity
+##### Ampure clean up
+- Ensure that droplets are intact after cycling
+- Add 10uL of perfluorooctonal to the droplet phase. Vertically shake 3-4 times hard and centrifuge down.
+- Extract aqueous phase 
+- Clean up with AmpureXP 0.8x and resuspend in 5uL
+
+##### Indexing PCR
+- Setup up following reaction: 5uL first round PCR product, 2uL forward index primer (10uM), 2uL reverse index primer (10um), 1uL water, 10uL 2x KapaHifi MasterMix. 
+- Run with the following PCR program:
+	- 1 95 5m
+	- 2 98 20s
+	- 3 65 15s
+	- 4 72 30s
+	- 5 step 2, 19x
+	- 6 72 5:00
+	- 7 10 infinity
 
