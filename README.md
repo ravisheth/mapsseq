@@ -196,15 +196,15 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Ensure that droplets are intact after cycling. One tube can be taken and droplet encapsulation distributions can be observed for QC purposes if desired. 
 - Add 10uL of perfluorooctonal to the droplet phase. Vertically flick 3-4 times hard and centrifuge down.
 - Extract 6uL of the aqueous phase and add 14uL nuclease free water.
-- Clean up with AmpureXP 0.8x and resuspend in 5uL.
+- Clean up with AmpureXP 0.8x and resuspend in 5uL of nuclease free water.
 
 ##### Indexing PCR
-- Setup up following reaction: 5uL first round PCR product, 2uL forward index primer (10uM), 2uL reverse index primer (10um), 1uL water, 10uL 2x KapaHifi MasterMix. 
+- Setup up following reaction: 5uL first round PCR product, 0.4uL forward index primer (10uM), 0.4uL reverse index primer (10um), 4.2uL water, 10uL 2x KapaHifi MasterMix. 
 - Run with the following PCR program:
 	- 1 95 5m
 	- 2 98 20s
-	- 3 65 15s
+	- 3 67 30s
 	- 4 72 30s
-	- 5 step 2, 19x
+	- 5 step 2, 29x
 	- 6 72 5:00
 	- 7 10 infinity
