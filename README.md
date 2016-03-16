@@ -167,7 +167,7 @@ To assess the composition of primers on a single bead as well as the composition
 A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 10 droplets will receive a bead, while approximately 1 in 10 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.  
 - UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bar, 1mL syringe, 1.5mL  collection tube, Hamilton luer to tubing connector, tubing exit connector. 
 - Clean appropriate amount of beads and acrylamide particles (~20K beads, ~10K particles) with 100uL nuclease-free water. Resuspend in 4uL of water each. 
-- Mix 200uL encapsulation master mix as follows: 100uL Kapa HiFi PCR MasterMix, 40uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 10uL BSA (20mg/mL, NEB), 4uL acrylamide particles, 4uL barcoded beads and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
+- Mix 200uL encapsulation master mix as follows: 100uL Kapa HiFi PCR MasterMix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), 4uL acrylamide particles, 4uL barcoded beads and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
 - Mix mixture well without introducing bubbles and pipette into 1mL syringe. Carefully load syringe with magnetic mixer. 
 - Prepare a second syringe with 1mL of 2%EA surfactant in HFE7500. 
 - Connect tubing to chip, and prime syringes. Turn on the syringe mixer to 400rpm. 
@@ -175,13 +175,12 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Observe proper and stable droplet formation (faint flickers at droplet junction)
 - Collect droplets into a LoBind tube cooled on ice
 
-##### UV treatment 
-- Place tube on ice and treat under UV light for 15 minutes
 
 ### PCR amplification and library prep
 ##### First round PCR amplification
 - Pipette out 10uL of just droplets into PCR tubes. Each 10uL contains approximately 100 particles. 
 - Add 10uL of 10%EA in HFE7500 to each tube
+- Place tubes under UV light with top open on ice and treat for 15 min
 - Cover with 30uL of mineral oil
 - Run with the following PCR program:
 	- 1 95 30s
@@ -199,12 +198,11 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Clean up with AmpureXP 0.8x and resuspend in 5uL of nuclease free water.
 
 ##### Indexing PCR
-- Setup up following reaction: 5uL first round PCR product, 0.4uL forward index primer (10uM), 0.4uL reverse index primer (10um), 4.2uL water, 10uL 2x KapaHifi MasterMix. 
+- Setup up following reaction: 5uL first round PCR product, 0.4uL forward index primer (10uM), 0.4uL reverse index primer (10um), 4.2uL water, 10uL 2x Kapa Hifi MasterMix. 
 - Run with the following PCR program:
-	- 1 95 5m
+	- 1 95 2m
 	- 2 98 20s
-	- 3 67 30s
-	- 4 72 30s
-	- 5 step 2, 29x
-	- 6 72 5:00
-	- 7 10 infinity
+	- 3 72 60s
+	- 4 step 2, 29x
+	- 5 72 2m
+	- 6 10 infinity
