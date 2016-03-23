@@ -28,7 +28,7 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 
 ##### Embedding of sample
 - Remove sample from fixative and cut into sub-parts no larger than 3x3mm. A smaller size allows for more effecient perfusion of acrymalide solution.
-- Wash in 1mL of PBS 3 times 
+- Wash in 1mL of PBS, and let sit for 10 minutes. Repeat for a total of 3 times.  
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice. 
 	- 8uL reverse primer (250uM stock), 10uM final
 	- 8uL Cy5 primer (250uM stock), 10uM final
