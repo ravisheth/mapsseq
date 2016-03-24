@@ -27,8 +27,9 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 	- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
 
 ##### Embedding of sample
-- Remove sample from fixative and cut into sub-parts no larger than 3x3mm. A smaller size allows for more effecient perfusion of acrymalide solution.
-- Wash in 1mL of PBS, and let sit for 10 minutes. Repeat for a total of 3 times.  
+- Remove sample from fixative, and wash in 10mL of PBS, and let sit for 10 minutes. Repeat wash for a total of 3 times. 
+- Cut sample into sub-parts no larger than 3x3mm with a sterile razor. A smaller size allows for more effecient perfusion of acrymalide solution.
+ 
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice. 
 	- 8uL reverse primer (250uM stock), 10uM final
 	- 8uL Cy5 primer (250uM stock), 10uM final
@@ -37,8 +38,8 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 	- 4uL 4HT
 	- 4uL TEMED
 	- 4uL APS
-- Place the particle in an 1.5mL  eppendorf tube, on ice. Place enough solution to fully embed the particle and allow to sit on ice for approximately 4 hours to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore. You may check for this by seeing if the sample “sinks” in the solution indicating it has equilibrated and any residual air has left.  
-- Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 4-6 hours or overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore. 
+- Place the particle in an 1.5mL  eppendorf tube, on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of acrymalide embedding solution to replace any PBS from the sample. Allow to embed for approximately 2 to 4 hours to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore. 
+- Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2 to 4 hours or overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore. 
 - Extract the embeded sample from the tube, and trim excess acrlyamide with a sterile razor. 
 - Wash 3x in PBS and store in an amber tube at 4C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized.
 
@@ -79,6 +80,13 @@ We utilize nylon mesh filters to size-select fractured acrylamide particles.
 	- Perform a wash by attaching a blunt syringe to the filter assembly, and aspirating 3mL of nuclease-free water. completely flow through the 3mL through and discard, repeat this wash twice for a total of three times. 
 	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles greater than the filter size. 
 - Each fraction can be pelleted via centrifugation and resuspended in storage buffer for long term storage. 
+
+### MIST-seq quality control
+##### Construction of synthetic community particles
+To test the ability of MIST-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities. 
+- Grow 6x strains overnight in 3:2 PAS: E. coli K12 MG1655, E. faecalis, P. aeruginosa, B. thetataiotaomacron, L. reuterii, B. adolescentis
+- Harvest strains and mix together into two Synthetic Communities: SC1 is composed of EC/BT/LR, SC2 is composed of BA/PA/EF. 
+- Put through fixation, embedding, fracturing protocols. Note that for embedding, the strains are resuspended in acrymalide such that they form a dense slurry with cells throughout the acrymalide. 
 
 ### Barcoded Bead Construction
 Note: this protocol yields 3 to 4 million beads containing one of approximately 9,200 barcodes. We target at least 100nM primer concentration per droplet. Assuming a droplet volume of approximately 0.5nL, and accounting for a worst-case extension efficiency of 10%, each bead must be initially loaded with 5*10<sup>-4</sup> pmol of primer. 
@@ -167,7 +175,7 @@ To assess the composition of primers on a single bead as well as the composition
 A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 10 droplets will receive a bead, while approximately 1 in 10 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.  
 - UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bar, 1mL syringe, 1.5mL  collection tube, Hamilton luer to tubing connector, tubing exit connector. 
 - Clean appropriate amount of beads and acrylamide particles (~20K beads, ~10K particles) with 100uL nuclease-free water. Resuspend in 4uL of water each. 
-- Mix 200uL encapsulation master mix as follows: 100uL Kapa HiFi PCR MasterMix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), 4uL acrylamide particles, 4uL barcoded beads and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
+- Mix 200uL encapsulation master mix as follows: 100uL NEB Q5 HiFi Hotstart 2x Master Mix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), 4uL acrylamide particles, 4uL barcoded beads and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
 - Mix mixture well without introducing bubbles and pipette into 1mL syringe. Carefully load syringe with magnetic mixer. 
 - Prepare a second syringe with 1mL of 2%EA surfactant in HFE7500. 
 - Connect tubing to chip, and prime syringes. Turn on the syringe mixer to 400rpm. 
@@ -175,20 +183,19 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Observe proper and stable droplet formation (faint flickers at droplet junction)
 - Collect droplets into a LoBind tube cooled on ice
 
-
 ### PCR amplification and library prep
 ##### First round PCR amplification
 - Pipette out 10uL of just droplets into PCR tubes. Each 10uL contains approximately 100 particles. 
-- Add 10uL of 10%EA in HFE7500 to each tube
+- Add 10uL of 5%EA in HFE7500 to each tube
 - Place tubes under UV light with top open on ice and treat for 15 min
 - Cover with 30uL of mineral oil
 - Run with the following PCR program:
-	- 1 95 30s
-	- 2 95 10s
-	- 3 55 15s 
+	- 1 98 60s
+	- 2 98 10s
+	- 3 55 20s 
 	- 4 72 30s
-	- 5 step 2, 9x
-	- 6 72 30s
+	- 5 step 2, 29x
+	- 6 72 120s
 	- 7 10 infinity
 
 ##### Ampure clean up
@@ -198,11 +205,12 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Clean up with AmpureXP 0.8x and resuspend in 5uL of nuclease free water.
 
 ##### Indexing PCR
-- Setup up following reaction: 5uL first round PCR product, 0.4uL forward index primer (10uM), 0.4uL reverse index primer (10um), 4.2uL water, 10uL 2x Kapa Hifi MasterMix. 
+- Setup up following reaction: 5uL first round PCR product, 1uL forward index primer (10uM), 1uL reverse index primer (10um), 3uL water, 10uL NEB Q5 HiFi Hotstart 2x Master Mix. 
 - Run with the following PCR program:
-	- 1 95 2m
-	- 2 98 20s
-	- 3 72 60s
-	- 4 step 2, 29x
-	- 5 72 2m
-	- 6 10 infinity
+	- 1 98 30s
+	- 2 98 10s
+	- 3 68 20s
+	- 4 72 10s
+	- 5 step 2, 29x
+	- 6 72 120s
+	- 7 10 infinity
