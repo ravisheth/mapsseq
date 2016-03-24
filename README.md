@@ -47,20 +47,19 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 The embedded sample is then broken into small particles using cryofracturing. 
 - Place sample in stainless steel microvial (Biospec 2007) and add a single 6.35mm stainless steel bead on top (Biospec 11079635ss). Seal the tube with a silicone rubber plug cap (Biospec 2008). 
 - Place (but do not submerge) vial in liquid nitrogen for at least 2 minutes. 
-- Quickly transfer to a bead beater (Biospec 112011) and beat for 30s. Inspect tube; if sample has not been completely fractionated repeat the liquid nitrogen freezing and bead beating for an additional step. 
-- Resuspend particles in PBS, vortex, and transfer to a sterile tube. Wash 3 times in PBS. Metal residue may color the particles a grey color, but this will not affect downstream steps. 
+- Quickly transfer to a bead beater (Biospec 112011) and beat for 10s. Note that beating time dictates the size distribution of particles; depending on desired particle size beating time can be adjusted to increase yield in a desired range. 
+- Resuspend particles in PBS, vortex, and transfer to a sterile tube. Wash 2 times in PBS. Note that during wash steps, particles should be centrifuged at greater than 10,000RPM for 10s to ensure full sedimentation. Metal residue may color the particles a grey color, but this will not affect downstream steps. 
 
 ### Lysis of cells within embedded particles
 Particles are then treated with lysozyme and proteinase K to lyse any remaining cells. 
 ##### Lysozyme treatment
-- Wash particles in 500uL TE buffer (Tris pH 8 10mM, EDTA 1mM) 3x times. 
-- Resuspend particle in lysis buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM) 
-- Add 50U/uL of lysozyme (0.66uL of 1:10 37.5U/uL stock for 50uL of sample)
+- Resuspend particles in 500uL lysis buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM) 
+- Add 1uL lyosozyme (37.5KU/uL stock) to sample (final concentration 75U/uL)
 - Incubate at 37C for 15 min
 
 ##### Proteinase K treatment
-- Wash particles in 500uL digestion buffer (30mM Tris HCl pH 8.0, EDTA 1mM, 0.5% Triton X-100, 800mM guanidine HCl) 3x times. 
-- Add 1ug/uL of proteinase K (1uL of 50ug/uL stock for 50uL of sample)
+- Resuspend particles in 500uL digestion buffer (30mM Tris HCl pH 8.0, EDTA 1mM, 0.5% Triton X-100, 800mM guanidine HCl). 
+- Add 5uL of proteinase K (50ug/uL stock) (final concentration 0.5ug/uL).
 - Incubate at 65C for 15 min
 - Incubate at 95C for 10 min to inactivate proteinase K.
 - Wash particles in 500uL TlowE buffer 3x times and store at 4C
