@@ -185,7 +185,7 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 ### PCR amplification and library prep
 ##### First round PCR amplification
 - Pipette out 10uL of just droplets into PCR tubes. Each 10uL contains approximately 100 particles. 
-- Add 10uL of 5%EA in HFE7500 to each tube
+- Add 10uL of 10%EA in HFE7500 to each tube
 - Place tubes under UV light with top open on ice and treat for 15 min
 - Cover with 30uL of mineral oil
 - Run with the following PCR program:
