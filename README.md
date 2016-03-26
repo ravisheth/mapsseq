@@ -198,14 +198,15 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 	- 7 10 infinity
 
 ##### Ampure clean up
-- Ensure that droplets are intact after cycling. One tube can be taken and droplet encapsulation distributions can be observed for QC purposes if desired. 
+- Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics. 
+- Remove 10% EA oil and save in a separate tube; this can potentially be reused. 
 - Add 10uL of perfluorooctonal to the droplet phase. Vertically flick 3-4 times hard and centrifuge down.
 - Extract 6uL of the aqueous phase and add 14uL nuclease free water.
 - Clean up with AmpureXP 0.8x (16uL) and resuspend in 12uL of nuclease free water. Remove 10uL of the resuspension and save. 
 
 ##### Indexing PCR
-- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 3uL water, 10uL NEB Q5 HiFi Hotstart 2x Master Mix. 
-- Run with the following PCR program:
+- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Q5 HiFi Hotstart 2x Master Mix. 
+- Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control:
 	- 1 98 30s
 	- 2 98 10s
 	- 3 68 20s
