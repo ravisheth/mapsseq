@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        mist_tools=mist_tools:cli
+    

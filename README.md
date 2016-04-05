@@ -138,12 +138,22 @@ To assess the efficiency of primer extension, we utilize fluorescence in situ hy
 - Wash beads 3 times with 500uL of hybridization buffer. Resuspend in 2uL of nuclease-free water, spot onto a slide, and allow to dry. 
 - Record average intensity per bead using an epifluorescence microscope. 
 
-##### Validation of photorelease of primers from bead
-To assess UV exposure-dependent release of primers from barcoded beads, we utilize the Agilent Bioanlyzer HS DNA assay kit to detect low concentrations of ssDNA product. 
+##### Validation of photorelease of primers from bead and particles - Bioanalzyer
+To assess UV exposure-dependent release of primers from barcoded beads and particles, we utilize the Agilent Bioanlyzer HS DNA assay kit to detect low concentrations of ssDNA product. 
 - Resuspend ~5,000 beads in 10uL nuclease-free water. Make two aliquots. 
 - Expose one aliquot to UV light (BlackRay Xenon 365nm UV) for 15 minutes on ice. Place the other aliquot on ice and protect from ambient light. 
 - Spin down aliquots and remove ~5uL of supernatant. 
 - Load 1uL of supernatant and follow manufacturer instructions for the Agilent Bioanylyzer HS DNA kit. 
+
+##### Validation of photorelease of primers from bead - PAGE analysis
+We also utilize PAGE analysis to quantify release of ssDNA from barcoded beads and particles. 
+- Resuspend ~10,000 beads in 10uL nuclease-free water. Make two aliquots. 
+- Expose one aliquot to UV light (BlackRay Xenon 365nm UV) for 15 minutes on ice. Place the other aliquot on ice and protect from ambient light. 
+- Spin down aliquots and remove 7.5uL of supernatant. 
+- Add 7.5uL of 2x TBE-Urea sample loading dye (Biorad). Mix well and heat to 95C for 3 minutes. 
+- Take 0.25uL of ladder (Gene Ruler Ultra Low) and add to 7.25uL of water; add 7.5uL of 2x TBE-Urea sample loading dye and mix well. 
+- Load into a 15% TBE-Urea gel and run per manufacturers instructions (180V, until bromophenol blue front hits reference). 
+- Open gel and stain with 10mL of 1X SYBR Green solution. Image on a UV transilluminator. 
 
 ##### Sequencing of individual bead primers and total pool primers
 To assess the composition of primers on a single bead as well as the composition of the entire pool of beads, we utilize deep sequencing of the ssDNA primers on the Illumina MiSeq platform. 
@@ -214,3 +224,10 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 	- 5 step 2, 29x
 	- 6 72 120s
 	- 7 10 infinity
+
+##### Library QC, pooling and prep
+- Assess products on a 1% agarose E-gel to confirm library product at 450bp. 
+- Quantify PCR product with the Qubit HS DNA kit and pool equimolarly. 
+- Gel extract 450bp product on a 1.5% LMP agarose gel using the ZymoPrep Gel Extraction kit. 
+- Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit. 
+- Sequence using a MiSeq v2 500 cycle kit, loading at 12pM with a 10% PhiX spike in.
