@@ -21,14 +21,12 @@ bc1_9=np.loadtxt(FILE_DIR+'/bc1_9.txt',dtype=str)
 bc2_8=np.loadtxt(FILE_DIR+'/bc2.txt',dtype=str)
 anchor='GACCTGCG'
 
-#TODO: specify output file
-#TODO: add file-specific identifier
 #TODO: error catching & user notifications
 #TODO: multiple index processing
 #TODO: auto configure usearch binary location (merging, quality filtering, clustering pipeline)
 #TODO: better loading of barcode sequences (standard format)
 #TODO: better loading of anchor sequence (probably in barcode sequence file)
-#TODO: make writing output faster
+#TODO: better annotation of script
 #subprocess.call(USEARCH, shell=True)
 
 @click.group()
@@ -36,60 +34,48 @@ def cli():
 	pass
 
 @cli.command()
-@click.argument('fasta', type=click.Path(exists=True))
-def process(fasta):
+@click.argument('input', type=click.Path(exists=True))
+@click.option('-l','--label',default='output',type=str)
+def process(input,label):
 	#takes merged, quality filtered FASTA as input
 	#load data 
 	seq=[]
-	for record in tqdm(SeqIO.parse(open(fasta),'fasta'), ncols=80, desc='reading input'):
+	for record in SeqIO.parse(open(input),'fasta'):
 		seq.append(str(record.seq))
 	click.echo('read '+str(len(seq))+' sequences')
 	
 	extract=[]
-	for s in tqdm(seq, ncols=80, desc='mapping barcodes'):
+	for s in tqdm(seq, ncols=80, desc='mapping barcodes', \
+		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
 		extract.append(extract_barcodes(s))
 	
 	extract_cnt=0
 	for i in extract:
 		if np.sum(i) > 0 and np.product(i) > 0:
 			extract_cnt+=1
-	click.echo('mapped '+str(extract_cnt)+' sequences to barcodes')
+	click.echo('mapped '+str(extract_cnt)+' sequences')
 
 	bc_map=[]
 	for i in np.arange(1,97):
 		for i2 in np.arange(1,97):
 			bc_map.append([i,i2])
+
 	bc_count=np.zeros(shape=9216)
 	write_cnt=0
 	output=[]
-	for i in tqdm(range(len(extract)), ncols=80, desc='writing output'):
+	for i in tqdm(range(len(extract)), ncols=80, desc='writing output',\
+		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
 		if np.product(extract[i]) != 0:
 			if len(filtered_seq(seq[i])) > 225 \
 				and len(filtered_seq(seq[i])) < 275:
 				bcn=bc_map.index(extract[i])
 				ind=bc_count[bcn]
 				output.append(SeqRecord(Seq(filtered_seq(seq[i]),generic_dna),\
-					id=(str(bcn)+'.'+str(int(ind))),description=""))
+					id=(label+'-'+str(bcn)+'.'+str(int(ind))),description=""))
 				bc_count[bcn]+=1
 				write_cnt+=1
-	#bcn=0
-	#for i in tqdm(np.arange(1,97), ncols=80, desc='writing output'):
-	#	for i2 in np.arange(1,97):
-	#		i_map=[j for j, k in enumerate(extract) if k == [i,i2]]
-	#		if i_map == []:
-	#			bcn+=1
-	#		else:
-	#			ind=0
-	#			for s in i_map:
-	#				if len(filtered_seq(seq[s])) > 225 \
-	#					and len(filtered_seq(seq[s])) < 275:
-	#					#if qiime needs to be underscore
-	#					output.append(SeqRecord(Seq(filtered_seq(seq[s]),generic_dna),\
-	#						id=(str(bcn)+'.'+str(ind)),description=""))
-	#					write_cnt+=1
-	#					ind+=1
-	#			bcn+=1
-	handle = open("output.fna", "w")
+
+	handle = open(label+'.fna', "w")
 	fasta_out = FastaIO.FastaWriter(handle, wrap=None)
 	fasta_out.write_file(output)
 	click.echo('wrote '+str(write_cnt)+' sequences')
