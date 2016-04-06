@@ -79,7 +79,7 @@ def process(input):
 				bcn=bc_map[index_n].index(extract[i])
 				ind=bc_count[index_n][bcn]
 				output.append(SeqRecord(Seq(s,generic_dna),\
-					id=(source_id+'-'+str(bcn)+'.'+str(int(ind))),description=""))
+					id=(source_id+str(bcn)+'.'+str(int(ind))),description=""))
 				bc_count[index_n][bcn]+=1
 				write_cnt+=1
 
