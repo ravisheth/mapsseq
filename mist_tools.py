@@ -1,6 +1,7 @@
 #mist_tools v0.1
 #author: ravi sheth, wang lab, columbia university
 #last updated 4/5/2016
+
 import numpy as np
 import os
 from tqdm import tqdm 
@@ -22,7 +23,6 @@ bc2_8=np.loadtxt(FILE_DIR+'/bc2.txt',dtype=str)
 anchor='GACCTGCG'
 
 #TODO: error catching & user notifications
-#TODO: multiple index processing
 #TODO: auto configure usearch binary location (merging, quality filtering, clustering pipeline)
 #TODO: better loading of barcode sequences (standard format)
 #TODO: better loading of anchor sequence (probably in barcode sequence file)
@@ -35,14 +35,14 @@ def cli():
 
 @cli.command()
 @click.argument('input', type=click.Path(exists=True))
-@click.option('-l','--label',default='output',type=str)
-def process(input,label):
-	#takes merged, quality filtered FASTA as input
-	#load data 
+def process(input):
 	seq=[]
-	for record in SeqIO.parse(open(input),'fasta'):
+	fasta_id=[]
+	for record in tqdm(SeqIO.parse(open(input),'fasta'), ncols=80, desc='reading sequences', \
+		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
 		seq.append(str(record.seq))
-	click.echo('read '+str(len(seq))+' sequences')
+		fasta_id.append(str(record.id).split('.')[0])
+	click.secho('read '+str(len(seq))+' sequences',bold=True)
 	
 	extract=[]
 	for s in tqdm(seq, ncols=80, desc='mapping barcodes', \
@@ -53,32 +53,41 @@ def process(input,label):
 	for i in extract:
 		if np.sum(i) > 0 and np.product(i) > 0:
 			extract_cnt+=1
-	click.echo('mapped '+str(extract_cnt)+' sequences')
+	click.secho('mapped '+str(extract_cnt)+' sequences',bold=True)
 
+	index_map=list(set(fasta_id))
 	bc_map=[]
-	for i in np.arange(1,97):
-		for i2 in np.arange(1,97):
-			bc_map.append([i,i2])
-
-	bc_count=np.zeros(shape=9216)
+	bc_count=[]
+	for n in index_map:
+		temp=[]
+		for i in np.arange(1,97):
+			for i2 in np.arange(1,97):
+				temp.append([i,i2])
+		bc_map.append(temp)
+		count=np.zeros(shape=9216)
+		bc_count.append(count)
+	
 	write_cnt=0
 	output=[]
 	for i in tqdm(range(len(extract)), ncols=80, desc='writing output',\
 		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
 		if np.product(extract[i]) != 0:
-			if len(filtered_seq(seq[i])) > 225 \
-				and len(filtered_seq(seq[i])) < 275:
-				bcn=bc_map.index(extract[i])
-				ind=bc_count[bcn]
-				output.append(SeqRecord(Seq(filtered_seq(seq[i]),generic_dna),\
-					id=(label+'-'+str(bcn)+'.'+str(int(ind))),description=""))
-				bc_count[bcn]+=1
+			s = filtered_seq(seq[i])
+			if len(s) > 225 and len(s) < 275:
+				source_id=fasta_id[i]
+				index_n=index_map.index(source_id)
+				bcn=bc_map[index_n].index(extract[i])
+				ind=bc_count[index_n][bcn]
+				output.append(SeqRecord(Seq(s,generic_dna),\
+					id=(source_id+'-'+str(bcn)+'.'+str(int(ind))),description=""))
+				bc_count[index_n][bcn]+=1
 				write_cnt+=1
 
-	handle = open(label+'.fna', "w")
+	label=input.split('.')[0]
+	handle = open(label+'_out.fasta', "w")
 	fasta_out = FastaIO.FastaWriter(handle, wrap=None)
 	fasta_out.write_file(output)
-	click.echo('wrote '+str(write_cnt)+' sequences')
+	click.secho('wrote '+str(write_cnt)+' sequences',bold=True)
 
 def extract_barcodes(seq):
 	bc1_id=0
