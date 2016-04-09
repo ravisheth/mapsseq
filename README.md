@@ -27,7 +27,8 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 	- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
 
 ##### Embedding of sample
-- Remove sample from fixative, and wash in 10mL of PBS, and let sit for 10 minutes. Repeat wash for a total of 3 times. 
+- Remove sample from fixative, and wash in 10mL of PBS, and let sit for 10 minutes. Repeat wash for a total of 3 times.
+- Incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 10 minutes.  
 - Cut sample into sub-parts no larger than 3x3mm with a sterile razor. A smaller size allows for more effecient perfusion of acrymalide solution.
  
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice. 
