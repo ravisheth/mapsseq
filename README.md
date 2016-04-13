@@ -181,11 +181,23 @@ To assess the composition of primers on a single bead as well as the composition
 - We utilize two Harvard Apparatus Pump 11 Elite syringe pumps and a Zeiss Axiovert 25 inverted microscope to observe droplet formation and flow. 
 - To generate droplets, we use a flow-focusing (T-junction) droplet generator cast in PDMS. The diameter of the droplet forming junction is 60um in width. This yields droplets of approximately 90um in diameter or 0.5nL in volume. 
 
+##### Aquapel treatment of microfluidic chips
+Chips need to be treated when first constructed. This is best performed in paralell. Note that this protocol is adopted from Mazutis, Nat. Protocols 2013.
+- Cut pad that aquapel solution is embedded within. Place ampule in 15mL conical and break the ampule within the tube.  
+- Pipette solution in 1mL syringe. 
+- Inject solution into microfludic device. Leave solution in channels for 30s, and flush with air (pressurized air) at all three fluidic ports. 
+- Flush device with FC-40, and flush with air (pressurized air) at all three fluidic ports.
+- Bake chip at 65C for 20 minutes. 
+
 ##### Encapsulation protocol
-A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 10 droplets will receive a bead, while approximately 1 in 10 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.  
+A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 5-10 droplets will receive a bead, while approximately 1 in 10 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.
+
+Note that for each new chip constructed, the volume of beads should be empirically determined (either by measuring encapsulation rate of beads of a known concentration, or measurement of diameter). This should then be used to setup a control "dry run" in which encapsulation rates are measured, the fine-tune loading concentrations. 
+
 - UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bar, 1mL syringe, 1.5mL  collection tube, Hamilton luer to tubing connector, tubing exit connector. 
 - Clean appropriate amount of beads and acrylamide particles (~20K beads, ~10K particles) with 100uL nuclease-free water. Resuspend in 4uL of water each. 
-- Mix 200uL encapsulation master mix as follows: 100uL NEB Q5 HiFi Hotstart 2x Master Mix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), 4uL acrylamide particles, 4uL barcoded beads and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
+- Mix 200uL encapsulation master mix as follows: 100uL NEB Q5 HiFi Hotstart 2x Master Mix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), acrylamide particles, barcoded beads and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
+	- NOTE, 4/13/16. With new rounds of chips, we should be loading at ~60K beads and ~15K particles per run. This results in approximately 15-20% encapsulation rate for beads and ~5-10% encapsulation rate for particles, which is desirable to maximize throughput and quality. 
 - Mix mixture well without introducing bubbles and pipette into 1mL syringe. Carefully load syringe with magnetic mixer. 
 - Prepare a second syringe with 1mL of 2%EA surfactant in HFE7500. 
 - Connect tubing to chip, and prime syringes. Turn on the syringe mixer to 400rpm. 
