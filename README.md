@@ -190,14 +190,14 @@ Chips need to be treated when first constructed. This is best performed in paral
 - Bake chip at 65C for 20 minutes. 
 
 ##### Encapsulation protocol
-A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 5-10 droplets will receive a bead, while approximately 1 in 10 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.
+A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 5-10 droplets will receive a bead, while approximately 1 in 10-20 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.
 
 Note that for each new chip constructed, the volume of beads should be empirically determined (either by measuring encapsulation rate of beads of a known concentration, or measurement of diameter). This should then be used to setup a control "dry run" in which encapsulation rates are measured, the fine-tune loading concentrations. 
 
 - UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bar, 1mL syringe, 1.5mL  collection tube, Hamilton luer to tubing connector, tubing exit connector. 
 - Clean appropriate amount of beads and acrylamide particles (~20K beads, ~10K particles) with 100uL nuclease-free water. Resuspend in 4uL of water each. 
 - Mix 200uL encapsulation master mix as follows: 100uL NEB Q5 HiFi Hotstart 2x Master Mix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), acrylamide particles, barcoded beads and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
-	- NOTE, 4/13/16. With new rounds of chips, we should be loading at ~60K beads and ~20K particles per run. This results in approximately 15-20% encapsulation rate for beads and ~5-10% encapsulation rate for particles, which is desirable to maximize throughput and quality. 
+	- NOTE, 4/18/16. With new rounds of single filter chips, we should be loading at ~20K beads and ~10K particles per run. This results in approximately 10% encapsulation rate for beads and approximately 5% encapsulation rate for particles, which is desirable to maximize throughput and quality, particularly given a high propensity for aggregate formation.
 - Mix mixture well without introducing bubbles and pipette into 1mL syringe. Carefully load syringe with magnetic mixer. 
 - Prepare a second syringe with 1mL of 2%EA surfactant in HFE7500. 
 - Connect tubing to chip, and prime syringes. Turn on the syringe mixer to 400rpm. 
@@ -224,12 +224,12 @@ Note that for each new chip constructed, the volume of beads should be empirical
 - Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics. 
 - Remove 10% EA oil and save in a separate tube; this can potentially be reused. 
 - Add 10uL of perfluorooctonal to the droplet phase. Vertically flick 3-4 times hard and centrifuge down.
-- Extract 6uL of the aqueous phase and add 14uL nuclease free water.
+- Extract 8uL of the aqueous phase and add 12uL nuclease free water.
 - Clean up with AmpureXP 0.8x (16uL) and resuspend in 12uL of nuclease free water. Remove 10uL of the resuspension and save. 
 
 ##### Indexing PCR
 - Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Q5 HiFi Hotstart 2x Master Mix. 
-- Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control:
+- Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel. 
 	- 1 98 30s
 	- 2 98 10s
 	- 3 68 20s
@@ -239,8 +239,8 @@ Note that for each new chip constructed, the volume of beads should be empirical
 	- 7 10 infinity
 
 ##### Library QC, pooling and prep
-- Assess products on a 1% agarose E-gel to confirm library product at 450bp. 
+- Assess all products on a 2% agarose E-gel to confirm library product at 450bp. Anectdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
 - Quantify PCR product with the Qubit HS DNA kit and pool equimolarly. 
 - Gel extract 450bp product on a 1.5% LMP agarose gel using the ZymoPrep Gel Extraction kit. 
 - Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit. 
-- Sequence using a MiSeq v2 500 cycle kit, loading at 12pM with a 10% PhiX spike in.
+- Sequence using a MiSeq v2 500 cycle kit, loading at 32pM (based on NEB qPCR quant) with a 20% 10pM PhiX spike in.
