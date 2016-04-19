@@ -230,6 +230,7 @@ Note that for each new chip constructed, the volume of beads should be empirical
 ##### Indexing PCR
 - Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Q5 HiFi Hotstart 2x Master Mix. 
 - Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel. 
+- **IMPORTANT**: for all indexes, there must be a G/C and A/T base at EACH position. The sequencing run will fail otherwise. 
 	- 1 98 30s
 	- 2 98 10s
 	- 3 68 20s
