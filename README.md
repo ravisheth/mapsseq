@@ -230,7 +230,7 @@ Note that for each new chip constructed, the volume of beads should be empirical
 ##### Indexing PCR
 - Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Q5 HiFi Hotstart 2x Master Mix. 
 - Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel. 
-- **IMPORTANT**: for all indexes, there must be a G/C and A/T base at EACH position. The sequencing run will fail otherwise. 
+- **IMPORTANT**: for all indexes, there must be a G/T and A/C base at EACH position. The sequencing run will fail otherwise. In practice, generally the p7 barcode will be diverse (ie greater than or equal to 8 barcodes), so this should be sufficient. For the p5 barcode, we use Nextera indices, so p5_bc1 and p5_bc2 can be used together as per the Nextera low-plex pooling guidelines.
 	- 1 98 30s
 	- 2 98 10s
 	- 3 68 20s
@@ -241,6 +241,7 @@ Note that for each new chip constructed, the volume of beads should be empirical
 
 ##### Library QC, pooling and prep
 - Assess all products on a 2% agarose E-gel to confirm library product at 450bp. Anectdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
+- Clean up with 0.6x AmpureXP and resuspend in 22uL of nuclease free water. Remove 20uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
 - Quantify PCR product with the Qubit HS DNA kit and pool equimolarly. 
 - Gel extract 450bp product on a 1.5% LMP agarose gel using the ZymoPrep Gel Extraction kit. 
 - Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit. 
