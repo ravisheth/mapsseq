@@ -33,13 +33,14 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
  
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice. 
 	- 8uL reverse primer (250uM stock), 10uM final
-	- 8uL Cy5 primer (250uM stock), 10uM final
+	- 8uL Cy5 primer (250uM stock), 10uM final *NOTE: this is optional, and can be replaced with water if not using.
 	- 105uL monomer concenrate
 	- 67uL water
 	- 4uL 4HT
 	- 4uL TEMED
 	- 4uL APS
 - Place the particle in an 1.5mL  eppendorf tube, on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of acrymalide embedding solution to replace any PBS from the sample. Allow to embed for approximately 2 to 4 hours to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore. 
+- Remove any excess liquid by pipetting out. This ensures that all particles will contain in-situ bacteria, instead of bacteria that may have diffused out of the sample.
 - Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2 to 4 hours or overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore. 
 - Extract the embeded sample from the tube, and trim excess acrlyamide with a sterile razor. 
 - Wash 3x in PBS and store in an amber tube at 4C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized.
@@ -77,8 +78,8 @@ We utilize nylon mesh filters to size-select fractured acrylamide particles.
 - Place each filter in a Swinnex filter holder with gasket O-ring. 
 - Perform the following steps for the 52um, 31um, 15um, 7um filters in order to yield >52um, 31-52um, 15-31um, 7-15um and <7um size filtered particles. 
 	- Take sample and resuspend in 1mL of nuclease-free water. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than the filter size.
-	- Perform a wash by attaching a blunt syringe to the filter assembly, and aspirating 3mL of nuclease-free water. completely flow through the 3mL through and discard, repeat this wash twice for a total of three times. 
-	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles greater than the filter size. 
+	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times and discard. Repeat this step three times.
+	- Aspirate 500uL of nuclease-free water; flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles greater than the filter size. 
 - Each fraction can be pelleted via centrifugation and resuspended in storage buffer for long term storage. 
 
 ### MIST-seq quality control
