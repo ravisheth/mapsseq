@@ -195,14 +195,14 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 
 Note that for each new chip constructed, the volume of beads should be empirically determined (either by measuring encapsulation rate of beads of a known concentration, or measurement of diameter). This should then be used to setup a control "dry run" in which encapsulation rates are measured, the fine-tune loading concentrations. 
 
-- UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bar, 1mL syringe, 1.5mL  collection tube, Hamilton luer to tubing connector, tubing exit connector. 
-- Clean appropriate amount of beads and acrylamide particles (~20K beads, ~10K particles) with 100uL nuclease-free water. Resuspend in 4uL of water each. 
-- Mix 200uL encapsulation master mix as follows: 100uL NEB Q5 HiFi Hotstart 2x Master Mix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), acrylamide particles, barcoded beads and water to 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
-	- NOTE, 4/18/16. With new rounds of single filter chips, we should be loading at ~20K beads and ~10K particles per run. This results in approximately 10% encapsulation rate for beads and approximately 5% encapsulation rate for particles, which is desirable to maximize throughput and quality, particularly given a high propensity for aggregate formation.
-- Mix mixture well without introducing bubbles and pipette into 1mL syringe. Carefully load syringe with magnetic mixer. 
-- Prepare a second syringe with 1mL of 2%EA surfactant in HFE7500. 
+- UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, 2x magnetic stir-bar, 2x 1mL syringe, 1.5mL  collection tube, 2x Hamilton luer to tubing connector, tubing exit connector. 
+- Aliquot appropriate amount of beads and acrylamide particles (~40K beads, ~20K particles) and resuspend in 10uL of water each. 
+- Mix 200uL encapsulation master mix (one for beads, one for particles) as follows: 100uL NEB Next Q5 2x Master Mix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), 33uL nuclease free water, and either beads or particles for a final volume of 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
+	- NOTE, 4/18/16. With new rounds of double filter chips, we should be loading at ~40K beads and ~20K particles per run. This results in approximately 10% encapsulation rate for beads and approximately 5% encapsulation rate for particles, which is desirable to maximize throughput and quality, particularly given a high propensity for aggregate formation.
+- Mix mixture well without introducing bubbles and pipette the bead and particle mixture into separate into 1mL syringe. Carefully load syringe with magnetic mixer. 
+- Prepare a third syringe with 1mL of 2%EA surfactant in HFE7500. 
 - Connect tubing to chip, and prime syringes. Turn on the syringe mixer to 400rpm. 
-- Flow syringes as 15uL/min for the PCR and 30uL/min for the oil. 
+- Flow syringes at 7.5uL/min for the particles and beads and 30uL/min for the oil. 
 - Observe proper and stable droplet formation (faint flickers at droplet junction)
 - Collect droplets into a LoBind tube cooled on ice
 
@@ -229,7 +229,7 @@ Note that for each new chip constructed, the volume of beads should be empirical
 - Clean up with AmpureXP 0.8x (12.8uL) and resuspend in 12uL of nuclease free water. Remove 10uL of the resuspension and save. 
 
 ##### Indexing PCR
-- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Q5 HiFi Hotstart 2x Master Mix. 
+- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Next Q5 2x Master Mix. 
 - Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel. 
 - **IMPORTANT**: for all indexes, there must be a G/T and A/C base at EACH position. The sequencing run will fail otherwise. In practice, generally the p7 barcode will be diverse (ie greater than or equal to 8 barcodes), so this should be sufficient. For the p5 barcode, we use Nextera indices, so p5_bc1 and p5_bc2 can be used together as per the Nextera low-plex pooling guidelines.
 	- 1 98 30s
