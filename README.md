@@ -208,10 +208,10 @@ Note that for each new chip constructed, the volume of beads should be empirical
 
 ### PCR amplification and library prep
 ##### First round PCR amplification
-- Pipette out 10uL of just droplets into PCR tubes. Each 10uL contains approximately 100 particles. 
-- Add 10uL of 10%EA in HFE7500 to each tube
+- Add 20uL of 10%EA in HFE7500 to each tube
+- Pipette out 20uL of just droplets into PCR tubes. Each 20uL contains approximately 250 particles. 
 - Place tubes under UV light with top open on ice and treat for 15 min
-- Cover with 30uL of mineral oil
+- Cover with 40uL of mineral oil
 - Run with the following PCR program:
 	- 1 98 60s
 	- 2 98 10s
@@ -224,9 +224,9 @@ Note that for each new chip constructed, the volume of beads should be empirical
 ##### Ampure clean up
 - Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics. 
 - Remove 10% EA oil and save in a separate tube; this can potentially be reused. 
-- Add 10uL of perfluorooctonal to the droplet phase. Vertically flick 3-4 times hard and centrifuge down.
-- Extract 8uL of the aqueous phase and add 12uL nuclease free water.
-- Clean up with AmpureXP 0.8x (16uL) and resuspend in 12uL of nuclease free water. Remove 10uL of the resuspension and save. 
+- Add 10uL to 20uL of perfluorooctonal to the droplet phase. Vertically flick 3-4 times hard and centrifuge down.
+- Extract 16uL of the aqueous phase and pipette into new tube.
+- Clean up with AmpureXP 0.8x (12.8uL) and resuspend in 12uL of nuclease free water. Remove 10uL of the resuspension and save. 
 
 ##### Indexing PCR
 - Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Q5 HiFi Hotstart 2x Master Mix. 
