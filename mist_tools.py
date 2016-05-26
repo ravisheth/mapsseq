@@ -4,7 +4,7 @@
 
 import numpy as np
 import os
-from tqdm import tqdm 
+from tqdm import tqdm
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
@@ -43,12 +43,12 @@ def process(input):
 		seq.append(str(record.seq))
 		fasta_id.append(str(record.id).split('.')[0])
 	click.secho('read '+str(len(seq))+' sequences',bold=True)
-	
+
 	extract=[]
 	for s in tqdm(seq, ncols=80, desc='mapping barcodes', \
 		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
 		extract.append(extract_barcodes(s))
-	
+
 	extract_cnt=0
 	for i in extract:
 		if np.sum(i) > 0 and np.product(i) > 0:
@@ -66,14 +66,14 @@ def process(input):
 		bc_map.append(temp)
 		count=np.zeros(shape=9216)
 		bc_count.append(count)
-	
+
 	write_cnt=0
 	output=[]
 	for i in tqdm(range(len(extract)), ncols=80, desc='writing output',\
 		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
 		if np.product(extract[i]) != 0:
 			s = filtered_seq(seq[i])
-			if len(s) > 225 and len(s) < 275:
+			if len(s) > 100 and len(s) < 400:
 				source_id=fasta_id[i]
 				index_n=index_map.index(source_id)
 				bcn=bc_map[index_n].index(extract[i])
@@ -95,11 +95,11 @@ def extract_barcodes(seq):
 	#IMPROVEMENT: allow mismatch of 1 (likely yield 2% improvement)
 	if len(seq.split(anchor))==1: #no exact match to anchor
 		return [0, 0]
-	
+
 	#extract bcs
 	bc1_s=seq.split(anchor)[0]
 	bc2_s=seq.split(anchor)[1][:8]
-	
+
 	#assign bc1
 	if len(bc1_s) == 7:
 		d,i=min_hamming(bc1_7,bc1_s)
@@ -110,7 +110,7 @@ def extract_barcodes(seq):
 	elif len(bc1_s) == 9:
 		d,i=min_hamming(bc1_9,bc1_s)
 		if d < 2: bc1_id=i+64
-	
+
 	#assign bc2
 	d,i=min_hamming(bc2_8,bc2_s)
 	if d < 2: bc2_id=i
