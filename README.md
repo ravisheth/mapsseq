@@ -201,7 +201,7 @@ Note that for each new chip constructed, the volume of beads should be empirical
 	- NOTE, 4/18/16. With new rounds of double filter chips, we should be loading at ~40K beads and ~20K particles per run. This results in approximately 10% encapsulation rate for beads and approximately 5% encapsulation rate for particles, which is desirable to maximize throughput and quality, particularly given a high propensity for aggregate formation.
 - Mix mixture well without introducing bubbles and pipette the bead and particle mixture into separate into 1mL syringe. Carefully load syringe with magnetic mixer.
 - Prepare a third syringe with 1mL of 2%EA surfactant in HFE7500.
-- Connect tubing to chip, and prime syringes. Turn on the syringe mixer to no greater than settings "30" (approximately 120rpm). Note that speeds higher than this may result in shearing of barcoded beads which is not desirable. 
+- Connect tubing to chip, and prime syringes. Turn on the syringe mixer to no greater than settings "30" (approximately 120rpm). Note that speeds higher than this may result in shearing of barcoded beads which is not desirable.
 - Flow syringes at 7.5uL/min for the particles and beads and 30uL/min for the oil.
 - Observe proper and stable droplet formation (faint flickers at droplet junction)
 - Collect droplets into a LoBind tube cooled on ice
@@ -226,7 +226,7 @@ Note that for each new chip constructed, the volume of beads should be empirical
 - Remove 10% EA oil and save in a separate tube; this can potentially be reused.
 - Add 10uL to 20uL of perfluorooctonal to the droplet phase. Vertically flick 3-4 times hard and centrifuge down.
 - Extract 16uL of the aqueous phase and pipette into new tube.
-- Clean up with AmpureXP 0.8x (12.8uL) and resuspend in 12uL of nuclease free water. Remove 10uL of the resuspension and save.
+- Clean up with AmpureXP 0.8x (12.8uL) and resuspend in 12uL of 10mM Tris-HCl pH 8.0. Remove 10uL of the resuspension and save.
 
 ##### Indexing PCR
 - Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Next Q5 2x Master Mix.
