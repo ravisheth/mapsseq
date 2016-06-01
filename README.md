@@ -18,7 +18,7 @@ The sample is then embedded with an acrylamide matrix which preserves spatial st
 | name | stock concentration | amt to add | final conc (w/w) |
 |:----:|:-------------------:|:----------:|:---------------:|
 |acrymalide|1.25g/2.5mL (1.5mL water sufficient)|2mL|10%|
-|bisacrymalide|0.04g/wmL|1.25mL|0.25%|
+|bisacrymalide|0.04g/mL|1.25mL|0.25%|
 |PBS|10x|1mL|1x|
 
 - Other stock solutions (store -20C,remake once every 2 weeks)
@@ -229,7 +229,7 @@ Note that for each new chip constructed, the volume of beads should be empirical
 - Clean up with AmpureXP 0.8x (12.8uL) and resuspend in 12uL of 10mM Tris-HCl pH 8.0. Remove 10uL of the resuspension and save.
 
 ##### Indexing PCR
-- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.2uL 100x SYBR green, 2.8uL water, 10uL NEB Next Q5 2x Master Mix.
+- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.02uL 100x SYBR green (0.1x final concentration), 2.8uL water, 10uL NEB Next Q5 2x Master Mix.
 - Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel.
 - **IMPORTANT**: for all indexes, there must be a G/T and A/C base at EACH position. The sequencing run will fail otherwise. In practice, generally the p7 barcode will be diverse (ie greater than or equal to 8 barcodes), so this should be sufficient. For the p5 barcode, we use Nextera indices, so p5_bc1 and p5_bc2 can be used together as per the Nextera low-plex pooling guidelines.
 	- 1 98 30s
@@ -242,8 +242,8 @@ Note that for each new chip constructed, the volume of beads should be empirical
 
 ##### Library QC, pooling and prep
 - Assess all products on a 2% agarose E-gel to confirm library product at 450bp. Anectdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
-- Clean up with 0.6x AmpureXP and resuspend in 22uL of nuclease free water. Remove 20uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
-- Quantify PCR product with the Qubit HS DNA kit and pool equimolarly.
-- Gel extract 450bp product on a 1.5% LMP agarose gel using the ZymoPrep Gel Extraction kit.
+- Clean up with 0.6x AmpureXP and resuspend in 42uL of 10mM Tris-HCl pH 8.0. Remove 40uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
+- Quantify PCR product on the plate reader (5uL 10,000X SYBR Green I and 25mL TE) and pool using the Biomek 4000 Robot.
+- Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the ZymoPrep Gel Extraction kit.
 - Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit.
-- Sequence using a MiSeq v2 500 cycle kit, loading at 32pM (based on NEB qPCR quant) with a 20% 10pM PhiX spike in.
+- Sequence using a MiSeq v2 500 cycle kit, loading at 24pM (based on Qubit quant) with a 20% 10pM PhiX spike in.
