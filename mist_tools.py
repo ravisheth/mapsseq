@@ -44,9 +44,12 @@ def process(input):
 	click.secho('read '+str(len(seq))+' sequences',bold=True)
 
 	extract=[]
+	extract_anchor=[]
 	for s in tqdm(seq, ncols=80, desc='mapping barcodes', \
 		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
-		extract.append(extract_barcodes(s))
+		f_barcode, f_anchor = extract_barcodes(s)
+		extract.append(f_barcode)
+		extract_anchor.append(f_anchor)
 
 	extract_cnt=0
 	for i in extract:
@@ -71,7 +74,7 @@ def process(input):
 	for i in tqdm(range(len(extract)), ncols=80, desc='writing output',\
 		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
 		if np.product(extract[i]) != 0:
-			s = filtered_seq(seq[i])
+			s = filtered_seq(seq[i],extract_anchor[i])
 			if len(s) > 100 and len(s) < 400:
 				source_id=fasta_id[i]
 				index_n=index_map.index(source_id)
@@ -93,14 +96,14 @@ def extract_barcodes(seq):
 	bc2_id=0
 
 	found_anchor=None
-	#attempt to make inexact match of single snp
+	#attempt to make inexact match of anchor with single snp
 	bc_length=[7,8,9]
 	for i in bc_length:
 		possible_anchor=seq[i:(i+8)]
 		if hamming(possible_anchor,anchor) < 2:
 			found_anchor=possible_anchor
 	if found_anchor == None:
-		return [0,0]
+		return [0,0], found_anchor
 	else:
 		bc1_s=seq.split(found_anchor)[0]
 		bc2_s=seq.split(found_anchor)[1][:8]
@@ -119,7 +122,7 @@ def extract_barcodes(seq):
 	#assign bc2
 	d,i=min_hamming(bc2_8,bc2_s)
 	if d < 2: bc2_id=i
-	return [bc1_id, bc2_id]
+	return [bc1_id, bc2_id], found_anchor
 
 def hamming(a, b):
 	dist = 0
@@ -143,5 +146,5 @@ def min_hamming(array, s):
 			i=i+1
 		return minimum, match
 
-def filtered_seq(seq):
-	return seq.split(anchor)[1][27:][:-20]
+def filtered_seq(seq, f_anchor):
+	return seq.split(f_anchor)[1][27:][:-20]
