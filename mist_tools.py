@@ -69,8 +69,12 @@ def process(input):
 		count=np.zeros(shape=9216)
 		bc_count.append(count)
 
+	label = input.split('.')[0]
+	handle = open(label+'_out.fasta', "w")
+	fasta_out = FastaIO.FastaWriter(handle, wrap=None)
+	fasta_out.write_header()
+
 	write_cnt=0
-	output=[]
 	for i in tqdm(range(len(extract)), ncols=80, desc='writing output',\
 		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
 		if np.product(extract[i]) != 0:
@@ -80,15 +84,12 @@ def process(input):
 				index_n=index_map.index(source_id)
 				bcn=bc_map[index_n].index(extract[i])
 				ind=bc_count[index_n][bcn]
-				output.append(SeqRecord(Seq(s,generic_dna),\
-					id=(source_id+str(bcn)+'.'+str(int(ind))),description=""))
+				fasta_out.write_record(SeqRecord(Seq(s,generic_dna), id=(source_id+str(bcn)+'.'+str(int(ind))),description=""))
 				bc_count[index_n][bcn]+=1
 				write_cnt+=1
 
-	label=input.split('.')[0]
-	handle = open(label+'_out.fasta', "w")
-	fasta_out = FastaIO.FastaWriter(handle, wrap=None)
-	fasta_out.write_file(output)
+	fasta_out.write_footer()
+	fasta_out.close()
 	click.secho('wrote '+str(write_cnt)+' sequences',bold=True)
 
 def extract_barcodes(seq):
