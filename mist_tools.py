@@ -10,7 +10,6 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 from Bio.Alphabet import generic_dna
 from Bio.SeqIO import FastaIO
-import subprocess
 import click
 
 USEARCH = '/Users/ravi/Dropbox/wang_lab/mist_seq/mist_seq/usearch8.1.1861_i86osx32'
@@ -92,13 +91,19 @@ def process(input):
 def extract_barcodes(seq):
 	bc1_id=0
 	bc2_id=0
-	#IMPROVEMENT: allow mismatch of 1 (likely yield 2% improvement)
-	if len(seq.split(anchor))==1: #no exact match to anchor
-		return [0, 0]
 
-	#extract bcs
-	bc1_s=seq.split(anchor)[0]
-	bc2_s=seq.split(anchor)[1][:8]
+	found_anchor=None
+	#attempt to make inexact match of single snp
+	bc_length=[7,8,9]
+	for i in bc_length:
+		possible_anchor=seq[i:(i+8)]
+		if hamming(possible_anchor,anchor) < 2:
+			found_anchor=possible_anchor
+	if found_anchor == None:
+		return [0,0]
+	else:
+		bc1_s=seq.split(found_anchor)[0]
+		bc2_s=seq.split(found_anchor)[1][:8]
 
 	#assign bc1
 	if len(bc1_s) == 7:
