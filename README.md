@@ -241,9 +241,9 @@ Note that for each new chip constructed, the volume of beads should be empirical
 	- 7 10 infinity
 
 ##### Library QC, pooling and prep
-- Assess all products on a 2% agarose E-gel to confirm library product at 450bp. Anectdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
+- Assess all products on a 2% agarose E-gel to confirm library product at 450bp. Anecdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
 - Clean up with 0.6x AmpureXP and resuspend in 42uL of 10mM Tris-HCl pH 8.0. Remove 40uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
 - Quantify PCR product on the plate reader (5uL 10,000X SYBR Green I and 25mL TE) and pool using the Biomek 4000 Robot.
-- Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the ZymoPrep Gel Extraction kit.
+- Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
 - Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit.
 - Sequence using a MiSeq v2 500 cycle kit, loading at 24pM (based on Qubit quant) with a 20% 10pM PhiX spike in.
