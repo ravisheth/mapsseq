@@ -4,7 +4,6 @@
 
 import numpy as np
 import os
-from tqdm import tqdm
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
@@ -30,25 +29,23 @@ def cli():
 def process(input):
 	seq=[]
 	fasta_id=[]
-	for record in tqdm(SeqIO.parse(open(input),'fasta'), ncols=80, desc='reading sequences', \
-		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
-		seq.append(str(record.seq))
-		fasta_id.append(str(record.id).split('.')[0])
-	click.secho('read '+str(len(seq))+' sequences',bold=True)
+	with click.progressbar(SeqIO.parse(open(input),'fasta'), label='reading sequences') as bar:
+		for record in bar:
+			seq.append(str(record.seq))
+			fasta_id.append(str(record.id).split('.')[0])
 
 	extract=[]
 	extract_anchor=[]
-	for s in tqdm(seq, ncols=80, desc='mapping barcodes', \
-		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
-		f_barcode, f_anchor = extract_barcodes(s)
-		extract.append(f_barcode)
-		extract_anchor.append(f_anchor)
+	with click.progressbar(seq, label='mapping barcodes ') as bar:
+		for s in bar:
+			f_barcode, f_anchor = extract_barcodes(s)
+			extract.append(f_barcode)
+			extract_anchor.append(f_anchor)
 
 	extract_cnt=0
 	for i in extract:
 		if np.sum(i) > 0 and np.product(i) > 0:
 			extract_cnt+=1
-	click.secho('mapped '+str(extract_cnt)+' sequences',bold=True)
 
 	index_map=list(set(fasta_id))
 	bc_map=[]
@@ -68,21 +65,23 @@ def process(input):
 	fasta_out.write_header()
 
 	write_cnt=0
-	for i in tqdm(range(len(extract)), ncols=80, desc='writing output',\
-		bar_format='{l_bar}{bar}|[{elapsed}<{remaining}s]'):
-		if np.product(extract[i]) != 0:
-			s = filtered_seq(seq[i],extract_anchor[i])
-			if len(s) > 100 and len(s) < 400:
-				source_id=fasta_id[i]
-				index_n=index_map.index(source_id)
-				bcn=bc_map[index_n].index(extract[i])
-				ind=bc_count[index_n][bcn]
-				fasta_out.write_record(SeqRecord(Seq(s,generic_dna), id=(source_id+str(bcn)+'.'+str(int(ind))),description=""))
-				bc_count[index_n][bcn]+=1
-				write_cnt+=1
+	with click.progressbar(range(len(extract)),label='writing output   ') as bar:
+		for i in bar:
+			if np.product(extract[i]) != 0:
+				s = filtered_seq(seq[i],extract_anchor[i])
+				if len(s) > 100 and len(s) < 400:
+					source_id=fasta_id[i]
+					index_n=index_map.index(source_id)
+					bcn=bc_map[index_n].index(extract[i])
+					ind=bc_count[index_n][bcn]
+					fasta_out.write_record(SeqRecord(Seq(s,generic_dna), id=(source_id+str(bcn)+'.'+str(int(ind))),description=""))
+					bc_count[index_n][bcn]+=1
+					write_cnt+=1
 
 	fasta_out.write_footer()
-	click.secho('wrote '+str(write_cnt)+' sequences',bold=True)
+	click.echo('read '+str(len(seq))+'; ',nl=False)
+	click.echo('mapped '+str(extract_cnt)+'; ',nl=False)
+	click.echo('wrote '+str(write_cnt)+' sequences')
 
 def extract_barcodes(seq):
 	bc1_id=0
