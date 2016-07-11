@@ -118,16 +118,16 @@ def hamming(a, b): #hamming distance between two sequences
 			dist += 1
 	return dist
 
-def min_hamming(array, s): #find match in array with minimum hamming dist to string
-	if len(array) == 1:
-		return hamming(array,s)
-	if len(array) > 1:
+def min_hamming(ref_list, s): #find match in list with minimum hamming dist to string
+	if len(ref_list) == 1: #if there is only one item in the input list
+		return hamming(ref_list,s)
+	if len(ref_list) > 1:
 		minimum=len(s)
 		match=0
 		i=1
-		for bc in array:
+		for bc in ref_list: #iterate through list
 			d=hamming(bc,s)
-			if d < minimum:
+			if d < minimum: #record minimum hamming distance
 				minimum = d
 				match = i
 			i=i+1
