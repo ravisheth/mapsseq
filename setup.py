@@ -1,5 +1,4 @@
 from setuptools import setup
-
 setup(
     name='mist_tools',
     version='0.1',
