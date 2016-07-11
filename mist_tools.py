@@ -21,13 +21,6 @@ bc1_9=np.loadtxt(FILE_DIR+'/bc1_9.txt',dtype=str)
 bc2_8=np.loadtxt(FILE_DIR+'/bc2.txt',dtype=str)
 anchor='GACCTGCG'
 
-#TODO: error catching & user notifications
-#TODO: auto configure usearch binary location (merging, quality filtering, clustering pipeline)
-#TODO: better loading of barcode sequences (standard format)
-#TODO: better loading of anchor sequence (probably in barcode sequence file)
-#TODO: better annotation of script
-#subprocess.call(USEARCH, shell=True)
-
 @click.group()
 def cli():
 	pass
@@ -89,7 +82,6 @@ def process(input):
 				write_cnt+=1
 
 	fasta_out.write_footer()
-	fasta_out.close()
 	click.secho('wrote '+str(write_cnt)+' sequences',bold=True)
 
 def extract_barcodes(seq):
