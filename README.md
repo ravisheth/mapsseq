@@ -2,7 +2,9 @@
 
 ## Overview
 
-## Detailed Protocol
+This document contains protocols from our initial MIST-seq studies including the MIST-seq technique as well as associated experiments and controls.
+
+## Detailed MIST-seq protocol
 
 ### Fixation
 Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
@@ -247,3 +249,47 @@ Note that for each new chip constructed, the volume of beads should be empirical
 - Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
 - Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit.
 - Sequence using a MiSeq v2 500 cycle kit, loading at 24pM (based on Qubit quant) with a 20% 10pM PhiX spike in.
+
+## 16S FISH studies
+FISH (based largely on Bacspace protocol)
+
+alexa488_erec482
+/5Alex488N/GC TTC TTA GTC AGG TAC CG
+F:Lachnospiraceae 76
+
+cy5_bac303
+/5Cy5/CC AAT GTG GGG GAC CTT
+F:Bacteroidaceae 96
+F:Porphyromonadaceae 20
+F:Prevotellae 78
+
+cy3_lab158
+/5Cy3/GG TAT TAG CAY CTG TTT CCA
+F: Enterococcaceae 96
+F:Lactobacillaceae 94
+F: Leuconostocaceae 60
+
+http://www.pnas.org/content/suppl/2013/02/28/1219247110.DCSupplemental/pnas.201219247SI.pdf
+
+- Deparafinize (10m xylene), rehydrate through EtOh gradient (95% 10m, 90% 10min; running DI water)
+    - Do not let dry out!
+- Incubate with FISH probes (3x) diluted to 10ng/uL in hybridiztaion buffer (0.9M NaCl, 20mM Tris-HCl pH 7.5, 0.01% SDS, 10% formadide) at 47C for 3-18hr in closed humid environment. Add 5uL, cover with coverslip and put in 50mL conical with cotton ball.
+    - resuspend probes to 500ng/uL in 10mM Tris pH7.5
+    - ~5uL needed per reaction, for 50uL
+        - 1uL 1M TrisHCl 7.5
+        - 9uL 5M NaCl
+        - 5uL formadide
+        - 0.1uL 10% SDS
+        - 32uL water (assuming 3x probes)
+        - 1uL each probe
+- Make sure wash buffer is prewarmed. Wash off hybridization with pipette/wash buffer and Incubate with wash buffer (0.9M NaCl, 20mM TrisHCl pH7.5) at 47C for 10m
+- Wash 3x in PBS
+- Incubate with 10ug/mL DAPI (1:100 stock) in PBS for 5min at 4C
+- Wash 3x in PBS
+- Dry
+- Mount with Vectashield
+
+In the future Alexa568 may be good Cy3 alternative (generally considered next generation to the Cy dyes)
+In general here are settings: pixel size 2.4, size 1024, 2x average, pinhole 1AU. Laser 2% for 405, everything 5%. Hv gain around 100. Setting gain above 130 will generally not be a great idea. In general Z-stacks and XY we want to sample at 2-3x resolution (i.e. nyquist sampling). For scanning use 512 pixel size (reasonable). Can likely couple FR and green during scanning.
+
+Here’s what I think I will ultimately want: scan at low resolution across large part of section (mucosal and lumenal) but with 3x Z-stack (0.5um) so I can do MIP. Then go back to two areas (mucosal and lumenal) to get higher resolution zoom fields (1x zoom, 3x zoom) again with Z-stack
