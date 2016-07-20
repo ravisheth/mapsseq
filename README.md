@@ -251,45 +251,41 @@ Note that for each new chip constructed, the volume of beads should be empirical
 - Sequence using a MiSeq v2 500 cycle kit, loading at 24pM (based on Qubit quant) with a 20% 10pM PhiX spike in.
 
 ## 16S FISH studies
-FISH (based largely on Bacspace protocol)
+To confirm findings from the MIST-seq technique, we also perform 16S FISH protocols. We base our FISH protocol largely on commonly used FISH protocols, and previously validated probes. 3 probes are chosen with different fluorophores. They target a particular percentage of all known species within particular families listed below:
 
-alexa488_erec482
-/5Alex488N/GC TTC TTA GTC AGG TAC CG
-F:Lachnospiraceae 76
+`alexa488_erec482 /5Alex488N/GCTTCTTAGTCAGGTACCG`
+Lachnospiraceae 76%
 
-cy5_bac303
-/5Cy5/CC AAT GTG GGG GAC CTT
-F:Bacteroidaceae 96
-F:Porphyromonadaceae 20
-F:Prevotellae 78
+`cy5_bac303 /5Cy5/CCAATGTGGGGGACCTT`
+Bacteroidaceae 96%, Porphyromonadaceae 20%, Prevotellae 78%
 
-cy3_lab158
-/5Cy3/GG TAT TAG CAY CTG TTT CCA
-F: Enterococcaceae 96
-F:Lactobacillaceae 94
-F: Leuconostocaceae 60
+`cy3_lab158 /5Cy3/GGTATTAGCAYCTGTTTCCA`
+Enterococcaceae 96%, Lactobacillaceae 94%, Leuconostocaceae 60
 
-http://www.pnas.org/content/suppl/2013/02/28/1219247110.DCSupplemental/pnas.201219247SI.pdf
+Family targeting from: http://www.pnas.org/content/suppl/2013/02/28/1219247110.DCSupplemental/pnas.201219247SI.pdf
 
-- Deparafinize (10m xylene), rehydrate through EtOh gradient (95% 10m, 90% 10min; running DI water)
-    - Do not let dry out!
-- Incubate with FISH probes (3x) diluted to 10ng/uL in hybridiztaion buffer (0.9M NaCl, 20mM Tris-HCl pH 7.5, 0.01% SDS, 10% formadide) at 47C for 3-18hr in closed humid environment. Add 5uL, cover with coverslip and put in 50mL conical with cotton ball.
+### FISH protocol
+- Deparaffinize samples by placing in xylene for 10m
+- Rehydrate through an ethanol gradient (95% Et0H 10m, 90% EtOH 10min; wash under running DI water)
+    - Do not let dry out during this processs
+- Incubate with 3x FISH probes diluted to 10ng/uL in hybridization buffer (0.9M NaCl, 20mM Tris-HCl pH 7.5, 0.01% SDS, 10% formadide) at 47C for 3-18hr in closed humid environment.
     - resuspend probes to 500ng/uL in 10mM Tris pH7.5
-    - ~5uL needed per reaction, for 50uL
+    - ~5uL needed per reaction, for 50uL master mix:
         - 1uL 1M TrisHCl 7.5
         - 9uL 5M NaCl
         - 5uL formadide
         - 0.1uL 10% SDS
-        - 32uL water (assuming 3x probes)
+        - 32uL water
         - 1uL each probe
-- Make sure wash buffer is prewarmed. Wash off hybridization with pipette/wash buffer and Incubate with wash buffer (0.9M NaCl, 20mM TrisHCl pH7.5) at 47C for 10m
+	  - Add 5uL of probe mix, cover with coverslip and put in 50mL conical with cotton ball.
+- Make wash buffer (0.9M NaCl, 20mM TrisHCl pH7.5) and prewarm at 47C. Wash off hybridization with pipette/wash buffer and incubate with wash buffer  at 47C for 10m
 - Wash 3x in PBS
 - Incubate with 10ug/mL DAPI (1:100 stock) in PBS for 5min at 4C
 - Wash 3x in PBS
 - Dry
-- Mount with Vectashield
+- Mount with vectashield (~20uL)
 
-In the future Alexa568 may be good Cy3 alternative (generally considered next generation to the Cy dyes)
-In general here are settings: pixel size 2.4, size 1024, 2x average, pinhole 1AU. Laser 2% for 405, everything 5%. Hv gain around 100. Setting gain above 130 will generally not be a great idea. In general Z-stacks and XY we want to sample at 2-3x resolution (i.e. nyquist sampling). For scanning use 512 pixel size (reasonable). Can likely couple FR and green during scanning.
+### Imaging
+Image at the cancer center confocal. In general here are settings: pixel size 2.4, size 1024, 2x average, pinhole 1AU. Laser 2% for 405, everything 5%. Hv gain around 100. Setting gain above 130 will generally not be a great idea. In general Z-stacks and XY we want to sample at 2-3x resolution (i.e. nyquist sampling). For scanning use 512 pixel size (reasonable). Can likely couple FR and green during scanning.
 
-Here’s what I think I will ultimately want: scan at low resolution across large part of section (mucosal and lumenal) but with 3x Z-stack (0.5um) so I can do MIP. Then go back to two areas (mucosal and lumenal) to get higher resolution zoom fields (1x zoom, 3x zoom) again with Z-stack
+Most images we get are 1024x1024 with 3x Z-stacks separated by 0.5um (so 1uM Z axis total).
