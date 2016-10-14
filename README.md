@@ -198,7 +198,7 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 Note that for each new chip constructed, the volume of beads should be empirically determined (either by measuring encapsulation rate of beads of a known concentration, or measurement of diameter). This should then be used to setup a control "dry run" in which encapsulation rates are measured, the fine-tune loading concentrations.
 
 - UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, 2x magnetic stir-bar, 2x 1mL syringe, 1.5mL  collection tube, 2x Hamilton luer to tubing connector, tubing exit connector.
-- Aliquot appropriate amount of beads and acrylamide particles (~40K beads, ~20K particles) and resuspend in 10uL of water each.
+- Aliquot appropriate amount of beads and acrylamide particles (~40K beads, ~20K particles), wash in 1mL water, and resuspend in 10uL of water each.
 - Mix 200uL encapsulation master mix (one for beads, one for particles) as follows: 100uL NEB Next Q5 2x Master Mix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), 33uL nuclease free water, and either beads or particles for a final volume of 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
 	- NOTE, 4/18/16. With new rounds of double filter chips, we should be loading at ~40K beads and ~20K particles per run. This results in approximately 10% encapsulation rate for beads and approximately 5% encapsulation rate for particles, which is desirable to maximize throughput and quality, particularly given a high propensity for aggregate formation.
 - Mix mixture well without introducing bubbles and pipette the bead and particle mixture into separate into 1mL syringe. Carefully load syringe with magnetic mixer.
@@ -215,12 +215,12 @@ Note that for each new chip constructed, the volume of beads should be empirical
 - Place tubes under UV light with top open on ice and treat for 15 min
 - Cover with 40uL of mineral oil
 - Run with the following PCR program:
-	- 1 98 60s
+	- 1 98 30s
 	- 2 98 10s
 	- 3 55 20s
-	- 4 72 30s
+	- 4 65 30s
 	- 5 step 2, 29x
-	- 6 72 120s
+	- 6 65 120s
 	- 7 10 infinity
 
 ##### Ampure clean up
@@ -237,9 +237,9 @@ Note that for each new chip constructed, the volume of beads should be empirical
 	- 1 98 30s
 	- 2 98 10s
 	- 3 68 20s
-	- 4 72 10s
+	- 4 65 30s
 	- 5 step 2, 29x
-	- 6 72 120s
+	- 6 65 120s
 	- 7 10 infinity
 
 ##### Library QC, pooling and prep
