@@ -2,51 +2,55 @@
 
 ## Overview
 
-This document contains MIST-seq v3 protocols and implementation.
+This document contains MIST-seq v3 protocol and implementation.
 
 ## Detailed MIST-seq protocol
 
 ### Fixation
 Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
-- Acquire sample (feces, GI tract etc.) and immediately placed in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
+- Acquire sample (feces, GI tract etc.) and immediately place in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
 - Fix the sample at room temperature for between 12 to 48 hours.
-- Replace the sample in 70% Ethanol after this period for storage up to 1 month (longer periods may be possible, but have not been investigated)
+- Replace the sample in 70% ethanol after this period for storage up to 1 month (longer periods may be possible, but have not been investigated)
 
 ### Embedding
-The sample is then embedded with an acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. Note that for inclusion of reverse primer, we target a concentration of approximately 100nM per droplet; accounting for droplet volume of 0.5nL this means that 5*10<sup>-5</sup>pmol must be loaded per particle. Assuming a median particle diameter of 20um, and assuming a spherical shape, this yields a particle volume of 4.2pL, meaning that the concentration of reverse primer should be approximately 10uM.
+The sample is then embedded with an degradable acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. Note that for inclusion of reverse primer, we target a concentration of approximately 100nM per droplet; accounting for droplet volume of 0.5nL this means that 5*10<sup>-5</sup>pmol must be loaded per particle. Assuming a median particle diameter of 20um, and assuming a spherical shape, this yields a particle volume of 4.2pL, meaning that the concentration of reverse primer should be approximately 10uM.
 
 ##### Preparation of  stock solutions
-- Monomer solution concentrate (store -20C indefinitely)
+- Monomer 2X concentrate (store -20C indefinitely)
 
 | name | stock concentration | amt to add | final conc (w/w) |
 |:----:|:-------------------:|:----------:|:---------------:|
-|acrymalide|1.25g/2.5mL (1.5mL water sufficient)|2mL|10%|
-|bisacrymalide|0.04g/mL|1.25mL|0.25%|
-|PBS|10x|1mL|1x|
+|Acrylamide|20%|1g|10%|
+|N,N′-Bis(acryloyl)cystamine|0.4%|0.02g|0.2%|
+|PBS|10x|0.5mL|1x|
+|nuclease-free water|n/a|3.5mL|n/a|
 
-- Other stock solutions (store -20C,remake once every 2 weeks)
+- Other stock solutions (store -20C, remake once every 2 weeks)
 	- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
 	- TEMED  (10% w/w stock, 0.1g/1mL ddH20), final 0.2%
 	- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
 
 ##### Embedding of sample
-- Remove sample from fixative, and wash in 10mL of PBS, and let sit for 10 minutes. Repeat wash for a total of 3 times.
-- Incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 10 minutes.  
-- Cut sample into sub-parts no larger than 3x3mm with a sterile razor. A smaller size allows for more effecient perfusion of acrymalide solution.
-
+```diff
+- IMPORTANT: ensure that the photocleavable primer is protected from light
+- IMPORTANT: once polymerized, the gel is sensitive to reducing conditions.
+Store at -80C and protect from any reagents that may contain reducing agents. 
+```
+- Remove sample from fixative, and wash in 10mL of PBS, and let sit for 5 min. Repeat wash for a total of 2 times.
+- Incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 5 min.  
+- Cut sample into sub-parts no larger than 3x3mm with a sterile razor. A smaller size allows for more efficient perfusion of monomer components.
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice.
 	- 8uL reverse primer (250uM stock), 10uM final
-	- 8uL Cy5 primer (250uM stock), 10uM final **NOTE**: this is optional, and can be replaced with water if not using.
-	- 105uL monomer concenrate
-	- 67uL water
+	- 100uL monomer concenrate
+	- 80uL water
 	- 4uL 4HT
 	- 4uL TEMED
 	- 4uL APS
-- Place the particle in an 1.5mL  eppendorf tube, on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of acrymalide embedding solution to replace any PBS from the sample. Allow to embed for approximately 2 to 4 hours to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
-- Remove any excess liquid by pipetting out. This ensures that all particles will contain in-situ bacteria, instead of bacteria that may have diffused out of the sample.
+- Place the particle in an 1.5mL tube on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
+- Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
 - Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2 to 4 hours or overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
-- Extract the embeded sample from the tube, and trim excess acrlyamide with a sterile razor.
-- Wash 3x in PBS and store in an amber tube at 4C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized.
+- Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
+- Wash 3 times in PBS and store in an amber tube at -80C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized.
 
 ### Fracturing
 The embedded sample is then broken into small particles using cryofracturing.
@@ -118,10 +122,10 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Add 20uL of 10%EA in HFE7500 to each tube
 
 ```diff
-- IMPORTANT: Emulsion compatible plastics must be utilized. Rainin low retention/wide orifice tips MUST be used when handling emulsion, and PCR tubes utilized must be VWR Maxymum Recovery.
+- IMPORTANT: Emulsion compatible plastics must be utilized:
+- Rainin low retention/wide orifice tips MUST be used when handling emulsion;
+- VWR Maxymum Recovery PCR tubes should be utilized.
 ```
-
-
 - Pipette out 20uL of just droplets into PCR tubes. Each 20uL contains approximately 250 particles.
 - Place tubes under UV light with top open on ice and treat for 15 min
 - Cover with 40uL of mineral oil
@@ -149,7 +153,14 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 ##### Indexing PCR
 - Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.02uL 100x SYBR green (0.1x final concentration), 2.8uL water, 10uL NEB Next Q5 2x Master Mix.
 - Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel.
-- **IMPORTANT**: for all indexes, there must be a G/T and A/C base at EACH position. The sequencing run will fail otherwise. In practice, generally the p7 barcode will be diverse (ie greater than or equal to 8 barcodes), so this should be sufficient. For the p5 barcode, we use Nextera indices, so p5_bc1 and p5_bc2 can be used together as per the Nextera low-plex pooling guidelines.
+
+```diff
+- IMPORTANT: for all indexes, there must be a G/T and A/C base at EACH position.
+- In practice, generally the i7 barcode will be diverse
+- For the i5 barcode, Nextera indices are used, so follow Nextera low-plex pooling guidelines.
+```
+
+- Run with the following PCR program:
 	- 1 98 30s
 	- 2 98 10s
 	- 3 68 20s
