@@ -6,184 +6,6 @@ This document contains MIST-seq v3 protocol and implementation.
 
 ## Detailed MIST-seq protocol
 
-### Fixation
-Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
-- Acquire sample (feces, GI tract etc.) and immediately place in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
-- Fix the sample at room temperature for between 12 to 48 hours.
-- Replace the sample in 70% ethanol after this period for storage up to 1 month (longer periods may be possible, but have not been investigated)
-
-### Embedding
-The sample is then embedded with an degradable acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. Note that for inclusion of reverse primer, we target a concentration of approximately 100nM per droplet; accounting for droplet volume of 0.5nL this means that 5*10<sup>-5</sup>pmol must be loaded per particle. Assuming a median particle diameter of 20um, and assuming a spherical shape, this yields a particle volume of 4.2pL, meaning that the concentration of reverse primer should be approximately 10uM.
-
-##### Preparation of  stock solutions
-- Monomer 2X concentrate (store -20C indefinitely)
-
-| name | stock concentration | amt to add | final conc (w/w) |
-|:----:|:-------------------:|:----------:|:---------------:|
-|Acrylamide|20%|1g|10%|
-|N,N′-Bis(acryloyl)cystamine|0.4%|0.02g|0.2%|
-|PBS|10x|0.5mL|1x|
-|nuclease-free water|n/a|3.5mL|n/a|
-
-- Other stock solutions (store -20C, remake once every 2 weeks)
-	- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
-	- TEMED  (10% w/w stock, 0.1g/1mL ddH20), final 0.2%
-	- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
-
-##### Embedding of sample
-```diff
-- IMPORTANT: ensure that the photocleavable primer is protected from light
-- IMPORTANT: once polymerized, the gel is sensitive to reducing conditions.
-Store at -80C and protect from any reagents that may contain reducing agents. 
-```
-- Remove sample from fixative, and wash in 10mL of PBS, and let sit for 5 min. Repeat wash for a total of 2 times.
-- Incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 5 min.  
-- Cut sample into sub-parts no larger than 3x3mm with a sterile razor. A smaller size allows for more efficient perfusion of monomer components.
-- Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice.
-	- 8uL reverse primer (250uM stock), 10uM final
-	- 100uL monomer concenrate
-	- 80uL water
-	- 4uL 4HT
-	- 4uL TEMED
-	- 4uL APS
-- Place the particle in an 1.5mL tube on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
-- Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
-- Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2 to 4 hours or overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
-- Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
-- Wash 3 times in PBS and store in an amber tube at -80C indefinitely. As a QC the first time this is performed, it may be helpful to do a sham sample and cut open to visually ensure that the sample has been fully embedded and polymerized.
-
-### Fracturing
-The embedded sample is then broken into small particles using cryofracturing.
-- Place sample in stainless steel microvial (Biospec 2007) and add a single 6.35mm stainless steel bead on top (Biospec 11079635ss). Seal the tube with a silicone rubber plug cap (Biospec 2008).
-- Place (but do not submerge) vial in liquid nitrogen for at least 2 minutes.
-- Quickly transfer to a bead beater (Biospec 112011) and beat for 10s. Note that beating time dictates the size distribution of particles; depending on desired particle size beating time can be adjusted to increase yield in a desired range.
-- Resuspend particles in PBS, vortex, and transfer to a sterile tube. Wash 2 times in PBS. Note that during wash steps, particles should be centrifuged at greater than 10,000RPM for 10s to ensure full sedimentation. Metal residue may color the particles a grey color, but this will not affect downstream steps.
-
-### Lysis of cells within embedded particles
-Particles are then treated with lysozyme and proteinase K to lyse any remaining cells.
-##### Lysozyme treatment
-- Resuspend particles in 500uL lysis buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM)
-- Add 1uL lyosozyme (37.5KU/uL stock) to sample (final concentration 75U/uL)
-- Incubate at 37C for 15 min
-
-##### Proteinase K treatment
-- Resuspend particles in 500uL digestion buffer (30mM Tris HCl pH 8.0, EDTA 1mM, 0.5% Triton X-100, 800mM guanidine HCl).
-- Add 5uL of proteinase K (50ug/uL stock) (final concentration 0.5ug/uL).
-- Incubate at 65C for 15 min
-- Incubate at 95C for 10 min to inactivate proteinase K.
-- Wash particles in 500uL TlowE buffer 3x times and store at 4C
-
-### Size selection
-We utilize nylon mesh filters to size-select fractured acrylamide particles.
-##### Preparation of nylon mesh filters
-- Sterilize a 1/2" hole punch (Amazon) and workspace.
-- Take nylon mesh filters of size 7um, 15um, 31um, 52um (Component Supply Company) and punch. Prepare multiple dots for multiple experiments in advance.
-- Place in a plastic bag for long-term storage
-
-##### Size selection of acrylamide particles
-- Clean and sterilize 4 Swinnex 13mm filter holders, 4 gasket O-rings, 1 punched nylon mesh filter of each size, and 4 3mL BD syringes via UV steriliation.
-- Place each filter in a Swinnex filter holder with gasket O-ring.
-- Perform the following steps for the 52um, 31um, 15um, 7um filters in order to yield >52um, 31-52um, 15-31um, 7-15um and <7um size filtered particles.
-	- Take sample and resuspend in 1mL of nuclease-free water. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than the filter size.
-	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times and discard. Repeat this step three times.
-	- Aspirate 500uL of nuclease-free water; flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles greater than the filter size.
-- Each fraction can be pelleted via centrifugation and resuspended in storage buffer for long term storage.
-
-### Encapsulation
-##### Equipment required
-- An in-syringe magnetic mixer was constructed with 400 RPM mini DC geared gear box electric motor (uxcell, Amazon) driven by a Unique Goods Digital Display DC Motor Speed Controller (Amazon) and a 6V 1A power adapter (Amazon). The motor rotates a small neodynium magnet (K&J magnetics B448) via a custom 3D printed adapter. This spins a 3x3mm magnetic stirbar (Bel-Art Z283835) which fits within a 1mL syringe.
-- We utilize two Harvard Apparatus Pump 11 Elite syringe pumps and a Zeiss Axiovert 25 inverted microscope to observe droplet formation and flow.
-- To generate droplets, we use a flow-focusing (T-junction) droplet generator cast in PDMS. The diameter of the droplet forming junction is 60um in width. This yields droplets of approximately 90um in diameter or 0.5nL in volume.
-
-##### Aquapel treatment of microfluidic chips
-Chips need to be treated when first constructed. This is best performed in paralell. Note that this protocol is adopted from Mazutis, Nat. Protocols 2013.
-- Cut pad that aquapel solution is embedded within. Place ampule in 15mL conical and break the ampule within the tube.  
-- Pipette solution in 1mL syringe.
-- Inject solution into microfludic device. Leave solution in channels for 30s, and flush with air (pressurized air) at all three fluidic ports.
-- Flush device with FC-40, and flush with air (pressurized air) at all three fluidic ports.
-- Bake chip at 65C for 20 minutes.
-
-##### Encapsulation protocol
-A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 5-10 droplets will receive a bead, while approximately 1 in 10-20 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.
-
-- UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, 2x magnetic stir-bar, 2x 1mL syringe, 1.5mL  collection tube, 2x Hamilton luer to tubing connector, tubing exit connector.
-- Aliquot appropriate amount of beads and acrylamide particles (~40K beads, ~20K particles), wash in 1mL water, and resuspend in 10uL of water each.
-- Mix 200uL encapsulation master mix (one for beads, one for particles) as follows: 100uL NEB Next Q5 2x Master Mix, 20uL 10%w/v Pluronic 127, 32uL NycoPrep (60% w/v Nycodenz), 5uL BSA (20mg/mL, NEB), 33uL nuclease free water, and either beads or particles for a final volume of 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
-	- NOTE, 4/18/16. With new rounds of double filter chips, we should be loading at ~40K beads and ~20K particles per run. This results in approximately 10% encapsulation rate for beads and approximately 5% encapsulation rate for particles, which is desirable to maximize throughput and quality, particularly given a high propensity for aggregate formation.
-- Mix mixture well without introducing bubbles and pipette the bead and particle mixture into separate into 1mL syringe. Carefully load syringe with magnetic mixer.
-- Prepare a third syringe with 1mL of 2%EA surfactant in HFE7500.
-- Connect tubing to chip, and prime syringes. Turn on the syringe mixer to no greater than settings "30" (approximately 120rpm). Note that speeds higher than this may result in shearing of barcoded beads which is not desirable.
-- Flow syringes at 7.5uL/min for the particles and beads and 30uL/min for the oil.
-- Observe proper and stable droplet formation (faint flickers at droplet junction)
-- Collect droplets into a LoBind tube cooled on ice
-
-### PCR amplification and library prep
-##### First round PCR amplification
-- Add 20uL of 10%EA in HFE7500 to each tube
-
-```diff
-- IMPORTANT: Emulsion compatible plastics must be utilized:
-- Rainin low retention/wide orifice tips MUST be used when handling emulsion;
-- VWR Maxymum Recovery PCR tubes should be utilized.
-```
-- Pipette out 20uL of just droplets into PCR tubes. Each 20uL contains approximately 250 particles.
-- Place tubes under UV light with top open on ice and treat for 15 min
-- Cover with 40uL of mineral oil
-
-```diff
-- IMPORTANT: A 96 deep well cycler must be utilized for the emulsion PCR amplification.
-```
-
-- Run with the following PCR program:
-	- 1 98 30s
-	- 2 98 10s
-	- 3 55 20s
-	- 4 65 30s
-	- 5 step 2, 29x
-	- 6 65 120s
-	- 7 10 infinity
-
-##### Ampure clean up
-- Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics.
-- Remove 10% EA oil and save in a separate tube; this can potentially be reused.
-- Add 10uL to 20uL of perfluorooctonal to the droplet phase. Vertically flick 3-4 times hard and centrifuge down.
-- Extract 16uL of the aqueous phase and pipette into new tube.
-- Clean up with AmpureXP 0.8x (12.8uL) and resuspend in 12uL of 10mM Tris-HCl pH 8.0. Remove 10uL of the resuspension and save.
-
-##### Indexing PCR
-- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.02uL 100x SYBR green (0.1x final concentration), 2.8uL water, 10uL NEB Next Q5 2x Master Mix.
-- Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel.
-
-```diff
-- IMPORTANT: for all indexes, there must be a G/T and A/C base at EACH position.
-- In practice, generally the i7 barcode will be diverse
-- For the i5 barcode, Nextera indices are used, so follow Nextera low-plex pooling guidelines.
-```
-
-- Run with the following PCR program:
-	- 1 98 30s
-	- 2 98 10s
-	- 3 68 20s
-	- 4 65 30s
-	- 5 step 2, 29x
-	- 6 65 120s
-	- 7 10 infinity
-
-##### Library QC, pooling and prep
-- Assess all products on a 2% agarose E-gel to confirm library product at 450bp. Anecdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
-- Clean up with 0.6x AmpureXP and resuspend in 42uL of 10mM Tris-HCl pH 8.0. Remove 40uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
-- Quantify PCR product on the plate reader (5uL 10,000X SYBR Green I and 25mL TE) and pool using the Biomek 4000 Robot.
-- Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
-- Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit.
-- Sequence using a MiSeq v2 500 cycle kit, loading at 24pM (based on Qubit quant) with a 20% 10pM PhiX spike in.
-
-### MIST-seq quality control
-##### Construction of synthetic community particles
-To test the ability of MIST-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities.
-- Grow 6x strains overnight in 3:2 PAS: E. coli K12 MG1655, E. faecalis, P. aeruginosa, B. thetataiotaomacron, L. reuterii, B. adolescentis
-- Harvest strains and mix together into two Synthetic Communities: SC1 is composed of EC/BT/LR, SC2 is composed of BA/PA/EF.
-- Put through fixation, embedding, fracturing protocols. Note that for embedding, the strains are resuspended in acrymalide such that they form a dense slurry with cells throughout the acrymalide.
-
 ### Barcoded Bead Construction
 Note: this protocol yields 3 to 4 million beads containing one of approximately 9,200 barcodes. We target at least 100nM primer concentration per droplet. Assuming a droplet volume of approximately 0.5nL, and accounting for a worst-case extension efficiency of 10%, each bead must be initially loaded with 5*10<sup>-4</sup> pmol of primer.
 
@@ -226,6 +48,193 @@ Note: this protocol yields 3 to 4 million beads containing one of approximately 
 - Pool the reactions and wash 5 times with 10mL of 125mM NaOH, 0.1mM biotin, 10mM EDTA.  
 - Wash 3 times with wash buffer supplemented with 0.1mM biotin and 0.1mM EDTA.
 - Resuspend beads in approximately 1mL of the wash buffer, 0.1mM biotin, 0.1mM EDTA solution, and store at 4C in an amber tube.  
+
+### Fixation
+Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
+- Acquire sample (feces, GI tract etc.) and immediately place in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
+- Fix the sample at room temperature for between 12 to 48 hours.
+- Replace the sample in 70% ethanol after this period for storage up to 1 month (longer periods may be possible, but have not been investigated)
+
+### Embedding
+The sample is then embedded with an degradable acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. Note that for inclusion of reverse primer, we target a concentration of approximately 100nM per droplet; accounting for droplet volume of 0.5nL this means that 5*10<sup>-5</sup>pmol must be loaded per particle. Assuming a median particle diameter of 20um, and assuming a spherical shape, this yields a particle volume of 4.2pL, meaning that the concentration of reverse primer should be approximately 10uM.
+
+##### Preparation of  stock solutions
+- Monomer 2X concentrate (store -20C indefinitely)
+
+| name | stock concentration | amt to add | final conc (w/w) |
+|:----:|:-------------------:|:----------:|:---------------:|
+|Acrylamide|20%|1g|10%|
+|N,N′-Bis(acryloyl)cystamine|0.4%|0.02g|0.2%|
+|PBS|10x|0.5mL|1x|
+|nuclease-free water|n/a|3.5mL|n/a|
+
+- Other stock solutions (store -20C, remake once every 2 weeks)
+	- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
+	- TEMED  (10% w/w stock, 0.1g/1mL ddH20), final 0.2%
+	- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
+
+##### Embedding of sample
+```diff
+- IMPORTANT: ensure that the photocleavable primer is protected from light
+- IMPORTANT: once polymerized, the gel is sensitive to reducing conditions.
+- Store at -80C and protect from any reagents that may contain reducing agents.
+```
+- Remove sample from fixative, and wash in PBS, and let sit for 5 min. Repeat wash for a total of 2 times.
+- Incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 5 min.  
+- Cut sample into sub-parts no larger than 3x3mm with a sterile razor. A smaller size allows for more efficient perfusion of monomer components.
+- Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice.
+	- 8uL reverse primer (250uM stock), 10uM final
+	- 100uL monomer concenrate
+	- 80uL water
+	- 4uL 4HT
+	- 4uL TEMED
+	- 4uL APS
+- Place the particle in an 1.5mL tube on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
+- Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
+- Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2 to 4 hours or overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
+- Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
+- Wash 3 times in PBS and store in an amber tube at -80C indefinitely. Ensure that sample is fully polymerized.
+
+### Fracturing
+The embedded sample is then broken into small particles using cryofracturing.
+- Place sample in stainless steel microvial (Biospec 2007) and add a single 6.35mm stainless steel bead on top (Biospec 11079635ss). Seal the tube with a silicone rubber plug cap (Biospec 2008).
+- Place (but do not submerge) vial in liquid nitrogen for at least 2 minutes.
+- Quickly transfer to a bead beater (Biospec 112011) and beat for 10s. Note that beating time dictates the size distribution of particles; depending on desired particle size beating time can be adjusted to increase yield in a desired range.
+- Resuspend particles in PBS, vortex, and transfer to a sterile tube. Wash 2 times in PBS. Note that during wash steps, particles should be centrifuged at greater than 10,000RPM for 10s to ensure full sedimentation. Metal residue may color the particles a grey color, but this will not affect downstream steps.
+
+### Lysis of cells within embedded particles
+Particles are then treated with lysozyme and proteinase K to lyse any remaining cells.
+
+##### Lysozyme treatment
+- Resuspend particles in 500uL lysis buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM)
+- Add 1uL lyosozyme (37.5KU/uL stock) to sample (final concentration 75U/uL)
+- Incubate at 37C for 15 min
+
+##### Proteinase K treatment
+- Resuspend particles in 500uL digestion buffer (30mM Tris HCl pH 8.0, EDTA 1mM, 0.5% Triton X-100, 800mM guanidine HCl).
+- Add 1uL of proteinase K (50ug/uL stock) (final concentration 0.5ug/uL).
+- Incubate at 65C for 15 min
+- Incubate at 95C for 5 min to inactivate proteinase K.
+- Wash particles in 500uL TlowE buffer 3x times and store at -80C.
+
+### Size selection
+We utilize nylon mesh filters to size-select fractured acrylamide particles.
+
+##### Preparation of nylon mesh filters
+- Sterilize a 1/2" hole punch (Amazon) and workspace.
+- Take nylon mesh filters of size 7um, 15um, 31um, 52um (Component Supply Company) and punch. Prepare multiple dots for multiple experiments in advance.
+- Place in a plastic bag for long-term storage
+
+##### Size selection of acrylamide particles
+- Clean and sterilize 4 Swinnex 13mm filter holders, 4 gasket O-rings, 1 punched nylon mesh filter of each size, and 4 3mL BD syringes via UV sterilization.
+- Place each filter in a Swinnex filter holder with gasket O-ring.
+- Perform the following steps for the 52um, 31um, 15um, 7um filters in order to yield >52um, 31-52um, 15-31um, 7-15um and <7um size filtered particles.
+	- Take sample and resuspend in 1mL of nuclease-free water. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than the filter size.
+	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times and discard. Repeat this step three times.
+	- Aspirate 500uL of nuclease-free water; flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles greater than the filter size.
+- Each fraction can be pelleted via centrifugation and resuspended in storage buffer for long term storage.
+
+### Encapsulation
+##### Equipment required
+- An in-syringe magnetic mixer was constructed with 400 RPM mini DC geared gear box electric motor (uxcell, Amazon) driven by a Unique Goods Digital Display DC Motor Speed Controller (Amazon) and a 6V 1A power adapter (Amazon). The motor rotates a small neodynium magnet (K&J magnetics B448) via a custom 3D printed adapter. This spins a 3x3mm magnetic stirbar (Bel-Art Z283835) which fits within a 1mL syringe.
+- We utilize two Harvard Apparatus Pump 11 Elite syringe pumps and a Zeiss Axiovert 25 inverted microscope to observe droplet formation and flow.
+- To generate droplets, we use a flow-focusing (T-junction) droplet generator cast in PDMS. The diameter of the droplet forming junction is 60um in width. This yields droplets of approximately 90um in diameter or 0.5nL in volume.
+
+##### Aquapel treatment of microfluidic chips
+Chips need to be treated when first constructed. This is best performed in parallell. Note that this protocol is adopted from Mazutis, Nat. Protocols 2013.
+- Cut pad that aquapel solution is embedded within. Place ampule in 15mL conical and break the ampule within the tube.  
+- Pipette solution in 1mL syringe.
+- Inject solution into microfludic device. Leave solution in channels for 30s, and flush with air (pressurized air) at all three fluidic ports.
+- Flush device with FC-40, and flush with air (pressurized air) at all three fluidic ports.
+- Bake chip at 65C for 20 minutes.
+
+##### Encapsulation protocol
+A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 5-10 droplets will receive a bead, while approximately 1 in 10-20 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.
+
+- UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, 2x magnetic stir-bar, 2x 1mL syringe, 1.5mL  collection tube, 2x Hamilton luer to tubing connector, tubing exit connector.
+- Aliquot appropriate amount of beads and acrylamide particles (~40K beads, ~20K particles), wash in 1mL water, and resuspend in 10uL of water each.
+- Mix 200uL encapsulation master mix (one for beads, one for particles) as follows:
+	- 100uL NEB Next Q5 2x Master Mix
+	- 20uL 10%w/v Pluronic 127
+	- 32uL NycoPrep (60% w/v Nycodenz)
+	- 5uL BSA (20mg/mL, NEB)
+	- 33uL nuclease free water
+	- and either beads or particles for a final volume of 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
+	- NOTE, 4/18/16. With new rounds of double filter chips, we should be loading at ~40K beads and ~20K particles per run. This results in approximately 10% encapsulation rate for beads and approximately 5% encapsulation rate for particles, which is desirable to maximize throughput and quality, particularly given a high propensity for aggregate formation.
+- Mix mixture well without introducing bubbles and pipette the bead and particle mixture into separate into 1mL syringe. Carefully load syringe with magnetic mixer.
+- Prepare a third syringe with 1mL of 2%EA surfactant in HFE7500.
+- Connect tubing to chip, and prime syringes. Turn on the syringe mixer to no greater than settings "30" (approximately 120rpm). Note that speeds higher than this may result in shearing of barcoded beads which is not desirable.
+- Flow syringes at 7.5uL/min for the particles and beads and 30uL/min for the oil.
+- Observe proper and stable droplet formation (faint flickers at droplet junction)
+- Collect droplets into a LoBind tube cooled on ice
+
+### PCR amplification and library prep
+##### First round PCR amplification
+- Add 20uL of 10%EA in HFE7500 to each tube
+
+```diff
+- IMPORTANT: Emulsion compatible plastics must be utilized:
+- Rainin low retention/wide orifice tips MUST be used when handling emulsion;
+- VWR Maxymum Recovery PCR tubes should be utilized.
+```
+- Pipette out 20uL of just droplets into PCR tubes. Each 20uL contains approximately 250 particles.
+- Place tubes under UV light with top open on ice and treat for 15 min
+- Cover with 40uL of mineral oil
+
+```diff
+- IMPORTANT: A 96 deep well cycler must be utilized for the emulsion PCR amplification.
+- Ensure that proper volume is set corresponding to actual emulsion volume.
+```
+
+- Run with the following PCR program:
+	- 1 98 30s
+	- 2 98 10s
+	- 3 55 20s
+	- 4 65 30s
+	- 5 step 2, 29x
+	- 6 65 120s
+	- 7 10 infinity
+
+##### First round clean up
+- Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics.
+- Remove 10% EA oil.
+- Add 20uL of PFO to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
+- Extract as much of the PFO phase as possible.
+- Perform a 0.8X AmpureXP clean up by adding XX uL. Resuspend in 12uL of 10mM Tris-HCl pH 8.0, and save 10uL.
+
+##### Indexing PCR
+- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.02uL 100x SYBR green (0.1x final concentration), 2.8uL water, 10uL NEB Next Q5 2x Master Mix.
+- Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel.
+
+```diff
+- IMPORTANT: for all indexes, there must be a G/T and A/C base at EACH position.
+- In practice, generally the i7 barcode will be diverse
+- For the i5 barcode, Nextera indices are used, so follow Nextera low-plex pooling guidelines.
+```
+
+- Run with the following PCR program:
+	- 1 98 30s
+	- 2 98 10s
+	- 3 68 20s
+	- 4 65 30s
+	- 5 step 2, 29x
+	- 6 65 120s
+	- 7 10 infinity
+
+##### Library QC, pooling and prep
+- Assess all products on a 2% agarose E-gel to confirm library product at 450bp. Anecdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
+- Clean up with 0.6x AmpureXP and resuspend in 42uL of 10mM Tris-HCl pH 8.0. Remove 40uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
+- Quantify PCR product on the plate reader (5uL 10,000X SYBR Green I and 25mL TE) and pool using the Biomek 4000 Robot.
+- Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
+- Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit.
+- Sequence using a MiSeq v2 500 cycle kit, loading at 24pM (based on Qubit quant) with a 20% 10pM PhiX spike in.
+
+### MIST-seq quality control
+##### Construction of synthetic community particles
+To test the ability of MIST-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities.
+- Grow 6x strains overnight in 3:2 PAS: E. coli K12 MG1655, E. faecalis, P. aeruginosa, B. thetataiotaomacron, L. reuterii, B. adolescentis
+- Harvest strains and mix together into two Synthetic Communities: SC1 is composed of EC/BT/LR, SC2 is composed of BA/PA/EF.
+- Put through fixation, embedding, fracturing protocols. Note that for embedding, the strains are resuspended in acrymalide such that they form a dense slurry with cells throughout the acrymalide.
 
 ### Barcoded Bead Quality Control
 ##### Quantification of extension efficiency via FISH
