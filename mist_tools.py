@@ -1,4 +1,5 @@
-#mist processing script. author: ravi sheth, wang lab, columbia university
+# MIST-seq data processing script
+# author: ravi sheth, wang lab, columbia university, 07/2016
 import click
 import os
 from itertools import groupby
