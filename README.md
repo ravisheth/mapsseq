@@ -2,11 +2,32 @@
 
 This document contains MIST-seq v3 protocol and implementation.
 
-### Barcoded Bead Construction
+### Barcoded Hydrogel Construction
 
-We target at least 100nM primer concentration per droplet. Assuming a droplet volume of approximately 0.5nL, and accounting for a worst-case extension efficiency of 10%, each bead must be initially loaded with 5*10<sup>-4</sup> pmol of primer.
+Barcoded Hydrogel construction consists of three extension steps to create over 880,000 barcoded hydrogel beads. Construction largely follows Zilionis, Nature Protocols 2016 with minor modifications.
 
-TODO
+#### Required buffers
+- Acry/Bis stock 4X (24%T, 3%C): 3.8mL water, 1.2g Acrylamide, 0.036g Bisacrylamide
+- TBSET buffer: 10mM Tris HCl pH 8.0, 137mM NaCl, 2.7mM KCl, 10mM EDTA, 0.1% Triton-X 100  
+
+#### Synthesis of hydrogel beads
+- Prepare 3mL of HFE7500, 1% surfactant, 12uL of TEMED. Place in 3mL syringe and prime (25 gauge needle, standard tubing) on syringe pump.
+- Prepare 300uL of an acrylamide master mix:
+	- 162uL nuclease free water
+	- 30uL TBSET buffer
+	- 75uL Acry/Bis stock 4X
+	- 24uL acry-pc-pe1 primer (250uM stock; 20uM final)
+	- 9uL 10% APS (wt/vol)
+- Vortex, microfuge and place in 1mL tube prefilled with 300uL HFE7500 and prime as above, with syringe tip facing up due to HFE7500 priming. Protect tubing from light with black sheath.
+- Connect tubing to droplet formation device and flow at 5uL for acrylamide master mix and 50uL for carrier. Allow flow to stabilize and watch on microscope with red filter.
+- Once flow is stabilized (~1 minute) collect droplets with tubing in 2mL tube prefilled with 300uL mineral oil.
+- Replace with new tube after 30 minutes.
+- Place two tubes in 65C incubator overnight, protected from light.
+
+#### Barcoding of hydrogel beads via primer extension
+
+#### Enzymatic cleanup of barcoded hydrogel beads
+**TODO**
 
 ### Fixation
 Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
@@ -116,6 +137,11 @@ Chips need to be treated when first constructed. This is best performed in paral
 ##### Encapsulation protocol
 A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 5-10 droplets will receive a bead, while approximately 1 in 10-20 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.
 
+```diff
+- IMPORTANT: Particles and barcoded hydrogel beads are light sensitive.
+- Minimize exposure to light, and ensure that red filter is used on microscope.
+```
+
 - UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, 2x magnetic stir-bar, 2x 1mL syringe, 1.5mL  collection tube, 2x Hamilton luer to tubing connector, tubing exit connector.
 
 
@@ -128,13 +154,12 @@ WASH
 Sonicate
 
 
-- Mix 200uL encapsulation master mix (one for beads, one for particles) as follows:
+- Mix 200uL encapsulation master mix as follows:
 	- 100uL NEB Next Q5 2x Master Mix
 	- 20uL 10%w/v Pluronic 127
 	- 32uL NycoPrep (60% w/v Nycodenz)
 	- 5uL BSA (20mg/mL, NEB)
 	- 33uL nuclease free water
-	- and either beads or particles for a final volume of 200uL. Note that the final density of a 16% NycoPrep solution should be approximately 1.05g/mL.
 
 ###### Encapsulation
 
@@ -154,7 +179,7 @@ Sonicate
 - Rainin low retention/wide orifice tips MUST be used when handling emulsion;
 - VWR Maxymum Recovery PCR tubes should be utilized.
 ```
-- Pipette out 20uL of just droplets into PCR tubes. Each 20uL contains approximately 250 particles.
+- Pipette out 20uL of just droplets into Axygen Maximum Recovery PCR tubes. Each 20uL contains approximately 250 particles.
 - Place tubes under UV light with top open on ice and treat for 15 min
 - Cover with 40uL of mineral oil
 
@@ -165,9 +190,9 @@ Sonicate
 
 - Run with the following PCR program:
 	- 1 98 30s
-	- 2 98 10s
+	- 2 98 20s
 	- 3 55 20s
-	- 4 65 30s
+	- 4 65 60s
 	- 5 step 2, 29x
 	- 6 65 120s
 	- 7 10 infinity
