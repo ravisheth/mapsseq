@@ -9,6 +9,11 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 #### Required buffers
 - Acry/Bis stock 4X (24%T, 3%C): 3.8mL water, 1.2g Acrylamide, 0.036g Bisacrylamide
 - TBSET buffer: 10mM Tris HCl pH 8.0, 137mM NaCl, 2.7mM KCl, 10mM EDTA, 0.1% Triton-X 100  
+- WB: 10mM Tris HCl pH 8.0, 0.1mM EDTA, 0.1% Tween 20
+- STOP25: 10mM Tris HCl pH 8.0, 25mM EDTA, 0.1% Tween 20, 100mM KCl
+- STOP10: 10mM Tris HCl pH 8.0, 25mM EDTA, 0.1% Tween 20, 100mM KCl
+- DENATURE: 0.5% Brij35, 150mM NaOH (must be made fresh and with non-expired NaOH)
+- NEUTRALIZE: 100mM Tris HCl pH 8.0, 10mM EDTA, 0.1% Tween 20, 100mM NaCl
 
 #### Synthesis of hydrogel beads
 - Prepare 3mL of HFE7500, 1% surfactant, 12uL of TEMED. Place in 3mL syringe and prime (25 gauge needle, standard tubing) on syringe pump.
@@ -18,13 +23,17 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 	- 75uL Acry/Bis stock 4X
 	- 24uL acry-pc-pe1 primer (250uM stock; 20uM final)
 	- 9uL 10% APS (wt/vol)
-- Vortex, microfuge and place in 1mL tube prefilled with 300uL HFE7500 and prime as above, with syringe tip facing up due to HFE7500 priming. Protect tubing from light with black sheath.
+- Vortex, microfuge and place in 1mL tube pre-filled with 300uL HFE7500 and prime as above, with syringe tip facing up due to HFE7500 priming. Protect tubing from light with black sheath.
 - Connect tubing to droplet formation device and flow at 5uL for acrylamide master mix and 50uL for carrier. Allow flow to stabilize and watch on microscope with red filter.
-- Once flow is stabilized (~1 minute) collect droplets with tubing in 2mL tube prefilled with 300uL mineral oil.
+- Once flow is stabilized (~1 minute) collect droplets with tubing in 2mL tube pre-filled with 300uL mineral oil. Ensure that droplets are 20um in diameter, which is desired for 25um input channel width in the encapsulation chip.
 - Replace with new tube after 30 minutes.
+- When finished (i.e. either acrylamide or carrier runs out) remove output tube and drain, and stop flow.
+- Clean chip quickly with water to prevent in-chip polymerization which could clog the chip.
 - Place two tubes in 65C incubator overnight, protected from light.
 
-#### Barcoding of hydrogel beads via primer extension
+- WRite clean up here
+
+#### Barcoding of hydrogel beads via primer extension (rounds 1-3)
 
 #### Enzymatic cleanup of barcoded hydrogel beads
 **TODO**
@@ -42,13 +51,13 @@ Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic
 The sample is then embedded with an degradable acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. Note that for inclusion of reverse primer, we target a concentration of approximately 100nM per droplet; accounting for droplet volume of 0.5nL this means that 5*10<sup>-5</sup>pmol must be loaded per particle. Assuming a median particle diameter of 20um, and assuming a spherical shape, this yields a particle volume of 4.2pL, meaning that the concentration of reverse primer should be approximately 10uM.
 
 ##### Preparation of  stock solutions
-- Monomer 2X concentrate (store -20C indefinitely)
+- Monomer 2X concentrate (store -20C indefinitely). Note: can be sonicated to ensure all components are solubilized.
 
 | name | stock concentration | amt to add | final conc (w/w) |
 |:----:|:-------------------:|:----------:|:---------------:|
 |Acrylamide|20%|1g|10%|
-|N,N′-Bis(acryloyl)cystamine|0.4%|0.02g|0.2%|
-|PBS|10x|0.5mL|1x|
+|N,N′-Bis(acryloyl)cystamine|0.8%|0.04g|0.4%|
+|PBS|2x|1mL|1x|
 |nuclease-free water|n/a|3.5mL|n/a|
 
 - Other stock solutions (store -20C, remake once every 2 weeks)
@@ -74,7 +83,7 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 	- 4uL APS
 - Place the particle in an 1.5mL tube on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
 - Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
-- Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2 to 4 hours or overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
+- Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
 - Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
 - Ensure that sample is fully polymerized throughout. Wash 3 times in PBS and store in an amber tube at -80C indefinitely.
 
@@ -91,7 +100,7 @@ Particles are then treated with lysozyme and proteinase K to lyse any remaining 
 ##### Lysozyme treatment
 - Resuspend particles in 500uL lysis buffer (Tris pH 8 10mM, EDTA 1mM, NaCl 100mM)
 - Add 1uL lysozyme (37.5KU/uL stock) to sample (final concentration 75U/uL)
-- Incubate at 37C for 1 hour with shaking.
+- Incubate at 37C for 1 hour with shaking; ensure cap stopper is added.
 
 ##### Proteinase K treatment
 - Resuspend particles in 500uL digestion buffer (30mM Tris HCl pH 8.0, EDTA 1mM, 0.5% Triton X-100, 800mM guanidine HCl).
@@ -234,9 +243,10 @@ Sonicate
 ### MIST-seq quality control
 ##### Construction of synthetic community particles
 To test the ability of MIST-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities.
-- Grow 6x strains overnight in 3:2 PAS: E. coli K12 MG1655, E. faecalis, P. aeruginosa, B. thetataiotaomacron, L. reuterii, B. adolescentis
-- Harvest strains and mix together into two Synthetic Communities: SC1 is composed of EC/BT/LR, SC2 is composed of BA/PA/EF.
-- Put through fixation, embedding, fracturing protocols. Note that for embedding, the strains are resuspended in acrymalide such that they form a dense slurry with cells throughout the acrymalide.
+- Prepare cells for two synthetic communities:
+	- One synthetic community is E. coli BL21, grown overnight; normalize to size of pellet fecal cells visually (see below)
+	- Second synthetic community is homogenized fecal pellets. Vortex two pellets in PBS with 3mm glass beads for 2 min to homogenize, and pass through 40um filter (Falcon). Vortex again with 0.1mm beads for 2min, microfuge down for 5s and pass through another 40um filter. Save the pass-through and pellet.
+- Samples are processed as above but with modification. Fix for 1 hr in methacarn with shaking to prevent aggregation of cell clumps. Spin down (ensuring no liquid remains) and embed pellet as above in 50uL of gel solution (by resuspending pellet within gel solution). Polymerize at 37C with shaking to ensure cells are in suspension. Fracture and prep as above.
 
 ### Barcoded Bead Quality Control
 ##### Quantification of extension efficiency via FISH
