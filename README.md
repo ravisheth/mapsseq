@@ -16,22 +16,31 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 - NEUTRALIZE: 100mM Tris HCl pH 8.0, 10mM EDTA, 0.1% Tween 20, 100mM NaCl
 
 #### Synthesis of hydrogel beads
-- Prepare 3mL of HFE7500, 1% surfactant, 12uL of TEMED. Place in 3mL syringe and prime (25 gauge needle, standard tubing) on syringe pump.
-- Prepare 300uL of an acrylamide master mix:
-	- 162uL nuclease free water
-	- 30uL TBSET buffer
-	- 75uL Acry/Bis stock 4X
-	- 24uL acry-pc-pe1 primer (250uM stock; 20uM final)
-	- 9uL 10% APS (wt/vol)
-- Vortex, microfuge and place in 1mL tube pre-filled with 300uL HFE7500 and prime as above, with syringe tip facing up due to HFE7500 priming. Protect tubing from light with black sheath.
-- Connect tubing to droplet formation device and flow at 5uL for acrylamide master mix and 50uL for carrier. Allow flow to stabilize and watch on microscope with red filter.
-- Once flow is stabilized (~1 minute) collect droplets with tubing in 2mL tube pre-filled with 300uL mineral oil. Ensure that droplets are 20um in diameter, which is desired for 25um input channel width in the encapsulation chip.
-- Replace with new tube after 30 minutes.
-- When finished (i.e. either acrylamide or carrier runs out) remove output tube and drain, and stop flow.
-- Clean chip quickly with water to prevent in-chip polymerization which could clog the chip.
-- Place two tubes in 65C incubator overnight, protected from light.
-
-- WRite clean up here
+- Microfluidic generation of beads:
+	- Prepare 3mL of HFE7500, 1% surfactant, 12uL of TEMED. Place in 3mL syringe and prime (25 gauge needle, standard tubing) on syringe pump.
+	- Prepare 300uL of an acrylamide master mix:
+		- 162uL nuclease free water
+		- 30uL TBSET buffer
+		- 75uL Acry/Bis stock 4X
+		- 24uL acry-pc-pe1 primer (250uM stock; 20uM final)
+		- 9uL 10% APS (wt/vol)
+	- Vortex, microfuge and place in 1mL tube pre-filled with 300uL HFE7500 and prime as above, with syringe tip facing up due to HFE7500 priming. Protect tubing from light with black sheath.
+	- Connect tubing to droplet formation device and flow at 5uL for acrylamide master mix and 50uL for carrier. Allow flow to stabilize and watch on microscope with red filter.
+	- Once flow is stabilized (~1 minute) collect droplets with tubing in 2mL tube pre-filled with 300uL mineral oil. Ensure that droplets are 20um in diameter, which is desired for 25um input channel width in the encapsulation chip.
+	- Replace with new tube after 30 minutes.
+	- When finished (i.e. either acrylamide or carrier runs out) remove output tube and drain, and stop flow.
+	- Clean chip quickly with water to prevent in-chip polymerization which could clog the chip.
+	- Place two tubes in 65C incubator overnight, protected from light.
+- Cleanup of beads:
+	- The next day, ensure that beads are polymerized by pipetting on microscope field.
+	- Remove mineral oil and carrier oil phases from the tubes, and pool both tubes. Add 500uL TBSET on top.
+	- Add 1mL of 20% PFO, vortex, and centrifuge at 5000g for 30s. Remove bottom 20% part of PFO phase and centrifuge again.
+	- Remove The bottom 20% of PFO phase and add 1mL of 1% Span-80 in hexane. Vortex and centrifuge at 5000g for 30s, and remove hexane layer.
+	- Repeat hexane wash again.
+	- Add 1mL TBSET and vortex. Centrifuge at 5000g for 1m, and remove hexane layer by keeping tip at air-water interface to remove trace hexane.
+	- Repeat TBSET wash three times.
+	- Pass beads through 40um cell strainer using TBSET to pass through beads.
+	- Recover beads and save in amber tube at 4C for up to 6 months. Measure diameter which should be 25-30um (due to swelling) and ensure uniformity.
 
 #### Barcoding of hydrogel beads via primer extension (rounds 1-3)
 
@@ -57,8 +66,8 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 |:----:|:-------------------:|:----------:|:---------------:|
 |Acrylamide|20%|1g|10%|
 |N,N′-Bis(acryloyl)cystamine|0.8%|0.04g|0.4%|
-|PBS|2x|1mL|1x|
-|nuclease-free water|n/a|3.5mL|n/a|
+|PBS|1x|0.5mL|0.5x|
+|nuclease-free water|n/a|3mL|n/a|
 
 - Other stock solutions (store -20C, remake once every 2 weeks)
 	- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
@@ -69,7 +78,7 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 ```diff
 - IMPORTANT: ensure that the photocleavable primer is protected from light
 - IMPORTANT: once polymerized, the gel is sensitive to reducing conditions.
-- Store at -80C and protect from any reagents that may contain reducing agents.
+- Store at -20C and protect from any reagents that may contain reducing agents.
 ```
 - Remove sample from fixative, and wash in PBS, and let sit for 5 min.
 - Remove PBS, and incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 5 min.  
@@ -85,7 +94,7 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 - Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
 - Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
 - Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
-- Ensure that sample is fully polymerized throughout. Wash 3 times in PBS and store in an amber tube at -80C indefinitely.
+- Ensure that sample is fully polymerized throughout. Wash 3 times in TET (10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween-20) and store at -20C.
 
 ### Fracturing
 The embedded sample is then broken into small particles using cryofracturing.
@@ -107,7 +116,7 @@ Particles are then treated with lysozyme and proteinase K to lyse any remaining 
 - Add 1uL of proteinase K (50ug/uL stock) (final concentration 0.1ug/uL).
 - Incubate at 65C for 15 min with shaking; ensure that cap stopper is added.
 - Incubate at 95C for 5 min to inactivate proteinase K; ensure that cap stopper is added.
-- Wash particles in 500uL TlowE buffer 3x times and store at -80C.
+- Wash particles in 500uL TET buffer 3x times and store at -20C.
 
 ### Size selection
 Nylon mesh filters are utilized to size-select fractured acrylamide particles. The protocol is modular to meshes of different sizes.
@@ -128,7 +137,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 	- Connect a 3mL syringe to the filter. Pipette the 1mL <15um sample into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Save flow-through; this  contains particles smaller than 7um.
 	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times and discard. Repeat this step three times.
 	- Aspirate 500uL of nuclease-free water; flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles 7-15um
-- Pellet each fraction centrifugation and resuspend in storage buffer (10mM Tris, 1mM EDTA, 0.1% Tween) for long term storage at -80C.
+- Pellet each fraction centrifugation and resuspend in TET for long term storage at -20C.
 
 ### Encapsulation
 ##### Equipment preparation
