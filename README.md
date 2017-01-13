@@ -12,7 +12,7 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 - WB: 10mM Tris HCl pH 8.0, 0.1mM EDTA, 0.1% Tween 20
 - TET: 10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween 20
 - STOP25: 10mM Tris HCl pH 8.0, 25mM EDTA, 0.1% Tween 20, 100mM KCl
-- STOP10: 10mM Tris HCl pH 8.0, 25mM EDTA, 0.1% Tween 20, 100mM KCl
+- STOP10: 10mM Tris HCl pH 8.0, 10mM EDTA, 0.1% Tween 20, 100mM KCl
 - DENATURE: 0.5% Brij35, 150mM NaOH (must be made fresh and with non-expired NaOH)
 - NEUTRALIZE: 100mM Tris HCl pH 8.0, 10mM EDTA, 0.1% Tween 20, 100mM NaCl
 - HYBRIDIZE: 10mM Tris HCl pH 8.0, 0.1mM EDTA, 0.1% Tween-20, 330mM KCl
@@ -54,11 +54,11 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 	- Place on incubator at 70C for 2min and place in block at 4C (or ice for V-well plate) with lid 105C for 20s. Pull of seal and discard.
 	- Place primer plate, bead plate (tap down to ensure mix is at bottom) and destination plate (96 well Eppendorf Twin-tec) on Beckman liquid handler with 2X P50 barrier tips. For bead tips, specify to the liquid handler the remaining tips.
 	- Using liquid handler, mix the beads and distribute 9.3uL to the destination plate. Then distribute 4.8uL of primer to each well.
-	- Seal destination plate and spin down plate.
+	- Re-seal primer plate with new seal and mark use on side of plate. Seal destination plate and spin down plate.
 	- Incubate in PCR machine: 85C 2min, 60C 120min. Start timer for 22min.
 	- Prepare reaction mix: 510uL water, 60uL 10X isothermal amplification buffer, 30uL Bst 2.0 Polymerase. Place 75uL in each well of the second column of the 96 V-well plate from before.
 	- After 20 min of incubation, take plate out and remove seals via the 70C/4C step described previously.
-	- Place reaction mix plate (tap down to ensure mix is at bottom), destination plate, P50 barrier tips on liquid handler. For tips, specify to the liquid handler the remaining tips. Transfer 5.4uL of the reaction mix to each well.
+	- Place reaction mix plate (tap down to ensure mix is at bottom), destination plate, P50 barrier tips on liquid handler. Transfer 5.4uL of the reaction mix to each well.
 	- Seal destination plate and spin down plate.
 	- Incubate back on PCR machine for 60m. Cool plates on ice and remove seal.
 	- Remove from PCR machine, and place destination plate, 10mL STOP25 buffer in 20mL reservoir, and P50 barrier tips on liquid handler. Add 10uL STOP25, mix and place in recovery reservoir for each well. Wash each well with 20uL of STOP25 and place in recovery reservoir.
@@ -67,9 +67,10 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 	- Incubate at RT for at least 30min.
 - Postbarcoding washes
 	- Centrifuge 15mL tube down (5000g, 5min) and transfer beads to 1.5mL tube
-	- Wash beads 3 times with 1mL STOP10 buffer (vortex, 10,000g 1min)
-	- Wash beads 3 times with **fresh** DENATURE as above
-	- Wash beads 2 times with NEUTRALIZE buffer as above
+	- Wash beads 3 times with 1mL STOP10 buffer (vortex, incubate 1m, 10,000g 1min)
+	- Incubate beads with DENATURE for 10m at room temperature
+	- Wash beads 3 times with **fresh** DENATURE (vortex, incubate 1m, 10,000g 1min)
+	- Wash beads 2 times with NEUTRALIZE buffer (vortex, incubate 1m, 10,000g 1min)
 	- Either wash 3 times in TET buffer if storing overnight, or proceed back to barcoding reaction with 3 washes in WB for next extension rounds
 
 #### Enzymatic cleanup of barcoded hydrogel beads
