@@ -51,7 +51,7 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 	- Add 140uL of isothermal amplification buffer (10X) for final 1.5X, 60uL 10mM dNTPs for final 0.645uM (final volume: 930uL)
 	- Pipette 115uL into first column of 8 wells of a 96 V-well plate (Costar 3894). Protect from light.
 	- Thaw primer plate for the round (pe1, pe2 or pe3). Centrifuge for 1 min to collect condensate.
-	- Place on PCR machine at 70C and lid 105C for 40s and place at 4C for 20s. Pull of seal and discard.
+	- Place on incubator at 70C for 2min and place in block at 4C (or ice for V-well plate) with lid 105C for 20s. Pull of seal and discard.
 	- Place primer plate, bead plate (tap down to ensure mix is at bottom) and destination plate (96 well Eppendorf Twin-tec) on Beckman liquid handler with 2X P50 barrier tips. For bead tips, specify to the liquid handler the remaining tips.
 	- Using liquid handler, mix the beads and distribute 9.3uL to the destination plate. Then distribute 4.8uL of primer to each well.
 	- Seal destination plate and spin down plate.
@@ -249,7 +249,7 @@ Sonicate
 	- 3 55 20s
 	- 4 65 60s
 	- 5 step 2, 29x
-	- 6 65 120s
+	- 6 65 5m
 	- 7 10 infinity
 
 ##### First round clean up
