@@ -10,10 +10,12 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 - Acry/Bis stock 4X (24%T, 3%C): 3.8mL water, 1.2g Acrylamide, 0.036g Bisacrylamide
 - TBSET buffer: 10mM Tris HCl pH 8.0, 137mM NaCl, 2.7mM KCl, 10mM EDTA, 0.1% Triton-X 100  
 - WB: 10mM Tris HCl pH 8.0, 0.1mM EDTA, 0.1% Tween 20
+- TET: 10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween 20
 - STOP25: 10mM Tris HCl pH 8.0, 25mM EDTA, 0.1% Tween 20, 100mM KCl
 - STOP10: 10mM Tris HCl pH 8.0, 25mM EDTA, 0.1% Tween 20, 100mM KCl
 - DENATURE: 0.5% Brij35, 150mM NaOH (must be made fresh and with non-expired NaOH)
 - NEUTRALIZE: 100mM Tris HCl pH 8.0, 10mM EDTA, 0.1% Tween 20, 100mM NaCl
+- HYBRIDIZE: 10mM Tris HCl pH 8.0, 0.1mM EDTA, 0.1% Tween-20, 330mM KCl
 
 #### Synthesis of hydrogel beads
 - Microfluidic generation of beads:
@@ -34,18 +36,53 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 - Cleanup of beads:
 	- The next day, ensure that beads are polymerized by pipetting on microscope field.
 	- Remove mineral oil and carrier oil phases from the tubes, and pool both tubes. Add 500uL TBSET on top.
-	- Add 1mL of 20% PFO, vortex, and centrifuge at 5000g for 30s. Remove bottom 20% part of PFO phase and centrifuge again.
+	- Add 1mL of 20% PFO in HFE7500, vortex, and centrifuge at 5000g for 30s. Remove bottom 20% part of PFO phase and centrifuge again.
 	- Remove The bottom 20% of PFO phase and add 1mL of 1% Span-80 in hexane. Vortex and centrifuge at 5000g for 30s, and remove hexane layer.
 	- Repeat hexane wash again.
-	- Add 1mL TBSET and vortex. Centrifuge at 5000g for 1m, and remove hexane layer by keeping tip at air-water interface to remove trace hexane.
+	- Add 1mL TBSET and vortex. Centrifuge at 10,000g for 1m, and remove hexane layer by keeping tip at air-water interface to remove trace hexane.
 	- Repeat TBSET wash three times.
 	- Pass beads through 40um cell strainer using TBSET to pass through beads.
 	- Recover beads and save in amber tube at 4C for up to 6 months. Measure diameter which should be 25-30um (due to swelling) and ensure uniformity.
 
 #### Barcoding of hydrogel beads via primer extension (rounds 1-3)
+- Barcoding reaction
+	- Add 1mL WB to approximately 20,000,000 beads, vortex, and spin down at 10,000g for 1 min. Repeat wash for a total of three times.
+	- Remove supernatant, leaving exactly 300uL of packed beads. Add 430uL WB and ensure volume is exactly 730uL.
+	- Add 140uL of isothermal amplification buffer (10X) for final 1.5X, 60uL 10mM dNTPs for final 0.645uM (final volume: 930uL)
+	- Pipette 115uL into first column of 8 wells of a 96 V-well plate (Costar 3894). Protect from light.
+	- Thaw primer plate for the round (pe1, pe2 or pe3). Centrifuge for 1 min to collect condensate.
+	- Place on PCR machine at 70C and lid 105C for 40s and place at 4C for 20s. Pull of seal and discard.
+	- Place primer plate, bead plate (tap down to ensure mix is at bottom) and destination plate (96 well Eppendorf Twin-tec) on Beckman liquid handler with 2X P50 barrier tips. For bead tips, specify to the liquid handler the remaining tips.
+	- Using liquid handler, mix the beads and distribute 9.3uL to the destination plate. Then distribute 4.8uL of primer to each well.
+	- Seal destination plate and spin down plate.
+	- Incubate in PCR machine: 85C 2min, 60C 120min. Start timer for 22min.
+	- Prepare reaction mix: 510uL water, 60uL 10X isothermal amplification buffer, 30uL Bst 2.0 Polymerase. Place 75uL in each well of the second column of the 96 V-well plate from before.
+	- After 20 min of incubation, take plate out and remove seals via the 70C/4C step described previously.
+	- Place reaction mix plate (tap down to ensure mix is at bottom), destination plate, P50 barrier tips on liquid handler. For tips, specify to the liquid handler the remaining tips. Transfer 5.4uL of the reaction mix to each well.
+	- Seal destination plate and spin down plate.
+	- Incubate back on PCR machine for 60m. Cool plates on ice and remove seal.
+	- Remove from PCR machine, and place destination plate, 10mL STOP25 buffer in 20mL reservoir, and P50 barrier tips on liquid handler. Add 10uL STOP25, mix and place in recovery reservoir for each well. Wash each well with 20uL of STOP25 and place in recovery reservoir.
+	- Discard 2 left columns of tips which are dirty.
+	- Recover beads from recovery reservoir in 15mL tube with serological pipette. Wash recovery reservoir with more STOP25 and place in 15mL tube.
+	- Incubate at RT for at least 30min.
+- Postbarcoding washes
+	- Centrifuge 15mL tube down (5000g, 5min) and transfer beads to 1.5mL tube
+	- Wash beads 3 times with 1mL STOP10 buffer (vortex, 10,000g 1min)
+	- Wash beads 3 times with **fresh** DENATURE as above
+	- Wash beads 2 times with NEUTRALIZE buffer as above
+	- Either wash 3 times in TET buffer if storing overnight, or proceed back to barcoding reaction with 3 washes in WB for next extension rounds
 
 #### Enzymatic cleanup of barcoded hydrogel beads
-**TODO**
+- Wash beads in WB 3 times (if not already done) as above. Save small aliquot as "before ExoI treatment" for QC
+- Wash beads in HYBRIDIZE three times and remove supernatant (300uL final volume)
+- Add 30uL of 250uM 16S_505f_RC primer (~20uM final concentration) and mix well
+- Incubate at RT for 30-min
+- Mix 330uL of bead mix with 100uL 10X ExoI buffer (1X final), 555uL nuclease-free water, 15uL ExoI (0.3U/uL) in 2mL tube.
+- Incubate for 2h at RT
+- Fill tube with STOP25 and invert
+- Perform STOP10, DENATURE, NEUTRALIZE washes as above.
+- After NEUTRALIZE washes, filter beads through 40um filter above.
+- Wash recovered beads three times in TET as above and save in amber tube at 4C.
 
 ### Fixation
 Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
