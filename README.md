@@ -47,7 +47,7 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 #### Barcoding of hydrogel beads via primer extension (rounds 1-3)
 - Barcoding reaction
 	- Add 1mL WB to approximately 20,000,000 beads, vortex, and spin down at 10,000g for 1 min. Repeat wash for a total of three times.
-	- Remove supernatant, leaving exactly 300uL of packed beads. Add 430uL WB and ensure volume is exactly 730uL.
+	- Remove supernatant, and adjust volume to exactly 730uL with WB.
 	- Add 140uL of isothermal amplification buffer (10X) for final 1.5X, 60uL 10mM dNTPs for final 0.645uM (final volume: 930uL)
 	- Pipette 115uL into first column of 8 wells of a 96 V-well plate (Costar 3894). Protect from light.
 	- Thaw primer plate for the round (pe1, pe2 or pe3). Centrifuge for 1 min to collect condensate.
@@ -56,12 +56,12 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 	- Using liquid handler, mix the beads and distribute 9.3uL to the destination plate. Then distribute 4.8uL of primer to each well.
 	- Re-seal primer plate with new seal and mark use on side of plate. Seal destination plate and spin down plate.
 	- Incubate in PCR machine: 85C 2min, 60C 120min. Start timer for 22min.
-	- Prepare reaction mix: 510uL water, 60uL 10X isothermal amplification buffer, 30uL Bst 2.0 Polymerase. Place 75uL in each well of the second column of the 96 V-well plate from before.
+	- Prepare reaction mix: 595uL water, 70uL 10X isothermal amplification buffer, 35uL Bst 2.0 Polymerase. Place 80uL in each well of the second column of the 96 V-well plate from before.
 	- After 20 min of incubation, take plate out and remove seals via the 70C/4C step described previously.
 	- Place reaction mix plate (tap down to ensure mix is at bottom), destination plate, P50 barrier tips on liquid handler. Transfer 5.4uL of the reaction mix to each well.
 	- Seal destination plate and spin down plate.
 	- Incubate back on PCR machine for 60m. Cool plates on ice and remove seal.
-	- Remove from PCR machine, and place destination plate, 10mL STOP25 buffer in 20mL reservoir, and P50 barrier tips on liquid handler. Add 10uL STOP25, mix and place in recovery reservoir for each well. Wash each well with 20uL of STOP25 and place in recovery reservoir.
+	- Remove from PCR machine, and place destination plate, 10mL STOP25 buffer in 20mL reservoir, and P50 barrier tips on liquid handler. Add 15uL STOP25, mix and place in recovery reservoir for each well. Wash each well with 20uL of STOP25 and place in recovery reservoir.
 	- Discard 2 left columns of tips which are dirty.
 	- Recover beads from recovery reservoir in 15mL tube with serological pipette. Wash recovery reservoir with more STOP25 and place in 15mL tube.
 	- Incubate at RT for at least 30min.
@@ -293,7 +293,7 @@ To test the ability of MIST-seq to provide data on single particles, we generate
 - Prepare cells for two synthetic communities:
 	- One synthetic community is E. coli BL21, grown overnight; normalize to size of pellet fecal cells visually (see below)
 	- Second synthetic community is homogenized fecal pellets. Vortex two pellets in PBS with 3mm glass beads for 2 min to homogenize, and pass through 40um filter (Falcon). Vortex again with 0.1mm beads for 2min, microfuge down for 5s and pass through another 40um filter. Save the pass-through and pellet.
-- Samples are processed as above but with modification. Fix for 1 hr in methacarn with shaking to prevent aggregation of cell clumps. Spin down (ensuring no liquid remains) and embed pellet as above in 50uL of gel solution (by resuspending pellet within gel solution). Polymerize at 37C with shaking to ensure cells are in suspension. Fracture and prep as above.
+- Samples are processed as above with minor modification. Fix for 1 hr in methacarn with shaking to prevent aggregation of cell clumps. Spin down (ensuring no liquid remains) and embed pellet as above in 50uL of gel solution (by resuspending pellet within gel solution). Polymerize at 37C with shaking to ensure cells are in suspension. Fracture and prep as above.
 
 ### Barcoded Bead Quality Control
 ##### Quantification of extension efficiency via FISH
