@@ -16,6 +16,7 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 - DENATURE: 0.5% Brij35, 150mM NaOH (must be made fresh and with non-expired NaOH)
 - NEUTRALIZE: 100mM Tris HCl pH 8.0, 10mM EDTA, 0.1% Tween 20, 100mM NaCl
 - HYBRIDIZE: 10mM Tris HCl pH 8.0, 0.1mM EDTA, 0.1% Tween-20, 330mM KCl
+- PROBE: 5mM Tris HCl pH 8.0, 5mM EDTA, 0.05% Tween, 1M KCl
 
 #### Synthesis of hydrogel beads
 - Microfluidic generation of beads:
@@ -73,17 +74,20 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 	- Wash beads 2 times with NEUTRALIZE buffer (vortex, incubate 1m, 10,000g 1min)
 	- Either wash 3 times in TET buffer if storing overnight, or proceed back to barcoding reaction with 3 washes in WB for next extension rounds
 
+
 #### Enzymatic cleanup of barcoded hydrogel beads
 - Wash beads in WB 3 times (if not already done) as above. Save small aliquot as "before ExoI treatment" for QC
 - Wash beads in HYBRIDIZE three times and remove supernatant (300uL final volume)
 - Add 30uL of 250uM 16S_505f_RC primer (~20uM final concentration) and mix well
-- Incubate at RT for 30-min
+- Incubate at 85C for 2 min and 60C for 30 min.
 - Mix 330uL of bead mix with 100uL 10X ExoI buffer (1X final), 555uL nuclease-free water, 15uL ExoI (0.3U/uL) in 2mL tube.
-- Incubate for 2h at RT
+- Incubate at 37C for 1h
 - Fill tube with STOP25 and invert
 - Perform STOP10, DENATURE, NEUTRALIZE washes as above.
 - After NEUTRALIZE washes, filter beads through 40um filter above.
-- Wash recovered beads three times in TET as above and save in amber tube at 4C.
+- Wash recovered beads three times in TET as above.
+- Pass through 40um cell strainer using TET to pass through beads.
+- Spin down filtered beads, resuspend TET, and save in amber tube at 4C.
 
 ### Fixation
 Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
@@ -170,7 +174,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Place each filters in a Swinnex filter holder with gasket O-ring.
 - Start with the 15um filter
 	- Take sample and resuspend in 1mL of nuclease-free water. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than 15um.
-	- Aspirate 500uL of nuclease free water, flow back and forth through the filter assembly for a total of three times. rPull remaining liquid in the syringe and set aside; this contains particles greater than 15um.
+	- Aspirate 500uL of nuclease free water, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this contains particles greater than 15um.
 - Switch filters to the 7um filter
 	- Connect a 3mL syringe to the filter. Pipette the 1mL <15um sample into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Save flow-through; this  contains particles smaller than 7um.
 	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times and discard. Repeat this step three times.
@@ -254,6 +258,8 @@ Sonicate
 	- 7 10 infinity
 
 ##### First round clean up
+ExoI?
+
 - Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics.
 - Remove 10% EA oil.
 - Add 20uL of PFO to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
@@ -297,10 +303,11 @@ To test the ability of MIST-seq to provide data on single particles, we generate
 
 ### Barcoded Bead Quality Control
 ##### Quantification of extension efficiency via FISH
-To assess the efficiency of primer extension, we utilize fluorescence in situ hybridization with FAM labeled probes targeted to the Illumina adapter (i.e. unextended ssDNA product) and the 505f primer (fully extended ssDNA product). The ratio of intensity observed with the 505f probe to the Illumina probe reflects the extension efficiency of the construction protocol.
-- Resuspend ~5,000 beads in 19.2uL hybridization buffer. Add 0.8uL of 250uM probe (either Illumina or 505f) such that the final concentration is 10uM. Include a negative control (beads with streptavidin, streptavidin-Cy3, but no primer) and positive control (beads with full primer product conjugated).
+To assess the efficiency of primer extension, as well ExoI cleanup, we utilize fluorescence in situ hybridization with Cy5 labeled probes targeted to the Illumina adapter (i.e. unextended ssDNA product) and the 505f primer (fully extended ssDNA product). The ratio of intensity observed with the 505f probe to the Illumina probe reflects the extension efficiency of the construction protocol.
+- Perform all steps for beads before ExoI cleanup and after ExoI cleanup, as well as for PE1 and 505f probe (4 total)
+- Resuspend 1uL packed beads in 18.2uL PROBE buffer. Add 0.8uL of 250uM probe (either PE1 or 505f) such that the final concentration is 10uM.
 - Allow to hybridize at RT on a rotisserie for 30 min.
-- Wash beads 3 times with 500uL of hybridization buffer. Resuspend in 2uL of nuclease-free water, spot onto a slide, and allow to dry.
+- Wash beads 3 times with 500uL of PROBE buffer. Resuspend in 20uL PROBE and place on slide with coverslip.
 - Record average intensity per bead using an epifluorescence microscope.
 
 ##### Validation of photorelease of primers from bead and particles - Bioanalzyer
@@ -310,34 +317,24 @@ To assess UV exposure-dependent release of primers from barcoded beads and parti
 - Spin down aliquots and remove ~5uL of supernatant.
 - Load 1uL of supernatant and follow manufacturer instructions for the Agilent Bioanylyzer HS DNA kit.
 
-##### Validation of photorelease of primers from bead - PAGE analysis
-We also utilize PAGE analysis to quantify release of ssDNA from barcoded beads and particles.
-- Resuspend ~10,000 beads in 10uL nuclease-free water. Make two aliquots.
-- Expose one aliquot to UV light (BlackRay Xenon 365nm UV) for 15 minutes on ice. Place the other aliquot on ice and protect from ambient light.
-- Spin down aliquots and remove 7.5uL of supernatant.
-- Add 7.5uL of 2x TBE-Urea sample loading dye (Biorad). Mix well and heat to 95C for 3 minutes.
-- Take 0.25uL of ladder (Gene Ruler Ultra Low) and add to 7.25uL of water; add 7.5uL of 2x TBE-Urea sample loading dye and mix well.
-- Load into a 15% TBE-Urea gel and run per manufacturers instructions (180V, until bromophenol blue front hits reference).
-- Open gel and stain with 10mL of 1X SYBR Green solution. Image on a UV transilluminator.
-
 ##### Sequencing of individual bead primers and total pool primers
-To assess the composition of primers on a single bead as well as the composition of the entire pool of beads, we utilize deep sequencing of the ssDNA primers on the Illumina MiSeq platform.
-- Suspend 100,000 beads (approximately 10x the size of the library) in 48uL of hybridization buffer with 0.1mM biotin. Add 2uL of 250uM stock pe2-umi-505f primer such that the final concentraiton is 10uM. Allow primers to anneal for 1 hr on a rotisserie at room temperature.
-- Wash beads 3 times with wash buffer supplemented with 0.1mM biotin. Remove as much of the wash buffer as possible without aspirating any of the beads.
-- Add 50uL of a Klenow master mix such that the tube has a final volume of 50uL containing 1x NEBuffer 2, 0.5mM dNTPs and and 5U Klenow.
-	- Specifically, mix 5uL NEBuffer 2 10x, 2.5uL 10uM dNTPs, 1uL Klenow (5,000 units/mL) and 41.5uL nuclease-free water.
-- Incubate at 25C for 30 minutes. Vortex every 10 minutes to keep beads in solution.
-- Add 5uL of 0.5M EDTA pH8.0 and mix well. Incubate on ice for 30 minutes to allow full chelation of magnesium ions and inactivation of Klenow.
-- Quench the reaction with 100uL of 125mM NaOH, 2mM biotin and 10mM EDTA.
-- Transfer to a 1.5mL tube and wash 5 times with 500uL of 125mM NaOH, 2mM biotin and 10mM EDTA.
-- Wash 3 times with wash buffer supplemented with 0.1mM biotin and 0.1mM EDTA.
-- Dilute an aliquot of beads and isolate single beads on a microscope field by pipetting carefully with a 2uL pipette. Place 16 beads in PCR tubes with 10uL of nuclease-free water.
-- Resuspend the remaining ~100,000 beads in 10uL of nuclease free water.
-- Expose all tubes to UV light (BlackRay Xenon 365nm UV) for 15 minutes on ice.
-- Add 20uL of Kapa HiFi PCR Master Mix, forward primer, and uniquely indexed reverse primer to each tube such that the final volume is 30uL
-	- Specifically, prepare a master mix of 255uL Kapa HiFi PCR Master Mix 2x, 25.5uL pe1 forward primer 10uM, 5.1uL SYBR 100x, 28.9uL nuclease-free water. Aliquot 18.5uL of this master mix into each tube, and add 1.5uL of pe2 indexed reverse primer 10uM (ie containing appropriate barcode). Mix well.
-- Amplify via a PCR reaction, with 20 cycles for the individual beads and 10 cycles for the pooled beads: 95C 5m, 98C 20s, 60C 15s, 72C 30s, 72C 5m.
-- Quantitate products using the Qubit HS DNA platform and pool together at an equimolar ratio. Clean up using a Qiagen PCR clean up kit, quantitate, and sequence on the MiSeq platform (2x25 read length, index 1 8bp).
+To assess the composition of primers on a single bead as well as the composition of the entire pool of beads, we utilize deep sequencing of the ssDNA primers. The experiment is performed on 12 individual beads as well as a pool of ~10,000 beads.
+- Perform PE1 probe staining as above. Pick individual beads on microscope field and add to PCR tube with 5uL 10mM Tris HCl pH 8.0, for 15 beads. Resuspend the remaining 10,000 beads in a PCR tube with 5uL 10mM Tris HCl pH 8.0
+- Expose tubes to UV light for 15 minutes on ice.
+- Add 1.1uL mix containing 0.25uL 10uM pe2-umi-505f primer, 0.6uL 10X isothermal amplification buffer, 0.25uL 10mM dNTPs to each well.
+- Incubate tubes at 85C for 2 min and 60C for 5 min
+- Add 3.9uL mix containing 0.4uL 10X isothermal amplification buffer, 0.25uL Bst2.0 and 3.25uL water to each well.
+- Incubate tubes at 60C for 15 min and 95C for 5 min and 10C infinite.
+- Add PCR mix containing 12.5uL NEB Next Q5 HiFi Hot Start Master Mix, 1uL 10uM forward primer (p5), 1uL 10uM reverse primer (p7, unique barcode for each well), 0.25uL 10X SYBR Green I, 0.25uL nuclease-free water.
+- Perform qPCR amplification with the following PCR protocol. Remove tubes from amplification before they pass exponential amplification:
+	- 1 98 30s
+	- 2 98 10s
+	- 3 68 20s
+	- 4 65 30s
+	- 5 step 2, 29x
+	- 6 65 120s
+	- 7 10 infinity
+- QC products via gel, pool based on Qubit HS DNA, and gel extract the 214-216bp product. Sequence on MiSeq 150v3 R1:94 R2:73 i1:8
 
 ## 16S FISH studies
 To confirm findings from the MIST-seq technique, we also perform 16S FISH protocols. We base our FISH protocol largely on commonly used FISH protocols, and previously validated probes. 3 probes are chosen with different fluorophores. They target a particular percentage of all known species within particular families listed below:
