@@ -197,77 +197,83 @@ Chips need to be treated when first constructed. This is best performed in paral
 ##### Encapsulation protocol
 A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 5-10 droplets will receive a bead, while approximately 1 in 10-20 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.
 
+###### General preparation
 ```diff
 - IMPORTANT: Particles and barcoded hydrogel beads are light sensitive.
 - Minimize exposure to light, and ensure that red filter is used on microscope.
 ```
-
-- UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, 2x magnetic stir-bar, 2x 1mL syringe, 1.5mL  collection tube, 2x Hamilton luer to tubing connector, tubing exit connector.
-
+- UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bars
 
 ###### Preparation of beads
-WASH
-Gel well tips
+- Centrifuge down bead stock and remove ~50-100uL of packed beads from bottom of tube
+- Wash beads twice with WB
+- Wash beads twice in WB with 1mM DTT
+- Centrifuge down beads and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
+- Using empty 1mL syringe connected to tubing, aspirate approximately 5uL of packed beads (approximately XX cm) and then approximately 10cm of air.
+- Remaining beads can be washed twice in TET and returned to stock tube.
+- Cut tubing right where beads start. Backfill a syringe with 500uL HFE7500, remove bubbles and prime with 25 gauge needle.
+- Connect syringe to tubing, prime syringe such that beads are near the entry port, and cover tubing with black covering.
+- Mount syringe vertically with needle facing upwards.
 
 ###### Preparation of cell-clusters
-WASH
-Sonicate
-
-
-- Mix 200uL encapsulation master mix as follows:
-	- 100uL NEB Next Q5 2x Master Mix
-	- 20uL 10%w/v Pluronic 127
-	- 32uL NycoPrep (60% w/v Nycodenz)
-	- 5uL BSA (20mg/mL, NEB)
-	- 33uL nuclease free water
+- Quantify cell-clusters via hemacytometer.
+- Remove approximately 20,000 cell-clusters and wash three times in WB (~444 clusters/uL)
+- Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
+- Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
+	- 25uL NEB Next Q5 2x Master Mix
+	- 5uL 10%w/v Pluronic 127
+	- 8uL NycoPrep (60% w/v Nycodenz)
+	- 1.25uL BSA (20mg/mL, NEB)
+	- 5.75uL nuclease free water
+- Vortex for 10s, and sonicate in water bath for 30s.
+- Backfill a syringe with 500uL HFE7500, add encapsulation mix, and prime with 25 gauge needle and tubing. Cover tubing with black covering.
 
 ###### Encapsulation
-
-- Mix mixture well without introducing bubbles and pipette the bead and particle mixture into separate into 1mL syringe. Carefully load syringe with magnetic mixer.
-- Prepare a third syringe with 1mL of 2%EA surfactant in HFE7500.
-- Connect tubing to chip, and prime syringes. Turn on the syringe mixer to no greater than settings "30" (approximately 120rpm). Note that speeds higher than this may result in shearing of barcoded beads which is not desirable.
-- Flow syringes at 7.5uL/min for the particles and beads and 30uL/min for the oil.
-- Observe proper and stable droplet formation (faint flickers at droplet junction)
-- Collect droplets into a LoBind tube filled with 200uL mineral oil cooled on ice
+- Prepare a third syringe with 750uL of 2%EA surfactant in HFE7500.
+- Prime syringes on machines by hand and connect to sterilized encapsulation chip.
+- Flow beads at 0.5uL/min and encapsulation mix at 0.5uL/min until flow is observed.
+- Adjust encapsulation mix to 5uL/min and turn on oil/surfactant to 10uL/min.
+- Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a LoBind tube filled with 200uL mineral oil cooled on ice.
+- Once reagents are finished, remove capture tubing and drain into capture tube. Then turn of syringes. Extra beads may be washed with TET twice and returned to stock vial.
+- Wash microfluidic chip with water.
 
 ### PCR amplification and library prep
 ##### First round PCR amplification
-- Add 20uL of 10%EA in HFE7500 to each tube
-
 ```diff
 - IMPORTANT: Emulsion compatible plastics must be utilized:
 - Rainin low retention/wide orifice tips MUST be used when handling emulsion;
 - VWR Maxymum Recovery PCR tubes should be utilized.
 ```
-- Pipette out 20uL of just droplets into Axygen Maximum Recovery PCR tubes. Each 20uL contains approximately 250 particles.
+- Add 30uL of 25%EA in HFE7500 to a Axygen Maximum Recovery PCR tube
+- Pipette out 40uL of droplets into the tube.
 - Place tubes under UV light with top open on ice and treat for 15 min
-- Cover with 40uL of mineral oil
+- Cover with 30uL of mineral oil
 
 ```diff
 - IMPORTANT: A 96 deep well cycler must be utilized for the emulsion PCR amplification.
 - Ensure that proper volume is set corresponding to actual emulsion volume.
 ```
 
-- Run with the following PCR program:
-	- 1 98 30s
-	- 2 98 20s
-	- 3 55 20s
-	- 4 65 60s
-	- 5 step 2, 29x
-	- 6 65 5m
-	- 7 10 infinity
+- Run with the following PCR program with heated lid off and 100uL volume.
+	- 1 10 3h
+	- 2 98 30s
+	- 3 98 20s
+	- 4 55 20s
+	- 5 65 60s
+	- 6 step 3, 14x
+	- 7 65 5m
+	- 8 10 infinity
 
 ##### First round clean up
-ExoI?
-
 - Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics.
-- Remove 10% EA oil.
-- Add 20uL of PFO to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
-- Extract as much of the PFO phase as possible.
-- Perform a 0.8X AmpureXP clean up by adding XX uL. Resuspend in 12uL of 10mM Tris-HCl pH 8.0, and save 10uL.
+- Remove as much of EA/oil underneath tube and mineral oil above tube.
+- Add 50uL of 20% PFO in HFE75000 to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
+- Extract as much of the aqueous phase as possible (40uL should be achievable)
+- Perform a ExoI digestion by adding 2uL of ExoI enzyme. Incubate at 37C for 30min.
+- Perform a 0.8X AmpureXP clean up by adding 32uL of AmpureXP, and follow regular protocol with 80% EtOH washes. Resuspend in 22uL of 10mM Tris-HCl pH 8.0, and save 20uL.
 
 ##### Indexing PCR
-- Setup up following reaction: 5uL first round PCR product (Ampure cleanup), 1uL forward index primer (10uM), 1uL reverse index primer (10um), 0.02uL 100x SYBR green (0.1x final concentration), 2.8uL water, 10uL NEB Next Q5 2x Master Mix.
+- Setup up following reaction: 10uL first round PCR product, 2uL forward index primer (10uM), 2uL reverse index primer (10um), 6uL water, 20uL NEB Next Q5 2x Master Mix and SYBR green (0.1x final concentration).
 - Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel.
 
 ```diff
@@ -286,7 +292,7 @@ ExoI?
 	- 7 10 infinity
 
 ##### Library QC, pooling and prep
-- Assess all products on a 2% agarose E-gel to confirm library product at 450bp. Anecdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
+- Assess all products on a 2% agarose E-gel to confirm library product at XXXbp. Anecdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
 - Clean up with 0.6x AmpureXP and resuspend in 42uL of 10mM Tris-HCl pH 8.0. Remove 40uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
 - Quantify PCR product on the plate reader (5uL 10,000X SYBR Green I and 25mL TE) and pool using the Biomek 4000 Robot.
 - Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
