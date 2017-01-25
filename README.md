@@ -207,9 +207,9 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 ###### Preparation of beads
 - Centrifuge down bead stock and remove ~50-100uL of packed beads from bottom of tube
 - Wash beads twice with WB
-- Wash beads twice in WB with 1mM DTT
+- Wash beads twice in WB with 2mM DTT
 - Centrifuge down beads and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
-- Using empty 1mL syringe connected to tubing, aspirate approximately 5uL of packed beads (approximately XX cm) and then approximately 10cm of air.
+- Using empty 1mL syringe connected to tubing, aspirate approximately 5uL of packed beads (approximately the length of a razor blade) and then approximately 10cm of air.
 - Remaining beads can be washed twice in TET and returned to stock tube.
 - Cut tubing right where beads start. Backfill a syringe with 500uL HFE7500, remove bubbles and prime with 25 gauge needle.
 - Connect syringe to tubing, prime syringe such that beads are near the entry port, and cover tubing with black covering.
@@ -268,9 +268,9 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics.
 - Remove as much of EA/oil underneath tube and mineral oil above tube.
 - Add 50uL of 20% PFO in HFE75000 to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
-- Extract as much of the aqueous phase as possible (40uL should be achievable)
-- Perform a ExoI digestion by adding 2uL of ExoI enzyme. Incubate at 37C for 30min.
-- Perform a 0.8X AmpureXP clean up by adding 32uL of AmpureXP, and follow regular protocol with 80% EtOH washes. Resuspend in 22uL of 10mM Tris-HCl pH 8.0, and save 20uL.
+- Extract as much of the aqueous phase as possible (40uL should be achievable) and pass through spin column (Costar 0.45um) in Lo Bind tube. Save spin column.
+- Incubate at 37C for 30min.
+- Perform a 1X AmpureXP clean up by adding 90uL of AmpureXP, and follow regular protocol with 80% EtOH washes. Resuspend in 22uL of 10mM Tris-HCl pH 8.0, and save 20uL.
 
 ##### Indexing PCR
 - Setup up following reaction: 10uL first round PCR product, 2uL forward index primer (10uM), 2uL reverse index primer (10um), 6uL water, 20uL NEB Next Q5 2x Master Mix and SYBR green (0.1x final concentration).
