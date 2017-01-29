@@ -102,14 +102,14 @@ Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic
 The sample is then embedded with an degradable acrylamide matrix which preserves spatial structure and contains a reverse 16S amplification primer. Note that for inclusion of reverse primer, we target a concentration of approximately 100nM per droplet; accounting for droplet volume of 0.5nL this means that 5*10<sup>-5</sup>pmol must be loaded per particle. Assuming a median particle diameter of 20um, and assuming a spherical shape, this yields a particle volume of 4.2pL, meaning that the concentration of reverse primer should be approximately 10uM.
 
 ##### Preparation of  stock solutions
-- Monomer 2X concentrate (store -20C indefinitely). Note: can be sonicated to ensure all components are solubilized.
+- Monomer 2X concentrate (store -20C indefinitely).
 
 | name | stock concentration | amt to add | final conc (w/w) |
 |:----:|:-------------------:|:----------:|:---------------:|
 |Acrylamide|20%|1g|10%|
-|N,N′-Bis(acryloyl)cystamine|0.8%|0.04g|0.4%|
-|PBS|1x|0.5mL|0.5x|
-|nuclease-free water|n/a|3mL|n/a|
+|N,N′-Bis(acryloyl)cystamine|0.4%|0.02g|0.2%|
+|PBS|2x|1.0mL|1x|
+|nuclease-free water|n/a|3.0mL|n/a|
 
 - Other stock solutions (store -20C, remake once every 2 weeks)
 	- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
@@ -172,14 +172,14 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - First filter sample through a 40um cell culture filter (Falcon), and save flow-through, to remove large particles.
 - Clean and sterilize Swinnex 13mm filter holders, gasket O-rings, punched nylon mesh filters via UV sterilization.
 - Place each filters in a Swinnex filter holder with gasket O-ring.
-- Start with the 15um filter
+- Start with the 15um filter. Place 2 filters in assembly.
 	- Take sample and resuspend in 1mL of nuclease-free water. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than 15um.
 	- Aspirate 500uL of nuclease free water, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this contains particles greater than 15um.
-- Switch filters to the 7um filter
+- Switch filters to the 7um filter. Place 2 filters in assembly.
 	- Connect a 3mL syringe to the filter. Pipette the 1mL <15um sample into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Save flow-through; this  contains particles smaller than 7um.
-	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly for a total of three times and discard. Repeat this step three times.
-	- Aspirate 500uL of nuclease-free water; flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this fraction contains particles 7-15um
-- Pellet each fraction centrifugation and resuspend in TET for long term storage at -20C.
+	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly. Repeat this wash for a total of three times.
+	- Aspirate 500uL of TET; flow back and forth through the filter assembly. Pull remaining liquid in the syringe and set aside; this fraction contains particles 7-15um
+- Quantify numbers and store in amber tube for long term storage at -20C. 
 
 ### Encapsulation
 ##### Equipment preparation
@@ -207,7 +207,7 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 ###### Preparation of beads
 - Centrifuge down bead stock and remove ~50-100uL of packed beads from bottom of tube
 - Wash beads twice with WB
-- Wash beads twice in WB with 2mM DTT
+- Wash beads twice with Bead Buffer (10mM Tris HCl pH 8.0, 0.1% Tween 20, 50mM KCl, 5mM DTT)
 - Centrifuge down beads and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
 - Using empty 1mL syringe connected to tubing, aspirate approximately 5uL of packed beads (approximately the length of a razor blade) and then approximately 10cm of air.
 - Remaining beads can be washed twice in TET and returned to stock tube.
@@ -217,7 +217,7 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 
 ###### Preparation of cell-clusters
 - Quantify cell-clusters via hemacytometer.
-- Remove approximately 20,000 cell-clusters and wash three times in WB (~444 clusters/uL)
+- Remove approximately 12,500 cell-clusters and wash three times in WB (~250 clusters/uL)
 - Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
 - Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
 	- 25uL NEB Next Q5 2x Master Mix
@@ -231,8 +231,8 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 ###### Encapsulation
 - Prepare a third syringe with 750uL of 2%EA surfactant in HFE7500.
 - Prime syringes on machines by hand and connect to sterilized encapsulation chip.
-- Flow beads at 0.5uL/min and encapsulation mix at 0.5uL/min until flow is observed.
-- Adjust encapsulation mix to 5uL/min and turn on oil/surfactant to 10uL/min.
+- Flow beads at 0.3uL/min and encapsulation mix at 0.3uL/min until flow is observed.
+- Adjust encapsulation mix to 2.7uL/min and turn on oil/surfactant to 2uL/min.
 - Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a LoBind tube filled with 200uL mineral oil cooled on ice.
 - Once reagents are finished, remove capture tubing and drain into capture tube. Then turn of syringes. Extra beads may be washed with TET twice and returned to stock vial.
 - Wash microfluidic chip with water.
