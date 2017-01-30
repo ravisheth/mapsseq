@@ -179,7 +179,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 	- Connect a 3mL syringe to the filter. Pipette the 1mL <15um sample into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Save flow-through; this  contains particles smaller than 7um.
 	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly. Repeat this wash for a total of three times.
 	- Aspirate 500uL of TET; flow back and forth through the filter assembly. Pull remaining liquid in the syringe and set aside; this fraction contains particles 7-15um
-- Quantify numbers and store in amber tube for long term storage at -20C. 
+- Quantify numbers and store in amber tube for long term storage at -20C.
 
 ### Encapsulation
 ##### Equipment preparation
@@ -195,8 +195,6 @@ Chips need to be treated when first constructed. This is best performed in paral
 - Bake chip at 65C for 20 minutes.
 
 ##### Encapsulation protocol
-A microfluidic device is used to encapsulate barcoded beads and particles. Approximately 1 in 5-10 droplets will receive a bead, while approximately 1 in 10-20 droplets will receive a particle; this implies that approximately 1 in 100 droplets will receive a bead and particles. The distribution of droplet occupancy follows the Poisson distribution as expected, leading to a low doublet rate.
-
 ###### General preparation
 ```diff
 - IMPORTANT: Particles and barcoded hydrogel beads are light sensitive.
@@ -217,14 +215,14 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 
 ###### Preparation of cell-clusters
 - Quantify cell-clusters via hemacytometer.
-- Remove approximately 12,500 cell-clusters and wash three times in WB (~250 clusters/uL)
+- Remove approximately 12,000 cell-clusters and wash three times in WB (~300 clusters/uL)
 - Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
-- Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
+- Prepare encapsulation master mix (40uL), and resuspend cell-clusters in the master mix:
 	- 25uL NEB Next Q5 2x Master Mix
 	- 5uL 10%w/v Pluronic 127
 	- 8uL NycoPrep (60% w/v Nycodenz)
 	- 1.25uL BSA (20mg/mL, NEB)
-	- 5.75uL nuclease free water
+	- 0.75uL nuclease free water
 - Vortex for 10s, and sonicate in water bath for 30s.
 - Backfill a syringe with 500uL HFE7500, add encapsulation mix, and prime with 25 gauge needle and tubing. Cover tubing with black covering.
 
@@ -233,7 +231,7 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Prime syringes on machines by hand and connect to sterilized encapsulation chip.
 - Flow beads at 0.3uL/min and encapsulation mix at 0.3uL/min until flow is observed.
 - Adjust encapsulation mix to 2.7uL/min and turn on oil/surfactant to 2uL/min.
-- Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a LoBind tube filled with 200uL mineral oil cooled on ice.
+- Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a Axygen Maxymum recovery tube filled with 50uL mineral oil cooled on ice.
 - Once reagents are finished, remove capture tubing and drain into capture tube. Then turn of syringes. Extra beads may be washed with TET twice and returned to stock vial.
 - Wash microfluidic chip with water.
 
@@ -242,12 +240,9 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 ```diff
 - IMPORTANT: Emulsion compatible plastics must be utilized:
 - Rainin low retention/wide orifice tips MUST be used when handling emulsion;
-- VWR Maxymum Recovery PCR tubes should be utilized.
 ```
-- Add 30uL of 25%EA in HFE7500 to a Axygen Maximum Recovery PCR tube
-- Pipette out 40uL of droplets into the tube.
+- Remove oil underneath droplets and add 30uL of 25%EA in HFE7500 to a Axygen Maximum Recovery PCR tube
 - Place tubes under UV light with top open on ice and treat for 15 min
-- Cover with 30uL of mineral oil
 
 ```diff
 - IMPORTANT: A 96 deep well cycler must be utilized for the emulsion PCR amplification.
@@ -255,13 +250,13 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 ```
 
 - Run with the following PCR program with heated lid off and 100uL volume.
-	- 1 10 3h
+	- 1 10 2h
 	- 2 98 30s
 	- 3 98 20s
 	- 4 55 20s
 	- 5 65 60s
-	- 6 step 3, 14x
-	- 7 65 5m
+	- 6 step 3, 19x
+	- 7 65 2m
 	- 8 10 infinity
 
 ##### First round clean up
@@ -269,6 +264,7 @@ A microfluidic device is used to encapsulate barcoded beads and particles. Appro
 - Remove as much of EA/oil underneath tube and mineral oil above tube.
 - Add 50uL of 20% PFO in HFE75000 to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
 - Extract as much of the aqueous phase as possible (40uL should be achievable) and pass through spin column (Costar 0.45um) in Lo Bind tube. Save spin column.
+- Make ExoI master mix: 5uL 10X ExoI buffer, 2.5uL ExoI, 42.5uL water. Pass through the spin column.
 - Incubate at 37C for 30min.
 - Perform a 1X AmpureXP clean up by adding 90uL of AmpureXP, and follow regular protocol with 80% EtOH washes. Resuspend in 22uL of 10mM Tris-HCl pH 8.0, and save 20uL.
 
