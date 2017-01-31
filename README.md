@@ -229,8 +229,8 @@ Chips need to be treated when first constructed. This is best performed in paral
 ###### Encapsulation
 - Prepare a third syringe with 750uL of 2%EA surfactant in HFE7500.
 - Prime syringes on machines by hand and connect to sterilized encapsulation chip.
-- Flow beads at 0.3uL/min and encapsulation mix at 0.3uL/min until flow is observed.
-- Adjust encapsulation mix to 2.7uL/min and turn on oil/surfactant to 2uL/min.
+- Flow beads at 0.5uL/min and encapsulation mix at 0.5uL/min until flow is observed.
+- Adjust encapsulation mix to 2.5uL/min and turn on oil/surfactant to 2uL/min.
 - Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a Axygen Maxymum recovery tube filled with 50uL mineral oil cooled on ice.
 - Once reagents are finished, remove capture tubing and drain into capture tube. Then turn of syringes. Extra beads may be washed with TET twice and returned to stock vial.
 - Wash microfluidic chip with water.
