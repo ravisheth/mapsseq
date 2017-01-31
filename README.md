@@ -203,10 +203,11 @@ Chips need to be treated when first constructed. This is best performed in paral
 - UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bars
 
 ###### Preparation of beads
-- Centrifuge down bead stock and remove ~50-100uL of packed beads from bottom of tube
+- Centrifuge down bead stock and remove 50uL of packed beads from bottom of tube
 - Wash beads twice with WB
 - Wash beads twice with Bead Buffer (10mM Tris HCl pH 8.0, 0.1% Tween 20, 50mM KCl, 5mM DTT)
-- Centrifuge down beads and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
+- Centrifuge down beads and remove all supernatant. Add 20uL NEB Next Q5 2x Master Mix.
+- Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
 - Using empty 1mL syringe connected to tubing, aspirate approximately 5uL of packed beads (approximately the length of a razor blade) and then approximately 10cm of air.
 - Remaining beads can be washed twice in TET and returned to stock tube.
 - Cut tubing right where beads start. Backfill a syringe with 500uL HFE7500, remove bubbles and prime with 25 gauge needle.
@@ -215,22 +216,25 @@ Chips need to be treated when first constructed. This is best performed in paral
 
 ###### Preparation of cell-clusters
 - Quantify cell-clusters via hemacytometer.
-- Remove approximately 12,000 cell-clusters and wash three times in WB (~300 clusters/uL)
-- Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
-- Prepare encapsulation master mix (40uL), and resuspend cell-clusters in the master mix:
+- Remove approximately 12,500 cell-clusters and wash three times in WB (~250 clusters/uL). NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
+- Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip. NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
+- Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
 	- 25uL NEB Next Q5 2x Master Mix
 	- 5uL 10%w/v Pluronic 127
 	- 8uL NycoPrep (60% w/v Nycodenz)
 	- 1.25uL BSA (20mg/mL, NEB)
-	- 0.75uL nuclease free water
+	- 5.75uL nuclease free water
 - Vortex for 10s, and sonicate in water bath for 30s.
-- Backfill a syringe with 500uL HFE7500, add encapsulation mix, and prime with 25 gauge needle and tubing. Cover tubing with black covering.
+- Using empty 1mL syringe connected to tubing, aspirate the cell clusters (approximately 10-20cm).
+- Cut tubing right where cell-clusters start start. Backfill a syringe with 500uL HFE7500, remove bubbles and prime with 25 gauge needle.
+- Connect syringe to tubing, prime syringe such that cell-clusters are near the entry port, and cover tubing with black covering.
+- Mount syringe vertically with needle facing upwards.
 
 ###### Encapsulation
 - Prepare a third syringe with 750uL of 2%EA surfactant in HFE7500.
 - Prime syringes on machines by hand and connect to sterilized encapsulation chip.
-- Flow beads at 0.5uL/min and encapsulation mix at 0.5uL/min until flow is observed.
-- Adjust encapsulation mix to 2.5uL/min and turn on oil/surfactant to 2uL/min.
+- Flow beads at 0.3uL/min and encapsulation mix at 0.3uL/min until flow is observed.
+- Adjust encapsulation mix to 2.7uL/min and turn on oil/surfactant to 2uL/min.
 - Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a Axygen Maxymum recovery tube filled with 50uL mineral oil cooled on ice.
 - Once reagents are finished, remove capture tubing and drain into capture tube. Then turn of syringes. Extra beads may be washed with TET twice and returned to stock vial.
 - Wash microfluidic chip with water.
