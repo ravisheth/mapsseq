@@ -269,7 +269,7 @@ Chips need to be treated when first constructed. This is best performed in paral
 - Perform a 1X AmpureXP clean up by adding 90uL of AmpureXP, and follow regular protocol with 80% EtOH washes. Resuspend in 22uL of 10mM Tris-HCl pH 8.0, and save 20uL.
 
 ##### Indexing PCR
-- Setup up following reaction: 10uL first round PCR product, 2uL forward index primer (10uM), 2uL reverse index primer (10um), 6uL water, 20uL NEB Next Q5 2x Master Mix and SYBR green (0.1x final concentration).
+- Setup up following reaction: 10uL first round PCR product, 2.5uL forward index primer (10uM), 2.5uL reverse index primer (10um), 10uL water, 25uL NEB Next Q5 2x Master Mix and SYBR green (0.1x final concentration).
 - Run with the following PCR program on qPCR cycler. Stop early if it appears samples stop exponential amplification. Ensure to run water only control to ensure that samples with non-specific amplification can be readily identified on a gel.
 
 ```diff
@@ -288,7 +288,7 @@ Chips need to be treated when first constructed. This is best performed in paral
 	- 7 10 infinity
 
 ##### Library QC, pooling and prep
-- Assess all products on a 2% agarose E-gel to confirm library product at XXXbp. Anecdotally, some tubes may not amplify or yield the proper product; these should be ommited from pooling/sequencing.
+- Assess all products on a 2% agarose E-gel to confirm library product at XXXbp. Anecdotally, some tubes may not amplify or yield the proper product; these should be omitted from pooling/sequencing.
 - Clean up with 0.6x AmpureXP and resuspend in 42uL of 10mM Tris-HCl pH 8.0. Remove 40uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
 - Quantify PCR product on the plate reader (5uL 10,000X SYBR Green I and 25mL TE) and pool using the Biomek 4000 Robot.
 - Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
