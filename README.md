@@ -3,7 +3,6 @@
 This document contains MIST-seq v3 protocol and implementation.
 
 ### Barcoded Hydrogel Construction
-
 Barcoded Hydrogel construction consists of three extension steps to create over 880,000 barcoded hydrogel beads. Construction largely follows Zilionis, Nature Protocols 2016 with minor modifications.
 
 #### Required buffers
@@ -74,7 +73,6 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 	- Wash beads 2 times with NEUTRALIZE buffer (vortex, incubate 1m, 10,000g 1min)
 	- Either wash 3 times in TET buffer if storing overnight, or proceed back to barcoding reaction with 3 washes in WB for next extension rounds
 
-
 #### Enzymatic cleanup of barcoded hydrogel beads
 - Wash beads in WB 3 times (if not already done) as above. Save small aliquot as "before ExoI treatment" for QC
 - Wash beads in HYBRIDIZE three times and remove supernatant (300uL final volume)
@@ -88,6 +86,35 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 - Wash recovered beads three times in TET as above.
 - Pass through 40um cell strainer using TET to pass through beads.
 - Spin down filtered beads, resuspend TET, and save in amber tube at 4C.
+
+### Microfluidic device fabrication
+#### Casting of devices
+Water is ordered from FlowJEM and is ready to cast.
+- Weigh 10:1 (50g/5g) of Sylgard 184.
+- Mix for 5 minutes in sterile pipette box with P1000 tip
+- Degas for 30 minutes under house vacuum
+- Take large weighing boat and carefully place wafer on it.
+- Pour PDMS solution on wafer, and degas again for 5-10 min or until bubbles are gone.
+- Place in 80C oven for 1 hour.
+- Allow to cool to room temperature.
+- Carefully remove wafer and store in petri dish.
+- Cut out PDMS strips, and cut holes with 1mm punch from feature side down.
+- Clean off feature side with scotch tape, and clean the surface of a precleaned glass slide.
+- Plasma treat PDMS device and slide
+	- Turn on device
+	- Turn on vacuum for 1 min with port closed
+	- Switch port to low gas input for 1 minute
+	- Turn on "HIGH" for 40 seconds. Strong plasma glow should be seen.
+- Remove device and quickly place feature side down on precleaned glass slide.
+- Place in 80C oven for 30min.
+
+#### Aquapel treatment of microfluidic chips
+Chips need to be treated when first constructed. This is best performed in parallel. Note that this protocol is adopted from Mazutis, Nat. Protocols 2013.
+- Cut pad that aquapel solution is embedded within. Place ampule in 15mL conical and break the ampule within the tube.  
+- Pipette solution in 1mL syringe.
+- Inject solution into microfludic device. Leave solution in channels for 30s, and flush with air (pressurized air) at all three fluidic ports.
+- Flush device with FC-40, and flush with air (pressurized air) at all three fluidic ports.
+- Bake chip at 80C for 10 minutes.
 
 ### Fixation
 Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
@@ -185,14 +212,6 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 ##### Equipment preparation
 - An in-syringe magnetic mixer was constructed with 400 RPM mini DC geared gear box electric motor (uxcell, Amazon) driven by a Unique Goods Digital Display DC Motor Speed Controller (Amazon) and a 6V 1A power adapter (Amazon). The motor rotates a small neodynium magnet (K&J magnetics B448) via a custom 3D printed adapter. This spins a 3x3mm magnetic stirbar (Bel-Art Z283835) which fits within a 1mL syringe.
 - We utilize three Harvard Apparatus Pump 11 Elite syringe pumps and a Zeiss Axiovert 25 inverted microscope to observe droplet formation and flow.
-
-##### Aquapel treatment of microfluidic chips
-Chips need to be treated when first constructed. This is best performed in parallel. Note that this protocol is adopted from Mazutis, Nat. Protocols 2013.
-- Cut pad that aquapel solution is embedded within. Place ampule in 15mL conical and break the ampule within the tube.  
-- Pipette solution in 1mL syringe.
-- Inject solution into microfludic device. Leave solution in channels for 30s, and flush with air (pressurized air) at all three fluidic ports.
-- Flush device with FC-40, and flush with air (pressurized air) at all three fluidic ports.
-- Bake chip at 65C for 20 minutes.
 
 ##### Encapsulation protocol
 ###### General preparation
