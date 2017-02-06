@@ -224,8 +224,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 ###### Preparation of beads
 - Centrifuge down bead stock and remove 50uL of packed beads from bottom of tube
 - Wash beads twice with WB
-- Wash beads twice with Bead Buffer (10mM Tris HCl pH 8.0, 0.1% Tween 20, 50mM KCl, 5mM DTT)
-- Centrifuge down beads and remove all supernatant. Add 20uL NEB Next Q5 2x Master Mix.
+- Wash beads twice with Bead Buffer (10mM Tris HCl pH 8.0, 0.1% Tween 20, 50mM KCl, 10mM DTT)
 - Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
 - Using empty 1mL syringe connected to tubing, aspirate approximately 5uL of packed beads (approximately the length of a razor blade) and then approximately 10cm of air.
 - Remaining beads can be washed twice in TET and returned to stock tube.
@@ -250,7 +249,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Mount syringe vertically with needle facing upwards.
 
 ###### Encapsulation
-- Prepare a third syringe with 750uL of 2%EA surfactant in HFE7500.
+- Prepare a third syringe with 750uL of 5%EA surfactant in HFE7500.
 - Prime syringes on machines by hand and connect to sterilized encapsulation chip.
 - Flow beads at 0.3uL/min and encapsulation mix at 0.3uL/min until flow is observed.
 - Adjust encapsulation mix to 2.7uL/min and turn on oil/surfactant to 2uL/min.
@@ -264,8 +263,8 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - IMPORTANT: Emulsion compatible plastics must be utilized:
 - Rainin low retention/wide orifice tips MUST be used when handling emulsion;
 ```
-- Remove oil underneath droplets and add 30uL of 25%EA in HFE7500 to a Axygen Maximum Recovery PCR tube
-- Place tubes under UV light with top open on ice and treat for 15 min
+- Remove oil underneath droplets and add 30uL of 30%EA in HFE7500 to a Axygen Maximum Recovery PCR tube
+- Place tubes under UV light with top open on ice and treat for 10 min
 
 ```diff
 - IMPORTANT: A 96 deep well cycler must be utilized for the emulsion PCR amplification.
@@ -285,7 +284,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 ##### First round clean up
 - Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics.
 - Remove as much of EA/oil underneath tube and mineral oil above tube.
-- Add 50uL of 20% PFO in HFE75000 to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
+- Add 20uL of PFO in HFE75000 to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
 - Extract as much of the aqueous phase as possible (40uL should be achievable) and pass through spin column (Costar 0.45um) in Lo Bind tube. Save spin column.
 - Make ExoI master mix: 5uL 10X ExoI buffer, 2.5uL ExoI, 42.5uL water. Pass through the spin column.
 - Incubate at 37C for 30min.
@@ -311,12 +310,10 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 	- 7 10 infinity
 
 ##### Library QC, pooling and prep
-- Assess all products on a 2% agarose E-gel to confirm library product at XXXbp. Anecdotally, some tubes may not amplify or yield the proper product; these should be omitted from pooling/sequencing.
-- Clean up with 0.6x AmpureXP and resuspend in 42uL of 10mM Tris-HCl pH 8.0. Remove 40uL of the resuspension and save. This step is necessary to ensure that quantification of PCR products is only performed upon the desired 450bp product, enabling more equal pooling.
-- Quantify PCR product on the plate reader (5uL 10,000X SYBR Green I and 25mL TE) and pool using the Biomek 4000 Robot.
-- Gel extract 365bp (murine mitochondrial 18s rRNA) and 450bp product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
-- Quantify library size on Bioanalzyer HS DNA kit, and concentration using the Qubit HS DNA kit.
-- Sequence using a MiSeq v2 500 cycle kit, loading at 24pM (based on Qubit quant) with a 20% 10pM PhiX spike in.
+- Assess all products on a 2% agarose E-gel to confirm library product at 489-491bp.
+- Gel extract the product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
+- Quantify concentration using the Qubit HS DNA kit (2uL sample).
+- Sequence using a MiSeq v2 500 cycle kit, loading at 12pM (based on Qubit quant) with a 10% 12pM PhiX spike in.
 
 ### MIST-seq quality control
 ##### Construction of synthetic community particles
