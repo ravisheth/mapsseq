@@ -140,7 +140,7 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 
 - Other stock solutions (store -20C, remake once every 2 weeks)
 	- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
-	- TEMED  (10% w/w stock, 0.1g/1mL ddH20), final 0.2%
+	- TEMED  (10% v/v stock, 0.1mL+0.9mL ddH20), final 0.2%
 	- 4HT  (0.5% w/w stock, 0.005g/1mL ddH20), final 0.01%
 
 ##### Embedding of sample
