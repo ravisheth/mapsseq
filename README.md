@@ -131,12 +131,12 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 ##### Preparation of  stock solutions
 - Monomer 2X concentrate (store -20C indefinitely).
 
-| name | stock concentration | amt to add | final conc (w/w) |
-|:----:|:-------------------:|:----------:|:---------------:|
-|Acrylamide|20%|1g|10%|
-|N,N′-Bis(acryloyl)cystamine|0.4%|0.02g|0.2%|
-|PBS|2x|1.0mL|1x|
-|nuclease-free water|n/a|3.0mL|n/a|
+| name | amt to add | final conc in gel (w/w) |
+|:----:|:----------:|:---------------:|
+|Acrylamide|1g|10%|
+|N,N′-Bis(acryloyl)cystamine|0.02g|0.2%|
+|10X PBS filter sterilized|1.0mL|1x|
+|nuclease-free water|3.0mL|n/a|
 
 - Other stock solutions (store -20C, remake once every 2 weeks)
 	- APS (10% w/w; 0.1g/1mL ddH20), final  0.2%
