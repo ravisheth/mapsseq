@@ -159,11 +159,12 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 	- 4uL 4HT
 	- 4uL TEMED
 	- 4uL APS
-- Place the particle in an 1.5mL tube on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
+- Place the particle in an 1.5mL tube on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to overnight allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
+	- NB: Like any initiator, TEMED/APS may degrade over time. An alternative is VA-044, a thermally activated initiator which can be used to initiate polymerization in the same manner. This can be used, at a final concentration of 0.5% w/w in the embedding solution and 4HT, TEMED and APS can be omitted and replaced with water.
 - Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
-- Open the tube, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
+- Open the tube top, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
 - Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
-- Ensure that sample is fully polymerized throughout. Wash 3 times in TET (10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween-20) and store at -20C.
+- Ensure that sample is fully polymerized throughout. Wash 2 times in PBS and 1 times in TET (10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween-20) and store in TET at -20C.
 
 ### Fracturing
 The embedded sample is then broken into small particles using cryofracturing.
