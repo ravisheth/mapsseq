@@ -162,14 +162,15 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 - Place the particle in an 1.5mL tube on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to overnight allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
 	- NB: Like any initiator, TEMED/APS may degrade over time. An alternative is VA-044, a thermally activated initiator which can be used to initiate polymerization in the same manner. This can be used, at a final concentration of 0.5% w/w in the embedding solution and 4HT, TEMED and APS can be omitted and replaced with water.
 - Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
-- Open the tube top, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C overnight; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
+- Open the tube top, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2-3 hours; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
 - Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
 - Ensure that sample is fully polymerized throughout. Wash 2 times in PBS and 1 times in TET (10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween-20) and store in TET at -20C.
 
 ### Fracturing
 The embedded sample is then broken into small particles using cryofracturing.
-- Place sample in stainless steel microvial (Biospec 2007) and add a single 6.35mm stainless steel bead on top (Biospec 11079635ss). Seal the tube with a silicone rubber plug cap (Biospec 2008).
-- Place (but do not submerge) vial in liquid nitrogen for at least 2 minutes.
+- Place sample in stainless steel microvial (Biospec 2007). Freeze sample on LN2 ~1 min (without submerging vial) and shake vial to ensure that particle can move freely and is not adhered to wall.
+- Add a single 6.35mm stainless steel bead on top (Biospec 11079635ss). Seal the tube with a silicone rubber plug cap (Biospec 2008).
+- Place vial back in liquid nitrogen for at least 2 minutes.
 - Quickly transfer to a bead beater (Biospec 112011) and beat for 10s. Note that beating time dictates the size distribution of particles; depending on desired particle size beating time can be adjusted to increase yield in a desired range.
 - Resuspend particles in PBS, vortex, and transfer to a sterile tube. Wash 2 times in PBS. Note that during wash steps, particles should be centrifuged at greater than 10,000RPM for 10s to ensure full sedimentation. Metal residue may color the particles a grey color, but this will not affect downstream steps.
 
