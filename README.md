@@ -236,7 +236,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 
 ###### Preparation of cell-clusters
 - Quantify cell-clusters via hemacytometer.
-- Remove approximately 12,500 cell-clusters and wash three times in WB (~250 clusters/uL). NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
+- Remove approximately 6,000 cell-clusters and wash three times in WB (~125 clusters/uL). NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
 - Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip. NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
 - Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
 	- 25uL NEB Next Q5 2x Master Mix
@@ -252,9 +252,13 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 
 ###### Encapsulation
 - Prepare a third syringe with 750uL of 5%EA surfactant in HFE7500.
-- Prime syringes on machines by hand and connect to sterilized encapsulation chip.
-- Flow beads at 0.3uL/min and encapsulation mix at 0.3uL/min until flow is observed.
-- Adjust encapsulation mix to 2.7uL/min and turn on oil/surfactant to 2uL/min.
+- Flow water through all channels of encapsulation chip to ensure proper flow and no debris.
+- Prime bead syringe by priming with pump and then cutting tubing where beads are at.
+- Attach oil and cell-cluster mix pumps, prime via syringe, and prime into device to displace any water.
+- Attach bead syringe to device
+- Prime beads, flowing at 1uL/min, encapsulation mix at 0.3uL/min and oil at 0.3uL/min
+- Close pack beads, flowing beads at 0.3uL/min, encapsulation mix at 0.3uL/min and oil at 2uL/min until close packing is observed.
+- Start encapsulation by adjusting encapsulation mix to 2.7uL/min. 
 - Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a Axygen Maxymum recovery tube filled with 50uL mineral oil cooled on ice.
 - Once reagents are finished, remove capture tubing and drain into capture tube. Then turn of syringes. Extra beads may be washed with TET twice and returned to stock vial.
 - Wash microfluidic chip with water.
