@@ -258,8 +258,8 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Attach bead syringe to device
 - Prime beads, flowing at 1uL/min, encapsulation mix at 0.3uL/min and oil at 0.3uL/min
 - Close pack beads, flowing beads at 0.3uL/min, encapsulation mix at 0.3uL/min and oil at 2uL/min until close packing is observed.
-- Start encapsulation by adjusting encapsulation mix to 2.7uL/min. 
-- Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a Axygen Maxymum recovery tube filled with 50uL mineral oil cooled on ice.
+- Start encapsulation by adjusting encapsulation mix to 2.7uL/min.
+- Once proper and stable droplet formation (faint flickers at droplet junction) is observed, with bead deposition in ~90% of droplets, add capture tubing and collect droplets into a Axygen Maxymum recovery tube filled with 50uL mineral oil and 10uL of 30% EA surfactant.
 - Once reagents are finished, remove capture tubing and drain into capture tube. Then turn of syringes. Extra beads may be washed with TET twice and returned to stock vial.
 - Wash microfluidic chip with water.
 
