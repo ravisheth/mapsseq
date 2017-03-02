@@ -153,9 +153,9 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 - Remove PBS, and incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 5 min.  
 - Cut sample into sub-parts no larger than 3x3mm with a sterile razor. A smaller size allows for more efficient perfusion of monomer components.
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice.
-	- 8uL reverse primer (250uM stock), 10uM final
+	- 4uL reverse primer (250uM stock), 5uM final
 	- 100uL monomer concentrate
-	- 80uL water
+	- 84uL water
 	- 4uL 4HT
 	- 4uL TEMED
 	- 4uL APS
@@ -235,8 +235,9 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Mount syringe vertically with needle facing upwards.
 
 ###### Preparation of cell-clusters
-- Quantify cell-clusters via hemacytometer.
-- Remove approximately 6,000 cell-clusters and wash three times in WB (~125 clusters/uL). NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
+- Vortex cell-clusters for 1 min and sonicate for 1 min to ensure avoidance of any aggregates.
+- Quantify cell-clusters via hemacytometer, immediately before encapsulation.
+- Remove approximately 12,500 cell-clusters and wash three times in WB (~250 clusters/uL). NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
 - Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip. NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
 - Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
 	- 25uL NEB Next Q5 2x Master Mix
