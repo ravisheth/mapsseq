@@ -164,7 +164,7 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 - Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
 - Open the tube top, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2-3 hours; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
 - Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
-- Ensure that sample is fully polymerized throughout. Wash 2 times in PBS and 1 times in TET (10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween-20) and store in TET at -20C.
+- Ensure that sample is fully polymerized throughout. Wash 2 times in PBS and 1 times in TET (10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween-20) and store in TET at 4C for short term storage (no more than 5 days) or -20C for long term storage.
 
 ### Fracturing
 The embedded sample is then broken into small particles using cryofracturing.
@@ -187,7 +187,7 @@ Particles are then treated with lysozyme and proteinase K to lyse any remaining 
 - Add 1uL of proteinase K (50ug/uL stock) (final concentration 0.1ug/uL).
 - Incubate at 65C for 15 min with shaking; ensure that cap stopper is added.
 - Incubate at 95C for 5 min to inactivate proteinase K; ensure that cap stopper is added.
-- Wash particles in 500uL TET buffer 3x times and store at -20C.
+- Wash particles in 500uL TET buffer 3x times and store at 4C for short term storage (5 days maximum), or -20C for long term storage.
 
 ### Size selection
 Nylon mesh filters are utilized to size-select fractured acrylamide particles. The protocol is modular to meshes of different sizes.
@@ -202,13 +202,13 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Clean and sterilize Swinnex 13mm filter holders, gasket O-rings, punched nylon mesh filters via UV sterilization.
 - Place each filters in a Swinnex filter holder with gasket O-ring.
 - Start with the 15um filter. Place 2 filters in assembly.
-	- Take sample and resuspend in 1mL of nuclease-free water. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than 15um.
-	- Aspirate 500uL of nuclease free water, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this contains particles greater than 15um.
+	- Take sample and resuspend in 1mL of TET. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than 15um.
+	- Aspirate 500uL of TET, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this contains particles greater than 15um.
 - Switch filters to the 7um filter. Place 2 filters in assembly.
 	- Connect a 3mL syringe to the filter. Pipette the 1mL <15um sample into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Save flow-through; this  contains particles smaller than 7um.
-	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly. Repeat this wash for a total of three times.
+	- Aspirate 1mL of TET. In the syringe, flow back and forth through the filter assembly. Repeat this wash for a total of three times.
 	- Aspirate 500uL of TET; flow back and forth through the filter assembly. Pull remaining liquid in the syringe and set aside; this fraction contains particles 7-15um
-- Quantify numbers and store in amber tube for long term storage at -20C.
+- Quantify numbers and store in amber tube for short term storage at 4C (5 days maximum) or long term storage at -20C.
 
 ### Encapsulation
 ##### Equipment preparation
@@ -222,9 +222,11 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Minimize exposure to light, and ensure that red filter is used on microscope.
 ```
 - UV sterilize encapsulation supplies for 30 minutes: microfluidic chip, magnetic stir-bars
+- Prepare a low dead volume syringe with 300uL of 5%EA surfactant in HFE7500.
+- Flow water through all channels of encapsulation chip to ensure proper flow and no debris.
 
 ###### Preparation of beads
-- Centrifuge down bead stock and remove 50uL of packed beads from bottom of tube
+- Centrifuge down bead stock and remove 30uL of packed beads from bottom of tube
 - Wash beads twice with WB
 - Wash beads twice with Bead Buffer (10mM Tris HCl pH 8.0, 0.1% Tween 20, 50mM KCl, 10mM DTT)
 - Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip.
@@ -242,18 +244,14 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
 	- 25uL NEB Next Q5 2x Master Mix
 	- 5uL 10%w/v Pluronic 127
-	- 8uL NycoPrep (60% w/v Nycodenz)
 	- 1.25uL BSA (20mg/mL, NEB)
-	- 5.75uL nuclease free water
+	- 13.75uL nuclease free water
 - Vortex for 10s, and sonicate in water bath for 30s.
-- Using empty 1mL syringe connected to tubing, aspirate the cell clusters (approximately 10-20cm).
-- Cut tubing right where cell-clusters start start. Backfill a syringe with 500uL HFE7500, remove bubbles and prime with 25 gauge needle.
+- Backfill a syringe with 500uL HFE7500, add cell cluster solution, and prime with 25 gauge needle.
 - Connect syringe to tubing, prime syringe such that cell-clusters are near the entry port, and cover tubing with black covering.
 - Mount syringe vertically with needle facing upwards.
 
 ###### Encapsulation
-- Prepare a third syringe with 750uL of 5%EA surfactant in HFE7500.
-- Flow water through all channels of encapsulation chip to ensure proper flow and no debris.
 - Prime bead syringe by priming with pump and then cutting tubing where beads are at.
 - Attach oil and cell-cluster mix pumps, prime via syringe, and prime into device to displace any water.
 - Attach bead syringe to device
