@@ -203,10 +203,11 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Place each filters in a Swinnex filter holder with gasket O-ring.
 - Start with the 15um filter. Place 2 filters in assembly.
 	- Take sample and resuspend in 1mL of TET. Connect a 3mL syringe to the filter. Pipette the 1mL into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Set flow-through aside; this fraction contains particles smaller than 15um.
-	- Aspirate 500uL of TET, flow back and forth through the filter assembly for a total of three times. Pull remaining liquid in the syringe and set aside; this contains particles greater than 15um.
+	- Aspirate 500uL of TET, flow back and forth through the filter assembly and push flow through into smaller than 15um tube (to improve recovery).
+	- Aspirate 500uL of TET, flow back and forth through the filter assembly. Pull liquid in the syringe and set aside; this contains particles greater than 15um.
 - Switch filters to the 7um filter. Place 2 filters in assembly.
 	- Connect a 3mL syringe to the filter. Pipette the 1mL <15um sample into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Save flow-through; this  contains particles smaller than 7um.
-	- Aspirate 1mL of TET. In the syringe, flow back and forth through the filter assembly. Repeat this wash for a total of three times.
+	- Aspirate 500uL of TET. In the syringe, flow back and forth through the filter assembly and discard. Repeat this wash for a total of three times.
 	- Aspirate 500uL of TET; flow back and forth through the filter assembly. Pull remaining liquid in the syringe and set aside; this fraction contains particles 7-15um
 - Quantify numbers and store in amber tube for short term storage at 4C (5 days maximum) or long term storage at -20C.
 
