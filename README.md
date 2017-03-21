@@ -134,7 +134,7 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 | name | amt to add | final conc in gel (w/w) |
 |:----:|:----------:|:---------------:|
 |Acrylamide|1g|10%|
-|N,N′-Bis(acryloyl)cystamine|0.02g|0.2%|
+|N,N′-Bis(acryloyl)cystamine|0.04g|0.4%|
 |10X PBS filter sterilized|1.0mL|1x|
 |nuclease-free water|3.0mL|n/a|
 
