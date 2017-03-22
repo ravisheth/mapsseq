@@ -243,9 +243,10 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip. NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
 - Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
 	- 25uL NEB Next Q5 2x Master Mix
+	- 8uL NycoPrep (60% w/v Nycodenz)
 	- 5uL 10%w/v Pluronic 127
 	- 1.25uL BSA (20mg/mL, NEB)
-	- 13.75uL nuclease free water
+	- 5.75uL nuclease free water
 - Vortex for 10s, and sonicate in water bath for 30s.
 - Backfill a syringe with 500uL HFE7500, add cell cluster solution, and prime with 25 gauge needle.
 - Connect syringe to tubing, prime syringe such that cell-clusters are near the entry port, and cover tubing with black covering.
@@ -279,10 +280,10 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Run with the following PCR program with heated lid off and 100uL volume.
 	- 1 10 2h
 	- 2 98 30s
-	- 3 98 20s
+	- 3 98 10s
 	- 4 55 20s
-	- 5 65 60s
-	- 6 step 3, 19x
+	- 5 65 30s
+	- 6 step 3, 29x
 	- 7 65 2m
 	- 8 10 infinity
 
