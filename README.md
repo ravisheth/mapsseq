@@ -325,9 +325,9 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 ##### Construction of synthetic community particles
 To test the ability of MIST-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities.
 - Prepare cells for two synthetic communities:
-	- One synthetic community is E. coli BL21, grown overnight; normalize to size of pellet fecal cells visually (see below)
-	- Second synthetic community is homogenized fecal pellets. Vortex two pellets in PBS with 3mm glass beads for 2 min to homogenize, and pass through 40um filter (Falcon). Vortex again with 0.1mm beads for 2min, microfuge down for 5s and pass through another 40um filter. Save the pass-through and pellet.
-- Samples are processed as above with minor modification. Fix for 1 hr in methacarn with shaking to prevent aggregation of cell clumps. Spin down (ensuring no liquid remains) and embed pellet as above in 50uL of gel solution (by resuspending pellet within gel solution). Polymerize at 37C with shaking to ensure cells are in suspension. Fracture and prep as above.
+	- One synthetic community is Sporocarcina pasteurii, normalize to size of pellet fecal cells visually (see below)
+	- Second synthetic community is homogenized fecal pellets. Vortex 5 pellets in 1mL PBS with 0.1mm glass beads for 1 min to homogenize on bead beater. Pass through 40um filter (Falcon). Save in 20% glycerol.
+- Samples are processed as above with minor modification. Fix for 5m in methacarn with shaking to prevent aggregation of cell clumps. Spin down (ensuring no liquid remains) and embed pellet as above in 50uL of gel solution (by resuspending pellet within gel solution, do not add 4HT). Polymerize at 60C aerobic with shaking to ensure cells are in suspension. Fracture and prep as above.
 
 ### Barcoded Bead Quality Control
 ##### Quantification of extension efficiency via FISH
@@ -397,9 +397,12 @@ Family targeting from: http://www.pnas.org/content/suppl/2013/02/28/1219247110.D
 - Incubate with 10ug/mL DAPI (1:100 stock) in PBS for 5min at 4C
 - Wash 3x in PBS
 - Dry
-- Mount with vectashield (~20uL)
+- Mount with vectashield (~10uL)
 
 ### Imaging
-Image at the cancer center confocal. In general here are settings: pixel size 2.4, size 1024, 2x average, pinhole 1AU. Laser 2% for 405, everything 5%. Hv gain around 100. Setting gain above 130 will generally not be a great idea. In general Z-stacks and XY we want to sample at 2-3x resolution (i.e. nyquist sampling). For scanning use 512 pixel size (reasonable). Can likely couple FR and green during scanning.
 
-Most images we get are 1024x1024 with 3x Z-stacks separated by 0.5um (so 1uM Z axis total).
+#### Epifluorescence
+Image on Wang Lab Nikon Ti2. Use all four channels, large image scan, and EDF with 4 z-stacks with 1um step size.
+
+#### Confocal
+Image at the cancer center confocal. In general here are settings: pixel size 2.4, size 1024, 2x average, pinhole 1AU. Laser 2% for 405, everything 5%. Hv gain around 100. Setting gain above 130 will generally not be a great idea. In general Z-stacks and XY we want to sample at 2-3x resolution (i.e. nyquist sampling). For scanning use 512 pixel size (reasonable). Can likely couple FR and green during scanning.Most images we get are 1024x1024 with 3x Z-stacks separated by 0.5um (so 1uM Z axis total).
