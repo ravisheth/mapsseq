@@ -82,10 +82,8 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 - Incubate at 37C for 1h
 - Fill tube with STOP25 and invert
 - Perform STOP10, DENATURE, NEUTRALIZE washes as above.
-- After NEUTRALIZE washes, filter beads through 40um filter above.
-- Wash recovered beads three times in TET as above.
-- Pass through 40um cell strainer using TET to pass through beads.
-- Spin down filtered beads, resuspend TET, and save in amber tube at 4C.
+- After NEUTRALIZE washes, filter beads through 40um filter as above.
+- Wash recovered beads three times in TET as above. Save in amber tube at 4C.
 
 ### Microfluidic device fabrication
 #### Casting of devices
@@ -198,7 +196,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Place in a plastic bag for long-term storage
 
 ##### Size selection of acrylamide particles
-- First filter sample through a 40um cell culture filter (Falcon), and save flow-through, to remove large particles.
+- If large chunks are observed in sample, filter through a 40um cell culture filter (Falcon), and save flow-through, to remove large particles.
 - Clean and sterilize Swinnex 13mm filter holders, gasket O-rings, punched nylon mesh filters via UV sterilization.
 - Place each filters in a Swinnex filter holder with gasket O-ring.
 - Start with the 15um filter. Place 2 filters in assembly.
@@ -239,14 +237,14 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 ###### Preparation of cell-clusters
 - Vortex cell-clusters for 1 min and sonicate for 1 min to ensure avoidance of any aggregates.
 - Quantify cell-clusters via hemacytometer, immediately before encapsulation.
-- Remove approximately 12,500 cell-clusters and wash three times in WB (~250 clusters/uL). NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
+- Remove approximately 2,500 cell-clusters and wash three times in WB (~50 clusters/uL). NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
 - Centrifuge down cell-clusters and remove all supernatant. Repeat centrifugation and remove last remains of supernatant with fine-tip gel tip. NOTE: centrifugation steps must be done for at least 1 minute to ensure full sedimentation of cell-clusters.
 - Prepare encapsulation master mix (45uL), and resuspend cell-clusters in the master mix:
 	- 25uL NEB Next Q5 2x Master Mix
-	- 8uL NycoPrep (60% w/v Nycodenz)
+	- 4uL NycoPrep (60% w/v Nycodenz)
 	- 5uL 10%w/v Pluronic 127
 	- 1.25uL BSA (20mg/mL, NEB)
-	- 5.75uL nuclease free water
+	- 9.75uL nuclease free water
 - Vortex for 10s, and sonicate in water bath for 30s.
 - Backfill a syringe with 500uL HFE7500, add cell cluster solution, and prime with 25 gauge needle.
 - Connect syringe to tubing, prime syringe such that cell-clusters are near the entry port, and cover tubing with black covering.
