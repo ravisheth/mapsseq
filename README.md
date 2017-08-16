@@ -315,7 +315,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 
 ##### Library QC, pooling and prep
 - Assess all products on a 2% agarose E-gel to confirm library product at 489-491bp.
-- Gel extract the product on a 1.5% LMP agarose gel using the Promega Wizard SV Gel and PCR Cleanup kit.
+- Perform a 1X AmpureXP cleanup.
 - Quantify concentration using the Qubit HS DNA kit (2uL sample).
 - Sequence using a MiSeq v2 500 cycle kit, loading at 12pM (based on Qubit quant) with a 10% 12pM PhiX spike in.
 
