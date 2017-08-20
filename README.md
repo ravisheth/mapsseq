@@ -147,9 +147,8 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 - IMPORTANT: once polymerized, the gel is sensitive to reducing conditions.
 - Store at -20C and protect from any reagents that may contain reducing agents.
 ```
-- Remove sample from fixative, and wash in PBS, and let sit for 5 min.
+- Remove sample from fixative, cut into parts no larger than 3x3mm with a sterile razor, and wash in PBS, and let sit for 5 min.
 - Remove PBS, and incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 5 min.  
-- Cut sample into sub-parts no larger than 3x3mm with a sterile razor. A smaller size allows for more efficient perfusion of monomer components.
 - Prepare an embedding stock solution in the following order on ice, with mixing between each step. Make sure to keep all reagents on ice.
 	- 4uL reverse primer (250uM stock), 5uM final
 	- 100uL monomer concentrate
@@ -157,7 +156,8 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 	- 4uL 4HT
 	- 4uL TEMED
 	- 4uL APS
-- Place the particle in an 1.5mL tube on ice. Place enough solution to fully embed the particle and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to overnight allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
+- Remove sample from PBS and dab dry with a sterile kim wipe.
+- Place the sample in an 1.5mL tube on ice. Place enough solution to fully embed the sample and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to overnight allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
 	- NB: Like any initiator, TEMED/APS may degrade over time. An alternative is VA-044, a thermally activated initiator which can be used to initiate polymerization in the same manner. This can be used, at a final concentration of 0.5% w/w in the embedding solution and 4HT, TEMED and APS can be omitted and replaced with water.
 - Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
 - Open the tube top, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2-3 hours; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
@@ -206,7 +206,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 	- Connect a 3mL syringe to the filter. Pipette the 1mL <15um sample into the filter, and carefully push liquid through the filter applying minimal pressure to the syringe. Collect sample in a sterile 1.5mL tube and repeat this filtering step twice for a total of three times. Save flow-through; this  contains particles smaller than 7um.
 	- Aspirate 1mL of nuclease-free water. In the syringe, flow back and forth through the filter assembly and discard. Repeat this wash for a total of three times.
 	- Aspirate 1mL of TET; flow back and forth through the filter assembly. Pull remaining liquid in the syringe and set aside; this fraction contains particles 7-15um
-- Quantify numbers and store in amber tube for short term storage at 4C (5 days maximum) or long term storage at -20C.
+- Quantify numbers and store in amber tube for short term storage at 4C (5 days maximum). Particles are not stable for longer time periods likely due to slow degradation of the gel.
 
 ### Encapsulation
 ##### Equipment preparation
