@@ -185,8 +185,7 @@ Particles are then treated with lysozyme and proteinase K to lyse any remaining 
 - Add 1uL of proteinase K (50ug/uL stock) (final concentration 0.1ug/uL).
 - Incubate at 65C for 15 min with shaking; ensure that cap stopper is added.
 - Incubate at 95C for 5 min to inactivate proteinase K; ensure that cap stopper is added.
-- Wash particles in 500uL TET buffer 3x times and store at 4C for short term storage (5 days maximum), or -20C for long term storage.
-
+- Wash particles in 500uL TET buffer 3x times and store at 4C for short term storage (5 days maximum).
 ### Size selection
 Nylon mesh filters are utilized to size-select fractured acrylamide particles. The protocol is modular to meshes of different sizes.
 
@@ -196,7 +195,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Place in a plastic bag for long-term storage
 
 ##### Size selection of acrylamide particles
-- If large chunks are observed in sample, filter through a 40um cell culture filter (Falcon), and save flow-through, to remove large particles.
+- Filter sample through a 40um cell culture filter (Falcon), and save flow-through, to remove large particles.
 - Clean and sterilize Swinnex 13mm filter holders, gasket O-rings, punched nylon mesh filters via UV sterilization.
 - Place each filters in a Swinnex filter holder with gasket O-ring.
 - Start with the 15um filter. Place 2 filters in assembly.
@@ -286,6 +285,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 	- 8 10 infinity
 
 ##### First round clean up
+- A coalesced droplet fraction, if present, may be carefully removed by pipetting 
 - Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics.
 - Remove as much of EA/oil underneath tube and mineral oil above tube.
 - Add 20uL of PFO in HFE75000 to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
