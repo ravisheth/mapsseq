@@ -157,7 +157,7 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 	- 4uL TEMED
 	- 4uL APS
 - Remove sample from PBS and dab dry with a sterile kim wipe.
-- Place the sample in an 1.5mL tube on ice. Place enough solution to fully embed the sample and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to overnight allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
+- Place the sample in an PCR tube on ice. Place enough solution to fully embed the sample and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to overnight allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
 	- NB: Like any initiator, TEMED/APS may degrade over time. An alternative is VA-044, a thermally activated initiator which can be used to initiate polymerization in the same manner. This can be used, at a final concentration of 0.5% w/w in the embedding solution and 4HT, TEMED and APS can be omitted and replaced with water.
 - Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
 - Open the tube top, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2-3 hours; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
@@ -285,7 +285,7 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 	- 8 10 infinity
 
 ##### First round clean up
-- A coalesced droplet fraction, if present, may be carefully removed by pipetting 
+- A coalesced droplet fraction, if present, may be carefully removed by pipetting
 - Ensure that droplets are intact after cycling. It is recommended to remove 1uL of droplets from 1 tube per sample type and observe co-encapsulation statistics.
 - Remove as much of EA/oil underneath tube and mineral oil above tube.
 - Add 20uL of PFO in HFE75000 to the droplet phase. Vortex for 5s, and centrifuge down on a microfuge.
