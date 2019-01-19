@@ -1,5 +1,5 @@
-# MIST-seq data processing script
-# Modified 1/19/16 for new MIST-seq setup
+# MaP-seq data processing script
+# Modified 1/19/16 for new MaP-seq setup
 import ConfigParser
 import sys
 import os
