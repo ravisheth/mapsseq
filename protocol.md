@@ -1,9 +1,38 @@
-# MIST-seq protocol
+# MaP-seq protocol
 
-This document contains MIST-seq v3 protocol and implementation.
+This document contains the MaP-seq protocol (as published in Sheth et al., Nature Biotechnology 2019, internal version v3.0). Note that this protocol contains much more detail than the published protocol, and I've tried to include as much rationale for why certain decisions were made in designing different aspects of the method.
 
-### Barcoded Hydrogel Construction
-Barcoded Hydrogel construction consists of three extension steps to create over 880,000 barcoded hydrogel beads. Construction largely follows Zilionis, Nature Protocols 2016 with minor modifications.
+### Microfluidic device fabrication
+#### Casting of devices
+The wafer was ordered from FlowJEM with ~40 μm feature height, and is ready to cast. There are two microfluidic devices, one for barcoded bead generation (single port input) and one for bead and cluster co-encapsulation (dual port input).
+- Weigh 10:1 (50g/5g) of Sylgard 184.
+- Mix for 5 minutes in sterile pipette box with P1000 tip
+- Degas for 30 minutes under house vacuum to remove all bubbles
+- Take large weighing boat and carefully place wafer on it.
+- Pour PDMS solution on wafer, and degas again for 5-10 min or until bubbles are gone.
+- Place in 80C oven for 1 hour.
+- Allow to cool to room temperature.
+- Carefully remove wafer and store in petri dish.
+- Cut out PDMS chips, and cut holes with 1mm biopsy punch from feature side.
+- Clean off feature side with scotch tape, and clean the surface of a precleaned glass slide.
+- Plasma treat PDMS device and slide
+	- Turn on plasma cleaner
+	- Turn on vacuum for 1 min with port closed
+	- Switch port to low gas input for 1 minute
+	- Turn on "HIGH" for 40 seconds. Strong plasma glow should be seen.
+- Remove device and quickly place feature side down on precleaned glass slide.
+- Place in 80C oven for 30min.
+
+#### Aquapel treatment of microfluidic chips
+Chips need to be treated when first constructed. This is best performed in parallel. Note that this protocol is adopted from [Mazutis et al., Nat. Protocols 2013](https://www.nature.com/articles/nprot.2013.046).
+- Cut pad that aquapel solution is embedded within. Score ampule with diamond scribe, and place ampule in 50mL conical and break the ampule within the tube.  
+- Pipette aquapel solution in 10mL syringe.
+- Inject solution into microfludic device. Leave solution in channels for 30s, and flush with air (pressurized air) at all three fluidic ports.
+- Flush device with FC-40, and flush with air (pressurized air) again at all three fluidic ports.
+- Bake chip at 80C for 10 minutes.
+
+### Barcoded bead construction
+Barcoded Hydrogel construction consists of three extension steps to create barcoded hydrogel beads containing >880K unique barcodes. Construction largely follows [Zilionis et al., Nature Protocols 2016](https://www.nature.com/articles/nprot.2016.154) with minor modifications. It's advisable to make a few batches of beads at a time (typically we make 3-4 at once). 
 
 #### Required buffers
 - Acry/Bis stock 4X (24%T, 3%C): 3.8mL water, 1.2g Acrylamide, 0.036g Bisacrylamide
@@ -85,41 +114,10 @@ Barcoded Hydrogel construction consists of three extension steps to create over 
 - After NEUTRALIZE washes, filter beads through 40um filter as above.
 - Wash recovered beads three times in TET as above. Save in amber tube at 4C.
 
-### Microfluidic device fabrication
-#### Casting of devices
-Water is ordered from FlowJEM and is ready to cast.
-- Weigh 10:1 (50g/5g) of Sylgard 184.
-- Mix for 5 minutes in sterile pipette box with P1000 tip
-- Degas for 30 minutes under house vacuum
-- Take large weighing boat and carefully place wafer on it.
-- Pour PDMS solution on wafer, and degas again for 5-10 min or until bubbles are gone.
-- Place in 80C oven for 1 hour.
-- Allow to cool to room temperature.
-- Carefully remove wafer and store in petri dish.
-- Cut out PDMS strips, and cut holes with 1mm punch from feature side down.
-- Clean off feature side with scotch tape, and clean the surface of a precleaned glass slide.
-- Plasma treat PDMS device and slide
-	- Turn on device
-	- Turn on vacuum for 1 min with port closed
-	- Switch port to low gas input for 1 minute
-	- Turn on "HIGH" for 40 seconds. Strong plasma glow should be seen.
-- Remove device and quickly place feature side down on precleaned glass slide.
-- Place in 80C oven for 30min.
-
-#### Aquapel treatment of microfluidic chips
-Chips need to be treated when first constructed. This is best performed in parallel. Note that this protocol is adopted from Mazutis, Nat. Protocols 2013.
-- Cut pad that aquapel solution is embedded within. Place ampule in 15mL conical and break the ampule within the tube.  
-- Pipette solution in 1mL syringe.
-- Inject solution into microfludic device. Leave solution in channels for 30s, and flush with air (pressurized air) at all three fluidic ports.
-- Flush device with FC-40, and flush with air (pressurized air) at all three fluidic ports.
-- Bake chip at 80C for 10 minutes.
-
 ### Fixation
-Samples are fixed in methacarn to avoid damage to mucosal structures and nucleic acids that may result with other fixatives such as formaldehyde.
-- Acquire sample (feces, GI tract etc.) and immediately place in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
-- Note: at this time, it will likely be of interest to save samples for 16S sequencing or clonal isolation.
-	- For 16S sequencing, place sample in eppendorf tube, and save at -80C until gDNA prep
-	- For clonal isolation, place sample immediately into pre-reduced (at least overnight) PBS with 0.1% cysteine (PBSc). Cycle into anaerobic chamber, and vortex until sample is homogenized (sterile glass bead can be added to enhance homogenization). Allow sample to rest for 5 minutes for particulate matter to settle, combine 500uL of supernatant with 500uL of 40% glycerol, mix and aliquot 500uL into two cryotubes. Freeze in anaerobic chamber on dry ice, and transfer to -80C for storage.
+Samples are fixed in methacarn to avoid damage to mucosal structures that may result with other fixatives such as formaldehyde.
+- Acquire sample (feces, GI tract etc.); at this time it is likely on interest to save samples for other assays (e.g. metagenomic sequencing, bacterial culture)
+- Immediately place sample for MaP-seq in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
 - Fix the sample at room temperature for between 24 to 48 hours.
 - Replace the sample in 70% ethanol after this period for storage up to 1 month (longer periods may be possible, but have not been investigated)
 
@@ -319,9 +317,9 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Quantify concentration using the Qubit HS DNA kit (2uL sample).
 - Sequence using a MiSeq v2 500 cycle kit, loading at 12pM (based on Qubit quant) with a 10% 12pM PhiX spike in.
 
-### MIST-seq quality control
+### MaP-seq quality control
 ##### Construction of synthetic community particles
-To test the ability of MIST-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities.
+To test the ability of MaP-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities.
 - Prepare cells for two synthetic communities:
 	- One synthetic community is Sporocarcina pasteurii, normalize to size of pellet fecal cells visually (see below)
 	- Second synthetic community is homogenized fecal pellets. Vortex 5 pellets in 1mL PBS with 0.1mm glass beads for 1 min to homogenize on bead beater. Pass through 40um filter (Falcon). Save in 20% glycerol.
@@ -363,7 +361,7 @@ To assess the composition of primers on a single bead as well as the composition
 - QC products via gel, pool based on Qubit HS DNA, and gel extract the 214-216bp product. Sequence on MiSeq 150v3 R1:94 R2:73 i1:8
 
 ## 16S FISH studies
-To confirm findings from the MIST-seq technique, we also perform 16S FISH protocols. We base our FISH protocol largely on commonly used FISH protocols, and previously validated probes. 3 probes are chosen with different fluorophores. They target a particular percentage of all known species within particular families listed below:
+To confirm findings from the MaP-seq technique, we also perform 16S FISH protocols. We base our FISH protocol largely on commonly used FISH protocols, and previously validated probes. 3 probes are chosen with different fluorophores. They target a particular percentage of all known species within particular families listed below:
 
 `alexa488_erec482 /5Alex488N/GCTTCTTAGTCAGGTACCG`
 Lachnospiraceae 76%
@@ -396,11 +394,3 @@ Family targeting from: http://www.pnas.org/content/suppl/2013/02/28/1219247110.D
 - Wash 3x in PBS
 - Dry
 - Mount with vectashield (~10uL)
-
-### Imaging
-
-#### Epifluorescence
-Image on Wang Lab Nikon Ti2. Use all four channels, large image scan, and EDF with 4 z-stacks with 1um step size.
-
-#### Confocal
-Image at the cancer center confocal. In general here are settings: pixel size 2.4, size 1024, 2x average, pinhole 1AU. Laser 2% for 405, everything 5%. Hv gain around 100. Setting gain above 130 will generally not be a great idea. In general Z-stacks and XY we want to sample at 2-3x resolution (i.e. nyquist sampling). For scanning use 512 pixel size (reasonable). Can likely couple FR and green during scanning.Most images we get are 1024x1024 with 3x Z-stacks separated by 0.5um (so 1uM Z axis total).
