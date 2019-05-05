@@ -56,5 +56,5 @@ We developed a [utility script](./utilities/) to easily process data from a MaP-
 
 ### Data accessibility 
 
-Raw data from the study can be found at [TODO]
+Raw data from the study can be found at NCBI SRA PRJNA541181
 
