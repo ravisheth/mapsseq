@@ -12,7 +12,7 @@ A comprehensive step-by-step protocol to performing a MaP-seq experiment can be 
 
 We developed a [script](./processing/) to demultiplex and process MaP-seq barcodes after sequencing for input into a typical OTU generation pipeline (e.g. usearch, but your favorite software could also be utilized). 
 
-The sequence analysis workflow as implemented in the paper was as follows: 
+The sequence analysis workflow as implemented in the manuscript was as follows: 
 - Reads for individual samples were merged (usearch -fastq_mergepairs) 
 - Merged reads were quality filtered (usearch -fastq-filter)
 - The MaP-seq processing code was utilized to demultiplex and rename individual reads by their barcode, and strip barcode and primer sequences
@@ -33,7 +33,7 @@ The specific parameters are explained below:
 - norm_length: basepairs from 5' of the stripped read (both barcode and primers) to normalize the read length to; 0 for no read length normalization
 - write_bc_count: True or False; should the program write an output file of reads per barcode? 
 
-In the manuscript, we utilized the following parameters with the script: 
+In the manuscript, we utilized the following parameters with the script. In addition, it is advisable to call the function in parallel (e.g. using [gnuparallel](https://www.gnu.org/software/parallel/)) using a simple shell script if you have a few samples. 
 
 ```
 python map_process.py <filename.fq> 21 20 240 260 0 True
