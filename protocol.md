@@ -1,6 +1,10 @@
 # MaP-seq protocol
 
-This document contains the MaP-seq protocol (as published in Sheth et al., Nature Biotechnology 2019, internal version v3.0). Note that this protocol contains much more detail than the published protocol, and I've tried to include as much rationale for why certain decisions were made in designing different aspects of the method.
+This document contains the MaP-seq protocol (as published in Sheth et al., Nature Biotechnology 2019, internal version v3.0). The published manuscript methods are the most accurate protocol, but here I've tried to make things easier to follow and provide as much rationale as possible why certain decisions were made in designing different aspects of the method.
+
+I would highly recommend trying a control mixing experiment (e.g. as performed in the paper in Fig. 1 with particles containing different bacterial species) before trying a biological sample for the first time. There are many complex steps to this protocol and so this is a good validation that everything is working before advancing to actual samples. 
+
+Questions and comments welcome, on the github or by email (sheth dot u dot ravi at gmail dot com).
 
 ### Microfluidic device fabrication
 #### Casting of devices
@@ -116,7 +120,7 @@ Barcoded Hydrogel construction consists of three extension steps to create barco
 
 ### Fixation
 Samples are fixed in methacarn to avoid damage to mucosal structures that may result with other fixatives such as formaldehyde.
-- Acquire sample (feces, GI tract etc.); at this time it is likely on interest to save samples for other assays (e.g. metagenomic sequencing, bacterial culture)
+- Acquire sample (e.g. intestinal tissue); at this time it is likely on interest to save samples for other assays (e.g. metagenomic sequencing, bacterial culture)
 - Immediately place sample for MaP-seq in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
 - Fix the sample at room temperature for between 24 to 48 hours.
 - Replace the sample in 70% ethanol after this period for storage up to 1 month (longer periods may be possible, but have not been investigated)
@@ -143,7 +147,7 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 ```diff
 - IMPORTANT: ensure that the photocleavable primer is protected from light
 - IMPORTANT: once polymerized, the gel is sensitive to reducing conditions.
-- Store at -20C and protect from any reagents that may contain reducing agents.
+- Store samples/particles at 4C in TET and protect from any reagents that may contain reducing agents.
 ```
 - Remove sample from fixative, cut into parts no larger than 3x3mm with a sterile razor, and wash in PBS, and let sit for 5 min.
 - Remove PBS, and incubate sample in permeabilization buffer (1x PBS, 0.1% Triton-X 100) for 5 min.  
@@ -154,13 +158,13 @@ The sample is then embedded with an degradable acrylamide matrix which preserves
 	- 4uL 4HT
 	- 4uL TEMED
 	- 4uL APS
-- Remove sample from PBS and dab dry with a sterile kim wipe.
+- Remove sample from PBS and dab dry with a sterile kim wipe to remove excess PBS.
 - Place the sample in an PCR tube on ice. Place enough solution to fully embed the sample and allow to sit on ice for 5 minutes. Remove excess solution and replace; this increases concentration of embedding solution to replace any PBS from the sample. Allow to embed for 1 hour to overnight allow for full perfusion; cover the tube with foil to prevent premature cleavage of the reverse primer.
-	- NB: Like any initiator, TEMED/APS may degrade over time. An alternative is VA-044, a thermally activated initiator which can be used to initiate polymerization in the same manner. This can be used, at a final concentration of 0.5% w/w in the embedding solution and 4HT, TEMED and APS can be omitted and replaced with water.
+	- NB: An alternative initator is VA-044, a thermally activated initiator which can be used to initiate polymerization in the same manner. This can be used, at a final concentration of 0.5% w/w in the embedding solution and 4HT, TEMED and APS can be omitted and replaced with water.
 - Remove any excess liquid by pipetting out, but ensure that the sample is still fully submerged under liquid.
-- Open the tube top, cycle into the anaerobic incubator (O2 impedes polymerization reaction) and allow to polymerize at 37C for 2-3 hours; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
-- Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
-- Ensure that sample is fully polymerized throughout. Wash 2 times in PBS and 1 times in TET (10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween-20) and store in TET at 4C for short term storage (no more than 5 days) or -20C for long term storage.
+- Open the tube top, cycle into a anaerobic incubator (O2 inhibits polymerization reaction) and allow to polymerize at 37C for 2-3 hours; cover the tube with foil to prevent premature cleavage of the reverse primer or photobleaching of the fluorophore.
+- Ensure that sample is fully polymerized. Extract the embedded sample from the tube, and trim excess polymer matrix with a sterile razor.
+- Wash 2 times in PBS and 1 times in TET (10mM Tris HCl pH 8.0, 1mM EDTA, 0.1% Tween-20) and store in TET at 4C for short term storage (no more than 5 days) or -20C for long term storage.
 
 ### Fracturing
 The embedded sample is then broken into small particles using cryofracturing.
@@ -380,10 +384,10 @@ Family targeting from: http://www.pnas.org/content/suppl/2013/02/28/1219247110.D
     - Do not let dry out during this processs
 - Incubate with 3x FISH probes diluted to 10ng/uL in hybridization buffer (0.9M NaCl, 20mM Tris-HCl pH 7.5, 0.01% SDS, 10% formadide) at 47C for 3-18hr in closed humid environment.
     - resuspend probes to 500ng/uL in 10mM Tris pH7.5
-    - ~5uL needed per reaction, for 50uL master mix:
+    - ~5-10 uL needed per reaction, for 50uL master mix:
         - 1uL 1M TrisHCl 7.5
         - 9uL 5M NaCl
-        - 5uL formadide
+        - 5uL formamide
         - 0.1uL 10% SDS
         - 32uL water
         - 1uL each probe
