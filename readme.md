@@ -24,7 +24,7 @@ The MaP-seq processing script is called from the command line and takes the foll
 python map_process.py file_name primer_fwd_length primer_rev_length min_length max_length norm_length write_bc_count
 ``` 
 
-The specific parameters are explained below: 
+The requirements for these parameters are explained here: 
 - file_name: fastq file input
 - primer_fwd_length: length of the forward primer to strip from the 5' of the read
 - primer_rev_length: length of the reverse primer to strip from the 3' of the read
@@ -33,11 +33,13 @@ The specific parameters are explained below:
 - norm_length: basepairs from 5' of the stripped read (both barcode and primers) to normalize the read length to; 0 for no read length normalization
 - write_bc_count: True or False; should the program write an output file of reads per barcode? 
 
-In the manuscript, we utilized the following parameters with the script. In addition, it is advisable to call the function in parallel (e.g. using [gnuparallel](https://www.gnu.org/software/parallel/)) using a simple shell script if you have a few samples. 
+In the manuscript, we utilized the following parameters with the script. 
 
 ```
 python map_process.py <filename.fq> 21 20 240 260 0 True
 ```
+
+In addition, it is advisable to call the function in parallel (e.g. using [gnuparallel](https://www.gnu.org/software/parallel/)) using a simple shell script if you have a few samples. 
 
 ### Microfluidic chip design
 
@@ -45,5 +47,9 @@ The microfluidic device design can be found [here](./microfluidic/). We ordered 
 
 ### OTU tables
 
-### Utility code
+[TODO]
+
+### Generating figures from the manuscript
+
+[TODO]
 
