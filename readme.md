@@ -46,13 +46,11 @@ python map_process.py <filename.fq> 21 20 240 260 0 True
 
 ### OTU tables
 
-[TODO]
+OTU tables containing filtered clusters as analyzed in the manuscript (those that meet the minimum read criteria, and filtered for clusters representing technical artifacts, all as detailed in the methods) are avaliable for re-analysis [here](./otu_tables). TableS5 in the text provides for details around samples names and metadata. We note that there are three different clustered OTU tables (e.g. for Fig2, Fig3, and Fig4 respectively as detailed in TableS5) and the OTU sequences (tableX_otus.fa) correspond to those tables. 
 
 ### Generating figures from the manuscript
 
 We developed a [utility script](./utilities/) to easily process data from a MaP-seq experiment and plot common analyses. A walk-through jupyter notebook can be found [here](./utilities/MaPseqDemo.ipynb). 
-
-[TODO]
 
 ### Data accessibility 
 

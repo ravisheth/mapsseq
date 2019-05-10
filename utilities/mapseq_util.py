@@ -13,31 +13,31 @@ import matplotlib.patches as patches
 
 #### utility functions 
 
-def calc_cutoff(df, r):
+def calc_cutoff(df, r, part_input):
     fil=df.filter(regex=r)
     ordered=np.sort(np.array(fil.sum(axis=0)))[::-1]
     part_range = range(1,ordered.shape[0]+1)
-    num_part = sum(ordered>(sum(ordered)/2500.))
+    num_part = sum(ordered>(sum(ordered)/float(part_input)))
     min_reads = ordered[num_part]
     return num_part, min_reads
 
-def return_raw_data(df, sname):
+def return_raw_data(df, sname, part_input):
     r1 = '^'+sname+'r1'
     fil1=df.filter(regex=r1)
-    _,min_reads1 = calc_cutoff(df, r1)
+    _,min_reads1 = calc_cutoff(df, r1, part_input)
     fil1=fil1.T.loc[fil1.sum(0)>min_reads1] 
 
     r2 = '^'+sname+'r2'
     fil2=df.filter(regex=r2)
-    _,min_reads2 = calc_cutoff(df, r2)
+    _,min_reads2 = calc_cutoff(df, r2, part_input)
     fil2=fil2.T.loc[fil2.sum(0)>min_reads2]
     
     output = pd.concat([fil1, fil2])
     return output.T
 
-def filt_data(df, sname, filter_clust = False, show_removed = False, \
+def filt_data(df, sname, part_input = 2500, filter_clust = False, show_removed = False, \
     min_appearance = False, min_prop = 0, verb = False):
-    output = return_raw_data(df, sname).T
+    output = return_raw_data(df, sname, part_input).T
     output = output.div(output.sum(1),axis=0)
 
     if filter_clust == True: 
@@ -91,58 +91,26 @@ def plot_filt_data(input_df, replicate_info = False, size = (4,4)):
             elif sname+'r2' in i:
                 colors.append('black')
         sns.clustermap(input_df, col_colors=colors, cmap='Reds', figsize = size)
-
     else:
         sns.clustermap(input_df, cmap='Reds', figsize = size)
 
-def plot_correlation(input_df):
-    input_df = input_df.corr()
-    colors=[]
-    sname = input_df.columns[0].split('r1')[0]
-    for i in input_df.columns:
-        if sname+'r1' in i:
-            colors.append('red')
-        elif sname+'r2' in i:
-            colors.append('black')
-    sns.clustermap(input_df,col_colors=colors,cmap='coolwarm')
-
-def plot_compare_bulk(input_df, sname, bulk_name, drop_otu = True, \
-    drop_name='Otu3_Planococcaceae100%'):
-    data = filt_data(df = input_df, sname = sname, filter_clust = True, \
-        show_removed = False, min_appearance = False)
-    if drop_otu == True: 
-        bulk=np.log10(input_df.filter(regex='^'+bulk_name+'$')).drop(drop_name)
-        particle=np.log10((data>0).sum(axis=1).drop(drop_name))
-    else: 
-        bulk=np.log10(input_df.filter(regex='^'+bulk_name+'$'))
-        particle=np.log10((data>0).sum(axis=1))
+def plot_species_per_particle(input_df, xlim = [1,25]):
+    data = input_df
     plt.figure(figsize=(3,3))
-    plt.plot(bulk,particle,'k.')
-    plt.xlabel('log10, reads bulk')
-    plt.ylabel('log10, #particle observations')
-    plt.tight_layout()
-    plt.show()
-
-def plot_species_per_particle(input_df, sname):
-    data = filt_data(df = input_df, sname = sname, filter_clust = True, \
-        show_removed = False, min_appearance = False)
-    plt.figure(figsize=(3,3))
-    plt.hist((data.T>0.025).sum(axis=1),bins=20,range=(0,20),normed=True, \
+    plt.hist((data.T>0.02).sum(axis=1),bins=20,range=(0,20),normed=True, \
         histtype='stepfilled', facecolor="black",edgecolor='black')
-    plt.xticks([1,5,10,15,20])
-    plt.xlim([1,20])
+    plt.xlim(xlim)
     plt.xlabel('# OTUs')
     plt.ylabel('prop. cell clusters')
     plt.tight_layout()
     plt.show()
 
 #TO-DO cluster cannot be utilized with annot as the values are shuffled. Would need to custom reshuffle the annot matrix per the resulting clustering. 
-def plot_association_heatmap(input_df, sname, tax_map, ab_thresh=0.02, min_appearance = 0.1, size =(5,5), sig = 0.05, max_val = 2, num_part = 0, cluster = False):
-    data = filt_data(df = input_df, sname = sname, filter_clust = True, \
-            show_removed = False, min_appearance = False, min_prop = 0.00, verb = False)
+def plot_association_heatmap(input_df, tax_map, ab_thresh=0.02, min_appearance = 0.1, size =(5,5), sig = 0.05, max_val = 2, num_part = 0):
+    data = input_df
     if num_part > 0:
         data = data.T.sample(frac=(num_part/float(data.shape[1])), random_state = np.random.RandomState(seed=1)).T
-    print data.shape[1]
+    print 'number of clusters used is: '+str(data.shape[1])
     data=data.T>ab_thresh
     data=data.loc[:,((data>0).sum(axis=0)>(data.shape[0]*min_appearance))] 
     data=data.T.reindex(data.sum(axis=0).sort_values(ascending=False).index).T
@@ -199,12 +167,10 @@ def plot_association_heatmap(input_df, sname, tax_map, ab_thresh=0.02, min_appea
 
     sns.clustermap(to_plot,cmap='coolwarm',square=True, annot=mat_sig, \
         row_colors=label_map, fmt='', vmax = max_val, vmin = -1*max_val, \
-        row_cluster=cluster, col_cluster=cluster, metric = 'braycurtis')
+        row_cluster=False, col_cluster=False, metric = 'braycurtis')
 
-def plot_association_network(input_df, sname, tax_map, net_pos = [], ab_thresh=0.02, min_appearance = 0.1, size = (5,5), sig = 0.05, max_val = 2, num_part=0, layout = 'circle'):
-    data = filt_data(df = input_df, sname = sname, filter_clust = True, \
-            show_removed = False, min_appearance = False, min_prop = 0.00, verb = False)
-    print 'sample_name is: '+sname
+def plot_association_network(input_df, tax_map, net_pos = [], ab_thresh=0.02, min_appearance = 0.1, size = (5,5), sig = 0.05, max_val = 2, num_part=0, layout = 'circle'):
+    data = input_df
     if num_part > 0:
         data = data.T.sample(frac=(num_part/float(data.shape[1])), random_state = np.random.RandomState(seed=1)).T
     print 'number of clusters used is: '+str(data.shape[1])
