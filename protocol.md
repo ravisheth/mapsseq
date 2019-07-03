@@ -1,6 +1,6 @@
-# MaP-seq protocol
+# MaPS-seq protocol
 
-This document contains the MaP-seq protocol (as published in Sheth et al., Nature Biotechnology 2019, internal version v3.0). The published manuscript methods section represents the most accurate protocol, but here I've tried to make things easier to follow and provide as much rationale as possible why certain decisions were made in designing different aspects of the method.
+This document contains the MaPS-seq protocol (as published in Sheth et al., Nature Biotechnology 2019, internal version v3.0). The published manuscript methods section represents the most accurate protocol, but here I've tried to make things easier to follow and provide as much rationale as possible why certain decisions were made in designing different aspects of the method.
 
 I would highly recommend trying a control mixing experiment (e.g. as performed in the paper in Fig. 1 with clusters containing different bacterial species) before trying a biological sample for the first time. There are many complex steps to this protocol and so this is a good validation that everything is working before advancing to actual samples. 
 
@@ -120,7 +120,7 @@ Barcoded Hydrogel construction consists of three extension steps to create barco
 ### Sample fixation
 Samples are fixed in methacarn to avoid damage to mucosal structures that may result with other fixatives such as formaldehyde.
 - Acquire sample (e.g. intestinal tissue); at this time it is likely on interest to save samples for other assays (e.g. metagenomic sequencing, bacterial culture)
-- Immediately place sample for MaP-seq in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
+- Immediately place sample for MaPS-seq in methacarn solution (60% methanol, 30% chloroform, 10% acetic acid).
 - Fix the sample at room temperature for between 24 to 48 hours.
 - Replace the sample in 70% ethanol after this period for storage up to 1 month (longer periods may be possible, but have not been investigated)
 
@@ -322,9 +322,9 @@ Nylon mesh filters are utilized to size-select fractured acrylamide particles. T
 - Quantify concentration using the Qubit HS DNA kit (2uL sample).
 - Sequence using a MiSeq v2 500 cycle kit, loading at 12pM (based on Qubit quant) with a 20% PhiX spike in.
 
-### MaP-seq quality control
+### MaPS-seq quality control
 ##### Construction of synthetic community particles
-To test the ability of MaP-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities.
+To test the ability of MaPS-seq to provide data on single particles, we generated synthetic bacterial communities, and co-encapsulated these communities.
 - Prepare cells for two synthetic communities:
 	- One synthetic community is a single strain (e.g. E. coli or S. pasteurii) 
 	- Second synthetic community is homogenized fecal pellets. Bead beat 5 mouse fecal pellets in 1mL PBS with 0.1mm glass beads for 1 min to homogenize. Pass through 40um filter (Falcon).
@@ -351,7 +351,7 @@ To assess UV exposure-dependent release of primers from barcoded beads and parti
 
 ## 16S FISH studies
 
-To confirm findings from the MaP-seq technique, we also perform 16S FISH. We base our FISH protocol largely on commonly used FISH protocols, and previously validated probes (see the manuscript for FISH primer details). Note that it is imperative to treat slides extremely gently at all times to prevent bacteria from washing off the section.
+To confirm findings from the MaPS-seq technique, we also perform 16S FISH. We base our FISH protocol largely on commonly used FISH protocols, and previously validated probes (see the manuscript for FISH primer details). Note that it is imperative to treat slides extremely gently at all times to prevent bacteria from washing off the section.
 
 ### FISH protocol
 - Paraffin embed sample and obtain 4 um lumenal sections 

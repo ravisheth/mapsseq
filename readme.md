@@ -1,4 +1,4 @@
-# MaP-seq: Metagenomic Plot-sampling by sequencing
+# MaPS-seq: Metagenomic Plot-sampling by sequencing
 
 Code, protocols and additional information from the paper "Spatial metagenomic characterization of microbial biogeography in the gut" Sheth RU, Li M, Jiang W, Sims PA, Leong KW, Wang HH. Nature Biotechnology, 2019
 
@@ -6,27 +6,27 @@ The full paper and supplemental information can be accessed here [TO BE ADDED]
 
 ### Step-by-step protocol
 
-A comprehensive step-by-step protocol to performing a MaP-seq experiment can be found [here](./protocol.md).
+A comprehensive step-by-step protocol to performing a MaPS-seq experiment can be found [here](./protocol.md).
 
 
 ### Microfluidic chip design
 
 The microfluidic device design can be found [here](./microfluidic/). We ordered the wafer from FlowJEM with a feature height of ~40 μm. 
 
-### MaP-seq processing code
+### MaPS-seq processing code
 
-We developed a [script](./processing/) to demultiplex and process MaP-seq barcodes after sequencing for input into a typical OTU generation pipeline (e.g. usearch, but your favorite software could also be utilized). 
+We developed a [script](./processing/) to demultiplex and process MaPS-seq barcodes after sequencing for input into a typical OTU generation pipeline (e.g. usearch, but your favorite software could also be utilized). 
 
 The sequence analysis workflow as implemented in the manuscript was as follows: 
 - Reads for individual samples were merged (usearch -fastq_mergepairs) 
 - Merged reads were quality filtered (usearch -fastq_filter)
-- The MaP-seq processing code was utilized to demultiplex and rename individual reads by their barcode, and strip barcode and 16S primer sequences
+- The MaPS-seq processing code was utilized to demultiplex and rename individual reads by their barcode, and strip barcode and 16S primer sequences
 - Resulting processed reads were subjected to a standard OTU generation pipeline; reads were dereplicated (usearch -derep_fullength), clustered (usearch -cluster_otus), and reads were searched against the generated OTUs (usearch -usearch_global) resulting in a final OTU table for analysis
 
-The MaP-seq processing script is called from the command line and takes the following arguments. In addition, a file named `param` must be included in the same directory which includes the structure of the barcode utilized (anchor sequences and barcode sequences). The script calls barcodes, renames individual reads with a unique name for each barcode, and strips the barcode and primer sequences from the reads, so the resulting read file can be analyzed in standard OTU generation pipelines. In addition, it is advisable to call the function in parallel (e.g. using [gnuparallel](https://www.gnu.org/software/parallel/)) using a simple shell for loop if you have more than a few samples. 
+The MaPS-seq processing script is called from the command line and takes the following arguments. In addition, a file named `param` must be included in the same directory which includes the structure of the barcode utilized (anchor sequences and barcode sequences). The script calls barcodes, renames individual reads with a unique name for each barcode, and strips the barcode and primer sequences from the reads, so the resulting read file can be analyzed in standard OTU generation pipelines. In addition, it is advisable to call the function in parallel (e.g. using [gnuparallel](https://www.gnu.org/software/parallel/)) using a simple shell for loop if you have more than a few samples. 
 
 ```
-python map_process.py file_name primer_fwd_length primer_rev_length min_length max_length norm_length write_bc_count
+python maps_process.py file_name primer_fwd_length primer_rev_length min_length max_length norm_length write_bc_count
 ``` 
 
 The requirements for these parameters are explained here: 
@@ -41,7 +41,7 @@ The requirements for these parameters are explained here:
 In the manuscript, we utilized the following parameters with the script, but can be altered if you make a different barcode design or use different sequencing read lengths. 
 
 ```
-python map_process.py <filename.fq> 21 20 240 260 0 True
+python maps_process.py <filename.fq> 21 20 240 260 0 True
 ```
 
 ### OTU tables
@@ -50,7 +50,7 @@ OTU tables containing filtered clusters as analyzed in the manuscript (those tha
 
 ### Generating figures from the manuscript
 
-We developed a [utility script](./utilities/) to easily process data from a MaP-seq experiment and plot common analyses. A walk-through jupyter notebook can be found [here](./utilities/MaPseqDemo.ipynb). 
+We developed a [utility script](./utilities/) to easily process data from a MaPS-seq experiment and plot common analyses. A walk-through jupyter notebook can be found [here](./utilities/MaPSseqDemo.ipynb). 
 
 ### Data accessibility 
 
