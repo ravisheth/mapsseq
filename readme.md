@@ -2,7 +2,7 @@
 
 Code, protocols and additional information from the paper "Spatial metagenomic characterization of microbial biogeography in the gut" Sheth RU, Li M, Jiang W, Sims PA, Leong KW, Wang HH. Nature Biotechnology, 2019
 
-The full paper and supplemental information can be accessed here [TO BE ADDED]
+The full paper and supplemental information can be accessed (here)[https://doi.org/10.1038/s41587-019-0183-2]
 
 ### Step-by-step protocol
 
